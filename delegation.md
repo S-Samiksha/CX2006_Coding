@@ -39,7 +39,7 @@ I need yall to send me the .vpp files by **3 OCT 12pm.**
 10 Oct: SQL and the link **Marcus, Junhan**
 10 Oct: test cases and testing results **Samiksha, Anagha**
 10 Oct: demo script -- video script **Melise, Arushi**
-10 Oct: make database for landlord with the entries. 
+10 Oct: make database add in the landlord entries **Melise, Arushi**
 
 ---------
 
