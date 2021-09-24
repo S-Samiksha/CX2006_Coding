@@ -19,8 +19,8 @@ Things to do:
 4 Oct: System Architecture **Junhan, Marcus, Samiksha**  
 4 Oct: class diagram .vpp needed follow the pdf **Arushi**  
 4 Oct: Edit the use case (change the landlord and follow the pdf)  
- *UC001 to UC004*: **Melise**  
- *UC005 to UC009*: **Anagha**  
+&nbsp;&nbsp;&nbsp;&nbsp;*UC001 to UC004*: **Melise**  
+&nbsp;&nbsp;&nbsp;&nbsp;*UC005 to UC009*: **Anagha**  
 4 Oct: sequence diagram any changes all the changes  **Arushi**  
 4 Oct: Dialog Map **Anagha**  
 4 Oct: use case diagram **Samiksha**  
