@@ -288,17 +288,14 @@ p {
     padding: 4rem 0rem;
     min-height: 100vh;
 	width: 100%;
-	display: flex;
     padding-right: 25rem;
     padding-left: 25rem;
     margin-top: 1 rem;
-	display: block;
   }
   .page-section h2.section-heading {
     font-size: 4rem;
     margin-bottom: 20px ;
     margin-top: 0;
-	display: block;
   }
   .page-section h3.section-subheading {
     font-size: 4rem;
@@ -313,13 +310,13 @@ p {
 	  background-color: #FEDFD4;
 	  max-width: 100%;
 	  max-height: 50%;
-	  display: block;
+	  padding-top: 40px;
   }
 	#roommate_img{
 		width: 500px;
 		height: 500px;
-		display: block;
 		margin-left: 250px;
+		padding-top: 40px;
 	}
 
 	.button-chat{
@@ -330,7 +327,6 @@ p {
 		padding: 10px 30px 10px 30px;
 		text-align: center;
 		text-decoration: none;
-		display: inline-block;
 		font-size: 3rem;
 		margin: 50px 30px 50px 200px;
 		cursor: pointer;
@@ -350,7 +346,6 @@ p {
 		padding: 10px 30px 10px 30px;
 		text-align: center;
 		text-decoration: none;
-		display: inline-block;
 		font-size: 3rem;
 		margin: 50px 30px 50px 30px;
 		cursor: pointer;
@@ -362,6 +357,56 @@ p {
 	box-shadow: 0 1em 1em -1em var(--hover);
 	transform: translateY(-0.25em);
 	}
+
+
+  .myRecommendations {display: none}  
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	width: auto;
+	padding: 15px;
+	color: white;
+	font-weight: bold;
+	font-size: 50px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	margin-top: 200px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+	right: 250px;
+	border-radius: 3px 0 0 3px;
+
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Fading animation */
+  .fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+  @keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+  }
+  
+
 
 
 /* end of roommate recommendation*/
