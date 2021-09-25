@@ -11,22 +11,36 @@ I also put inside folder: so many css and html files ><
 
 
 ## Front End Delegation of work (remember to create your own css files)
-> Pages:
+> Pages(just nice 12 pages):
+*main folder*
 1. Main Page: main.html **Samiksha**
-2. Registration Page: register.html **Anagha** 
-3. Login Page: login.html **Arushi** 
-4. Home Page (that contains the roommate recommendation): home.html **Samiksha**
-5. View Profile: profile.html **Melise** 
-6. Update roommate profile page: update_roommate.html **Arushi**
-7. Update self profile page: update_self.html **Anagha**
-8. Search House page: search_house.html **Melise**
-9. view result of house page: view_houses.html **junhan**
-10. Chat Box Page **Marcus** : messages.html
-11. Tenant Email Landlord **Junhan**: tenant_email.html
+2. About Page: about.html **Marcus**
+
+*register_login folder*
+3. Registration Page: register.html **Anagha** 
+4. Login Page: login.html **Arushi** 
+
+*home_page folder*
+5. Home Page (that contains the roommate recommendation): home.html **Samiksha**
+
+*view_update_profile*
+6. View Profile: profile.html **Melise** 
+7. Update roommate profile page: update_roommate.html **Arushi**
+8. Update self profile page: update_self.html **Anagha**
+
+*search_view_houses*
+9. Search House page: search_house.html **Melise**
+10. view result of house page: view_houses.html **junhan**
+
+*Messages*
+11. Chat Box Page **Marcus** : messages.html
+
+*tenant_email*
+12. Tenant Email Landlord **Junhan**: tenant_email.html
 
 
 > Things to do:
-1. Make the HTML pages using styles.css made by Junhan 
+1. Make the HTML pages using styles.css made by Junhan --> found in main>style_main
 2. Then we fix the SQL after all 6 pages are done!
 3. Then we finalize the document
 
