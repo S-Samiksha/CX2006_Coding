@@ -15,10 +15,10 @@ I also split further and further to make it very clear the different pages. I kn
 3. Login Page: login.html **Arushi** 
 4. Home Page (that contains the roommate recommendation): home.html **Samiksha**
 5. View Profile: profile.html **Melise** 
-6. Update roommate profile page: update_roommate.html
-7. Update self profile page: update_self.html
-8. Search House page: search_house.html
-9. view result of house page: view_houses.html
+6. Update roommate profile page: update_roommate.html **Arushi**
+7. Update self profile page: update_self.html **Anagha**
+8. Search House page: search_house.html **Melise**
+9. view result of house page: view_houses.html **Samiksha**
 10. Chat Box Page **Marcus** : messages.html
 11. Tenant Email Landlord **Junhan**: tenant_email.html
 
