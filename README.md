@@ -1,4 +1,4 @@
-## read this before you start!!
+# READ THIS!!!!
 i have changes the names of the files to follow the initial dialog map. Pls refer to the pdf submitted and the following for reference: 
 main page is before the register or login <br>
 home page is after you login <br>
@@ -10,37 +10,37 @@ I also split further and further to make it very clear the different pages. I kn
 I also put inside folder: so many css and html files ><
 
 
-# Lab 3 Submission (Front-End)
-## **3 OCT 12 PM**
+## Lab 3 Submission (Front-End)
+### **3 OCT 12 PM**
 
 
 > Pages(just nice 12 pages):
 <br>
 *main folder*<br>
-1. Main Page: main.html **Samiksha** <br>
-2. About Page: about.html **Marcus**<br>
+1. Main Page: main.html **Samiksha** 
+2. About Page: about.html **Marcus** 
 <br>
 *register_login folder*<br>
-3. Registration Page: register.html **Anagha** <br>
-4. Login Page: login.html **Arushi** <br>
+3. Registration Page: register.html **Anagha** 
+4. Login Page: login.html **Arushi** 
 <br>
 *home_page folder*<br>
-5. Home Page (that contains the roommate recommendation): home.html **Samiksha**<br>
+5. Home Page (that contains the roommate recommendation): home.html **Samiksha**
 <br>
 *view_update_profile*<br>
-6. View Profile: profile.html **Melise** <br>
-7. Update roommate profile page: update_roommate.html **Arushi**<br>
-8. Update self profile page: update_self.html **Anagha**<br>
+6. View Profile: profile.html **Melise** 
+7. Update roommate profile page: update_roommate.html **Arushi**
+8. Update self profile page: update_self.html **Anagha**
 
 *search_view_houses*<br>
-9. Search House page: search_house.html **Melise**<br>
-10. view result of house page: view_houses.html **junhan**<br>
+9. Search House page: search_house.html **Melise**
+10. view result of house page: view_houses.html **junhan**
 
-*Messages*<br>
-11. Chat Box Page **Marcus** : messages.html<br>
+*Messages*
+11. Chat Box Page **Marcus** : messages.html
 
-*tenant_email*<br>
-12. Tenant Email Landlord **Junhan**: tenant_email.html<br>
+*tenant_email*
+12. Tenant Email Landlord **Junhan**: tenant_email.html
 
 
 > Things to do:
@@ -51,8 +51,8 @@ I also put inside folder: so many css and html files ><
 
 ---
 
-# Lab 3 Submission (documentation)
-## **3 OCT 12 PM**
+## Lab 3 Submission (documentation)
+### **3 OCT 12 PM**
 
 4 Oct: finish front end by then **everyone**   <br>
 4 Oct: System Architecture **Junhan, Marcus, Samiksha**  <br>
@@ -78,8 +78,8 @@ I need yall to send me the .vpp files by **3 OCT 12pm.** <br>
 ----
 
 
-# Lab 4 Submissions 
-## **9 Oct 12pm** 
+## Lab 4 Submissions 
+### **9 Oct 12pm** 
 10 Oct: SQL and the link **Marcus, Junhan**  <br>
 10 Oct: test cases and testing results **Samiksha, Anagha**  <br>
 10 Oct: demo script -- video script **Melise, Arushi**  <br>
