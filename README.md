@@ -10,33 +10,37 @@ I also split further and further to make it very clear the different pages. I kn
 I also put inside folder: so many css and html files ><
 
 
-## Front End Delegation of work (remember to create your own css files)
+# Lab 3 Submission (Front-End)
+## **3 OCT 12 PM**
+
+
 > Pages(just nice 12 pages):
-*main folder*
-1. Main Page: main.html **Samiksha**
-2. About Page: about.html **Marcus**
+<br>
+*main folder*<br>
+1. Main Page: main.html **Samiksha** <br>
+2. About Page: about.html **Marcus**<br>
+<br>
+*register_login folder*<br>
+3. Registration Page: register.html **Anagha** <br>
+4. Login Page: login.html **Arushi** <br>
+<br>
+*home_page folder*<br>
+5. Home Page (that contains the roommate recommendation): home.html **Samiksha**<br>
+<br>
+*view_update_profile*<br>
+6. View Profile: profile.html **Melise** <br>
+7. Update roommate profile page: update_roommate.html **Arushi**<br>
+8. Update self profile page: update_self.html **Anagha**<br>
 
-*register_login folder*
-3. Registration Page: register.html **Anagha** 
-4. Login Page: login.html **Arushi** 
+*search_view_houses*<br>
+9. Search House page: search_house.html **Melise**<br>
+10. view result of house page: view_houses.html **junhan**<br>
 
-*home_page folder*
-5. Home Page (that contains the roommate recommendation): home.html **Samiksha**
+*Messages*<br>
+11. Chat Box Page **Marcus** : messages.html<br>
 
-*view_update_profile*
-6. View Profile: profile.html **Melise** 
-7. Update roommate profile page: update_roommate.html **Arushi**
-8. Update self profile page: update_self.html **Anagha**
-
-*search_view_houses*
-9. Search House page: search_house.html **Melise**
-10. view result of house page: view_houses.html **junhan**
-
-*Messages*
-11. Chat Box Page **Marcus** : messages.html
-
-*tenant_email*
-12. Tenant Email Landlord **Junhan**: tenant_email.html
+*tenant_email*<br>
+12. Tenant Email Landlord **Junhan**: tenant_email.html<br>
 
 
 > Things to do:
@@ -47,7 +51,7 @@ I also put inside folder: so many css and html files ><
 
 ---
 
-# Lab 3 Submission 
+# Lab 3 Submission (documentation)
 ## **3 OCT 12 PM**
 
 4 Oct: finish front end by then **everyone**   <br>
