@@ -61,7 +61,7 @@ p {
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
 	margin-top: 30px;
-	transition: 0.3s ease;
+	transition: 0.1s ease;
 	transition-property: background-color, color;
 }
 .cta:hover {
@@ -77,6 +77,14 @@ p {
 	color: #65010C;
 }
 
+#logo {
+	float: left;
+	width: 5rem;
+	height: 5rem;
+	
+  }
+  
+
 /* Header section */
 #header {
 	position: fixed;
@@ -88,8 +96,8 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: #FEDFD4;
-	transition: 0.3s ease background-color;
+	background-color: white;
+	transition: 0.1s ease background-color;
 }
 #header .nav-bar {
 	display: flex;
@@ -103,7 +111,7 @@ p {
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
-	background-color: #FEDFD4;
+	background-color: white;
 	width: 100vw;
 	height: 100vh;
 	left: 100%;
@@ -141,7 +149,7 @@ p {
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
-	transition: 0.3s ease letter-spacing;
+	transition: 0.1s ease letter-spacing;
 	padding-right: 1 rem;
 }
 #header .nav-list ul li:hover a::after {
@@ -190,7 +198,7 @@ p {
 	width: 100%;
 	left: 0;
 	background-color: white;
-	transition: 0.3s ease;
+	transition: 0.1s ease;
 	transition-property: top, bottom;
 }
 #header .hamburger .bar::after {
@@ -209,7 +217,7 @@ p {
 
 /* Welcome Section */
 #welcome {
-	background-image: url(./img/welcome-bg.jpg); 
+	background-image: url(../images/welcome-bg.jpg); 
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -224,7 +232,7 @@ p {
 	height: 100%;
 	width: 100%;
 	background-color: #F29479;
-	opacity: 0.7;
+	opacity: 0.6;
 	z-index: -1;
 }
 #welcome .welcome {
@@ -261,7 +269,7 @@ p {
 	width: 0;
 	background-color: #FEDFD4;
 	animation: text_reveal_box 1s ease;
-	animation-delay: 0.5s;
+	animation-delay: 0.1s;
 }
 #welcome h1:nth-child(1) span {
 	animation-delay: 0.5s;
@@ -270,7 +278,7 @@ p {
 	animation-delay: 1.5s;
 }
 #welcome h1:nth-child(3) span {
-	animation-delay: 2.5s;
+	animation-delay: 1s;
 }
 
 /* End welcome Section */
