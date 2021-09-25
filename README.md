@@ -1,3 +1,5 @@
+
+### Front End Delegation of work 
 Pages:
 1. Home Page (Done)
 2. Registration Page **Anagha** : register.html
@@ -14,6 +16,8 @@ Things to do:
 3. Then we finalize the document
 
 
+### Lab 3 Submission 
+## **3 OCT 12 PM**
 --------
 4 Oct: finish front end by then **everyone**   <br>
 4 Oct: System Architecture **Junhan, Marcus, Samiksha**  <br>
@@ -37,6 +41,8 @@ I need yall to send me the .vpp files by **3 OCT 12pm.** <br>
 
 ------------
 
+### Lab 4 Submissions 
+## 9 Oct 12pm 
 10 Oct: SQL and the link **Marcus, Junhan**  <br>
 10 Oct: test cases and testing results **Samiksha, Anagha**  <br>
 10 Oct: demo script -- video script **Melise, Arushi**  <br>
@@ -44,7 +50,7 @@ I need yall to send me the .vpp files by **3 OCT 12pm.** <br>
 
 ---------
 
-lab 5 everything 
+
 
 
 
