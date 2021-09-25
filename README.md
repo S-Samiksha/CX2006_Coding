@@ -16,30 +16,40 @@ I also put inside folder: so many css and html files ><
 
 > Pages(just nice 12 pages):
 <br>
-*main folder*<br>
+*main folder*
+
 1. Main Page: main.html **Samiksha** 
 2. About Page: about.html **Marcus** 
-<br>
-*register_login folder*<br>
+
+
+*register_login folder*
+
 3. Registration Page: register.html **Anagha** 
 4. Login Page: login.html **Arushi** 
-<br>
-*home_page folder*<br>
+
+
+*home_page folder*
+
 5. Home Page (that contains the roommate recommendation): home.html **Samiksha**
-<br>
-*view_update_profile*<br>
+
+
+*view_update_profile*
+
 6. View Profile: profile.html **Melise** 
 7. Update roommate profile page: update_roommate.html **Arushi**
 8. Update self profile page: update_self.html **Anagha**
 
-*search_view_houses*<br>
+*search_view_houses*
+
 9. Search House page: search_house.html **Melise**
 10. view result of house page: view_houses.html **junhan**
 
 *Messages*
+
 11. Chat Box Page **Marcus** : messages.html
 
 *tenant_email*
+
 12. Tenant Email Landlord **Junhan**: tenant_email.html
 
 
