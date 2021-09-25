@@ -337,6 +337,11 @@ p {
 		border-radius: 10px;
 		align-self: right;
 	}
+	.button-chat:hover,
+	.button-chat:focus {
+	box-shadow: 0 1em 1em -1em var(--hover);
+	transform: translateY(-0.25em);
+	}
 	.button-skip{
 		background-color: #65010C;
 		border-radius: 0;
@@ -352,7 +357,11 @@ p {
 		border-radius: 10px;
 		align-self: right;
 	}
-	  
+	.button-skip:hover,
+	.button-skip:focus {
+	box-shadow: 0 1em 1em -1em var(--hover);
+	transform: translateY(-0.25em);
+	}
 
 
 /* end of roommate recommendation*/
