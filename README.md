@@ -1,13 +1,26 @@
+## read this before you start!!
+i have changes the names of the files to follow the initial dialog map. Pls refer to the pdf submitted and the following for reference: 
+main page is before the register or login <br>
+home page is after you login <br>
+follow the drive link for UI: <br>
+https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit
+<br>
+I also split further and further to make it very clear the different pages. I know they can be the same code or can be merged but we can discuss that later. 
+
 
 ## Front End Delegation of work 
 > Pages:
-1. Home Page (Done)
-2. Registration Page **Anagha** : register.html
-3. Login Page **Arushi** : login.html
-4. View/Update Profile **Melise** : profile.html
-5. Roommate Recommendation **Samiksha** : recommend.html
-6. Chat Box Page **Marcus** : chat.html
-7. Tenant Email Landlord **Junhan**: tenant.html
+1. Main Page: main.html **Junhan**
+2. Registration Page: register.html **Anagha** 
+3. Login Page: login.html **Arushi** 
+4. Home Page (that contains the roommate recommendation): home.html **Samiksha**
+5. View Profile: profile.html **Melise** 
+6. Update roommate profile page: update_roommate.html
+7. Update self profile page: update_self.html
+8. Search House page: search_house.html
+9. view result of house page: view_houses.html
+10. Chat Box Page **Marcus** : messages.html
+11. Tenant Email Landlord **Junhan**: tenant_email.html
 
 
 > Things to do:
