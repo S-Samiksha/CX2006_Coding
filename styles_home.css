@@ -209,11 +209,12 @@ p {
 
 /* Welcome Section */
 #welcome {
-	/*background-image: url(./img/welcome-bg.png); find later*/ 
+	background-image: url(./img/welcome-bg.jpg); 
 	background-size: cover;
 	background-position: top center;
 	position: relative;
 	z-index: 1;
+	align-content: center;
 }
 #welcome::after {
 	content: '';
@@ -230,7 +231,7 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 50px;
-	justify-content: flex-start;
+	justify-content: center;
 }
 #welcome h1 {
 	display: block;
@@ -240,6 +241,7 @@ p {
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
+
 }
 #welcome h1:nth-child(1) {
 	animation-delay: 1s;
@@ -297,6 +299,7 @@ p {
     margin-top: 1rem;
   }
   
+
 /* end of roommate recommendation*/
 
 
@@ -387,6 +390,8 @@ p {
 	/* welcome */
 	#welcome h1 {
 		font-size: 7rem;
+		padding-bottom: 3rem;
+		
 	}
 	/* End welcome */
 
