@@ -8,7 +8,7 @@ https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQ
 I also split further and further to make it very clear the different pages. I know they can be the same code or can be merged but we can discuss that later. 
 
 
-## Front End Delegation of work 
+## Front End Delegation of work (remember to create your own css files)
 > Pages:
 1. Main Page: main.html **Junhan**
 2. Registration Page: register.html **Anagha** 
