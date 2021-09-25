@@ -10,7 +10,7 @@ I also split further and further to make it very clear the different pages. I kn
 
 ## Front End Delegation of work (remember to create your own css files)
 > Pages:
-1. Main Page: main.html (done)
+1. Main Page: main.html **Samiksha**
 2. Registration Page: register.html **Anagha** 
 3. Login Page: login.html **Arushi** 
 4. Home Page (that contains the roommate recommendation): home.html **Samiksha**
