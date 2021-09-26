@@ -32,11 +32,25 @@ function MessageAdd(message) {
 	var chat_messages = document.getElementById("chat");
 
 	var today = new Date();
-	var time = today.getHours() + ":" + today.getMinutes();
+	var hours = today.getHours()
+	var minutes = today.getMinutes()
+	if (hours < 10){
+		hours = "0" + hours
+	}
 
-  var chat_bubble_html = '<li class="me"><div class="entete"><h3 style="padding-right:5px">' + time +', Today</h3><h2> Vincent</h2><span class="status blue"></span></div><div class="message">' + message + '</div></li>'
+	if (minutes < 10){
+		minutes = "0" + minutes
+	}
+
+	var time = hours + ":" + minutes;
+
+  var chat_bubble_html = '<li class="me"><div class="entete"><h3 style="padding-right:5px">' + time +', Today</h3><h2> Me</h2><span class="status blue"></span></div><div class="message">' + message + '</div></li>'
 
 
 	chat_messages.insertAdjacentHTML("beforeend", chat_bubble_html);
 	chat_messages.scrollTop = chat_messages.scrollHeight;
+}
+
+function congrats_msg(){
+	alert("Congratulation! Successfully match");
 }
