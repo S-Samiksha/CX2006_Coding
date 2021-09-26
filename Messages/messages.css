@@ -6,7 +6,7 @@
 }
 #container{
   height: 100%;
-  background:#eff3f7;
+  background:#fedfd4;
   margin:0 auto;
   font-size:0;
   border-radius:5px;
@@ -105,6 +105,8 @@ aside li h3{
 main header{
   height:110px;
   padding:30px 20px 30px 40px;
+  display: inline-flex;
+  width: 70%;
 }
 main header > *{
   display:inline-block;
@@ -149,7 +151,7 @@ main header h3{
   font-weight:normal;
 }
 #chat h3{
-  color:#bbb;
+  color: black;
 }
 #chat .entete{
   margin-bottom:5px;
@@ -167,10 +169,10 @@ main header h3{
   text-align:right;
 }
 #chat .you .message{
-  background-color:crimson;
+  background-color: #f26a4f;
 }
 #chat .me .message{
-  background-color:grey;
+  background-color: #033270;
 }
 #chat .triangle{
   width: 0;
@@ -185,6 +187,31 @@ main header h3{
 #chat .me .triangle{
     border-color: transparent transparent #6fbced transparent;
     margin-left:375px;
+}
+
+.msg_profile{
+  width: 65px;
+  height: 65px;
+}
+
+.button-chat{
+  border-radius: 0;
+  background-color: #f26a4f;
+  border: none;
+  color: white;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  align-self: right;
+  vertical-align: 110%;
+}
+
+.current_chat_banner{
+  display: inline-block;
+  width: 100%;
 }
 
 main footer{
@@ -216,9 +243,9 @@ main footer a{
   text-decoration:none;
   text-transform:uppercase;
   font-weight:bold;
-  color:#6fbced;
+  color:black;
   vertical-align:middle;
-  padding-top: 8px;
+  padding: 2px;
 }
 
 .send_icons{
@@ -228,7 +255,16 @@ main footer a{
 
 #send_btn{
   float:right;
+  border: 2px solid black;
 }
+
+
+#logo {
+	float: left;
+	width: 5rem;
+	height: 5rem;
+
+  }
 
 /* division of original */
 
@@ -299,16 +335,15 @@ p {
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
-	color: white;
+	color: black;
 }
 .brand h1 span {
-	color: crimson;
+	color: #65010C;
 }
 
 /* Header section */
 #header {
   background-color: black;
-  opacity: 0.7;
 	z-index: 1000;
 	left: 0;
 	top: 0;
@@ -317,7 +352,7 @@ p {
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
+	background-color: white;
 	transition: 0.3s ease background-color;
 }
 #header .nav-bar {
@@ -353,7 +388,7 @@ p {
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
-	color: white;
+	color: black;
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
