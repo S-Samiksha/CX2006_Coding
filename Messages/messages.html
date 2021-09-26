@@ -17,8 +17,9 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
+        <img src="./images/icon.png" id="logo"/>
         <div class="brand">
-          <a href="#hero">
+          <a href="#welcome">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
           </a>
         </div>
@@ -27,11 +28,11 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="index.html" data-after="Home">HOME</a></li>
-            <!-- <li><a href="#services" data-after="Service">Service</a></li> -->
-            <li><a href="about.html" data-after="ABOUT">ABOUT</a></li>
-            <li><a href="search_roomates.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
-            <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="./home.html" data-after="HOME">HOME</a></li>
+            <li><a href="../profile.html" data-after="PROFILE">PROFILE</a></li>
+            <li><a href="../search_view_houses/search_house.html" data-after="SEARCH HOUSE">SEARCH HOME</a></li>
+            <li><a href="../Messages/messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="../main/main.html" data-after="LOGOUT">LOUGOUT</a></li>
           </ul>
         </div>
       </div>
@@ -47,9 +48,9 @@
     </header>
     <ul>
       <li>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
+        <img src="images/crop2.png" alt="" class="msg_profile">
         <div>
-          <h2>Prénom Nom</h2>
+          <h2>Jerry</h2>
           <h3>
             <span class="status orange"></span>
             offline
@@ -57,9 +58,9 @@
         </div>
       </li>
       <li>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_02.jpg" alt="">
+        <img src="images/crop3.png" alt=""class="msg_profile">
         <div>
-          <h2>Prénom Nom</h2>
+          <h2>Anthony</h2>
           <h3>
             <span class="status green"></span>
             online
@@ -67,9 +68,9 @@
         </div>
       </li>
       <li>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_03.jpg" alt="">
+        <img src="images/crop4.png" alt="" class="msg_profile">
         <div>
-          <h2>Prénom Nom</h2>
+          <h2>Davis</h2>
           <h3>
             <span class="status orange"></span>
             offline
@@ -77,9 +78,9 @@
         </div>
       </li>
       <li>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_04.jpg" alt="">
+        <img src="images/crop7.png" alt=""class="msg_profile">
         <div>
-          <h2>Prénom Nom</h2>
+          <h2>Russel</h2>
           <h3>
             <span class="status green"></span>
             online
@@ -87,9 +88,9 @@
         </div>
       </li>
       <li>
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_05.jpg" alt="">
+        <img src="images/crop6.png" alt=""class="msg_profile">
         <div>
-          <h2>Prénom Nom</h2>
+          <h2>Westbrook</h2>
           <h3>
             <span class="status orange"></span>
             offline
@@ -100,18 +101,22 @@
     </ul>
   </aside>
   <main>
-    <header>
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/chat_avatar_01.jpg" alt="">
-      <div>
-        <h2>Chat with Vincent Porter</h2>
-        <h3>already 1902 messages</h3>
-      </div>
-    </header>
+    <div class="current_chat_banner">
+      <header>
+        <img src="images/crop2.png" alt="" class="msg_profile">
+        <div>
+          <h2>Jerry</h2>
+          <h3>already 1902 messages</h3>
+        </div>
+      </header>
+      <a class="button-chat" onclick="congrats_msg()">Confirm Stay</a>
+    </div>
+
     <ul id="chat">
       <li class="you">
         <div class="entete">
           <span class="status green"></span>
-          <h2>Vincent</h2>
+          <h2>Jerry</h2>
           <h3>11:35, Today</h3>
         </div>
         <div class="message">
@@ -121,7 +126,7 @@
       <li class="me">
         <div class="entete">
           <h3>11:35, Today</h3>
-          <h2>Vincent</h2>
+          <h2>Me</h2>
           <span class="status blue"></span>
         </div>
         <div class="message">
@@ -131,7 +136,7 @@
       <li class="me">
         <div class="entete">
           <h3>11:35, Today</h3>
-          <h2>Vincent</h2>
+          <h2>Me</h2>
           <span class="status blue"></span>
         </div>
         <div class="message">
@@ -141,7 +146,7 @@
       <li class="you">
         <div class="entete">
           <span class="status green"></span>
-          <h2>Vincent</h2>
+          <h2>Jerry</h2>
           <h3>11:35, Today</h3>
         </div>
         <div class="message">
@@ -151,7 +156,7 @@
       <li class="me">
         <div class="entete">
           <h3>11:35, Today</h3>
-          <h2>Vincent</h2>
+          <h2>Me</h2>
           <span class="status blue"></span>
         </div>
         <div class="message">
@@ -161,7 +166,7 @@
       <li class="me">
         <div class="entete">
           <h3>11:35, Today</h3>
-          <h2>Vincent</h2>
+          <h2>Me</h2>
           <span class="status blue"></span>
         </div>
         <div class="message">
@@ -173,12 +178,6 @@
       <!-- <input type="text" name="message" placeholder="Enter a message..." maxlength="500" autocomplete="off" id="text_input"> -->
       <textarea name="message-to-send" id="text_input" placeholder="Type your message" rows="3"></textarea>
       <div>
-        <div class="send_icons">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_picture.png" alt="">
-        </div>
-        <div class="send_icons">
-          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1940306/ico_file.png" alt="">
-        </div>
         <div class="send_icons">
           <a href="#", id="send_btn">SEND</a>
         </div>
