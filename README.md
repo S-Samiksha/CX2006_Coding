@@ -67,6 +67,7 @@ I also put inside folder: so many css and html files ><
 ### **3 OCT 12 PM**
 
 1. System Architecture **Junhan, Marcus, Samiksha**  
+2. State machine diagram **Junhan, Marcus, Samiksha**  
 
 *For all the below stuff, most are from the TA's feedback and the existing pdf we sent in for lab. Check onedrive>lab 3 submission. follow the images in the pdf and make a new .vpp file and send. also help edit the landlord database thingy about the rental flats and sending to all the landlords (discussed in the meeting on 24 sept)*
 2. class diagram .vpp needed follow the pdf **Arushi** 
@@ -99,6 +100,22 @@ Label the subject of the email as 2006 (later i cannot find hehe)
 10 Oct: test cases and testing results **Samiksha, Junhan**  <br>
 10 Oct: demo script -- video script **Melise, Arushi**  <br>
 10 Oct: make database add in the landlord entries **Anagha, Marcus**  <br>
+
+*The diagrams*
+Just put here first for reference later:
+1. make sure the class diagram is coherent with the use case
+2. all diagrams need to be coherent. 
+3. proper class diagram with the proper number of relationships (one to many, many to one, one to one)
+4. think about parent class, subclasses 
+5. noun: classes
+6. verb: operation
+7. idk??? all entity classes must be in data dictionary?? lecture note 7 slide 20?
+8. do not need sequence diagram for all. the minor classes dont need 
+9. sequence diagram no line from boundary back to actor 
+10. actually how long is the activation bar supposed to be?
+
+
+----
 
 ---
 
