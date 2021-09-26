@@ -113,6 +113,9 @@ Just put here first for reference later:
 8. do not need sequence diagram for all. the minor classes dont need 
 9. sequence diagram no line from boundary back to actor 
 10. actually how long is the activation bar supposed to be?
+11. do we really need a communication diagram ><
+12. visual paradigm can convert from sequence to communication diagram. but why have a communication diagram in the first place??? :(
+13. 
 
 
 ----
