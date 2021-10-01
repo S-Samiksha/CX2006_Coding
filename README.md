@@ -64,7 +64,7 @@ I also put inside folder: so many css and html files ><
 ---
 
 ## Lab 3 Submission (documentation)
-### **3 OCT 12 PM**
+### **8 OCT 12 PM**
 
 1. System Architecture **Junhan, Marcus, Samiksha**  
 2. State machine diagram **Junhan, Marcus, Samiksha**  
@@ -89,17 +89,19 @@ I also put inside folder: so many css and html files ><
 **samiksha:** compile the front end code into github, .vpp files, and document for submission and check the system architecture <br>
 
 
-I need yall to send me the .vpp files by **3 OCT 12pm.** <br>
-Label the subject of the email as 2006 (later i cannot find hehe)
+I need yall to upload the .vpp files to github<br>
 
 ----
 
 ## Lab 4 Submissions 
-### **9 Oct 12pm** 
+### **17 Oct** 
 10 Oct: SQL **Everyon their own pages**  <br>
 10 Oct: test cases and testing results **Samiksha, Junhan**  <br>
 10 Oct: demo script -- video script **Melise, Arushi**  <br>
 10 Oct: make database add in the landlord entries **Anagha, Marcus**  <br>
+
+## Lab 5 Submission 
+### **29 Oct**
 
 *The diagrams*
 Just put here first for reference later:
