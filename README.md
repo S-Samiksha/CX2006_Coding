@@ -19,13 +19,15 @@ I also put inside folder: so many css and html files ><
 
 
 *main folder* <br>
-(swap around if needed)<br>
+(swap around if needed)
+
 1. Main Page: main.html **Samiksha** 
 2. About Page: about.html **Marcus** 
 
 
 *register_login folder* <br>
-(swap around if needed) <br>
+(swap around if needed) 
+
 3. Registration Page: register.html **Anagha** 
 4. Login Page: login.html **Arushi** 
 
@@ -36,13 +38,15 @@ I also put inside folder: so many css and html files ><
 
 
 *view_update_profile* <br>
-(swap around if needed) <br>
+(swap around if needed) 
+
 6. View Profile: profile.html **Melise** 
 7. Update roommate profile page: update_roommate.html **Arushi**
 8. Update self profile page: update_self.html **Anagha**
 
 *search_view_houses* <br>
-(swap around if needed) <br>
+(swap around if needed) 
+
 9. Search House page: search_house.html **Melise**
 10. view result of house page: view_houses.html **junhan**
 
