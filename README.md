@@ -18,14 +18,14 @@ I also put inside folder: so many css and html files ><
 > Pages(just nice 12 pages):
 
 
-*main folder*
-(swap around if needed)
+*main folder* <br>
+(swap around if needed)<br>
 1. Main Page: main.html **Samiksha** 
 2. About Page: about.html **Marcus** 
 
 
-*register_login folder*
-(swap around if needed)
+*register_login folder* <br>
+(swap around if needed) <br>
 3. Registration Page: register.html **Anagha** 
 4. Login Page: login.html **Arushi** 
 
@@ -35,14 +35,14 @@ I also put inside folder: so many css and html files ><
 5. Home Page (that contains the roommate recommendation; to do the entire roommate reccomendation algorithm ): home.html **Samiksha**
 
 
-*view_update_profile*
-(swap around if needed)
+*view_update_profile* <br>
+(swap around if needed) <br>
 6. View Profile: profile.html **Melise** 
 7. Update roommate profile page: update_roommate.html **Arushi**
 8. Update self profile page: update_self.html **Anagha**
 
-*search_view_houses*
-(swap around if needed)
+*search_view_houses* <br>
+(swap around if needed) <br>
 9. Search House page: search_house.html **Melise**
 10. view result of house page: view_houses.html **junhan**
 
