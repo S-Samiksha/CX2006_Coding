@@ -12,6 +12,7 @@ I also put inside folder: so many css and html files ><
 
 ## Lab 3 Submission (Front-End)
 ### **3 OCT 12 PM**
+#### Sql, backend also the person is responsible 
 
 
 > Pages(just nice 12 pages):
@@ -31,7 +32,7 @@ I also put inside folder: so many css and html files ><
 
 *home_page folder*
 
-5. Home Page (that contains the roommate recommendation): home.html **Samiksha**
+5. Home Page (that contains the roommate recommendation; to do the entire roommate reccomendation algorithm ): home.html **Samiksha**
 
 
 *view_update_profile*
