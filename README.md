@@ -11,7 +11,7 @@ I also put inside folder: so many css and html files ><
 
 
 ## Lab 3 Submission (Front-End)
-### **3 OCT 12 PM**
+### **10 OCT 12 PM**
 #### Sql, backend also the person is responsible 
 
 
@@ -65,7 +65,7 @@ I also put inside folder: so many css and html files ><
 ---
 
 ## Lab 3 Submission (documentation)
-### **8 OCT 12 PM**
+### **13 OCT 12 PM**
 
 1. System Architecture **Junhan, Marcus, Samiksha**  
 2. State machine diagram **Junhan, Marcus, Samiksha**  
@@ -88,7 +88,7 @@ I also put inside folder: so many css and html files ><
 7. font size, font type, the details basically **Marcus**   <br>
 
 
-#### Checking 
+#### Checking 15 Oct 12pm
 **Melise - Anagha:** double check each other use case <br>
 **junhan:** check the diagrams (class diagram, sequence diagram) <br>
 **marcus:** check the diagrams (use case diagram, initial dialog map) <br>
@@ -100,14 +100,14 @@ I need yall to upload the .vpp files to github<br>
 ----
 
 ## Lab 4 Submissions 
-### **17 Oct** 
+### decide deadline later 
 10 Oct: SQL **Everyon their own pages**  <br>
 10 Oct: test cases and testing results **Samiksha, Junhan**  <br>
 10 Oct: demo script -- video script **Melise, Arushi**  <br>
 10 Oct: make database add in the landlord entries **Anagha, Marcus**  <br>
 
 ## Lab 5 Submission 
-### **29 Oct**
+### decide later 
 
 *The diagrams*
 Just put here first for reference later:
