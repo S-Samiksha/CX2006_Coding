@@ -19,13 +19,13 @@ I also put inside folder: so many css and html files ><
 
 
 *main folder*
-
+(swap around if needed)
 1. Main Page: main.html **Samiksha** 
 2. About Page: about.html **Marcus** 
 
 
 *register_login folder*
-
+(swap around if needed)
 3. Registration Page: register.html **Anagha** 
 4. Login Page: login.html **Arushi** 
 
@@ -36,13 +36,13 @@ I also put inside folder: so many css and html files ><
 
 
 *view_update_profile*
-
+(swap around if needed)
 6. View Profile: profile.html **Melise** 
 7. Update roommate profile page: update_roommate.html **Arushi**
 8. Update self profile page: update_self.html **Anagha**
 
 *search_view_houses*
-
+(swap around if needed)
 9. Search House page: search_house.html **Melise**
 10. view result of house page: view_houses.html **junhan**
 
@@ -71,6 +71,11 @@ I also put inside folder: so many css and html files ><
 2. State machine diagram **Junhan, Marcus, Samiksha**  
 
 *For all the below stuff, most are from the TA's feedback and the existing pdf we sent in for lab. Check onedrive>lab 3 submission. follow the images in the pdf and make a new .vpp file and send. also help edit the landlord database thingy about the rental flats and sending to all the landlords (discussed in the meeting on 24 sept)*
+
+*I uploaded the .vpp file containing all the use case, dialog map, class diagram. We just need to **update** it.*
+
+
+
 2. class diagram .vpp needed follow the pdf **Arushi** 
 3. Edit the use case (change the landlord and follow the pdf)  
 
