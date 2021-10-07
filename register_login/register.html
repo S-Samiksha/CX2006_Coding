@@ -15,8 +15,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_main.css">
   <title>Register</title>
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -49,25 +50,26 @@
 <style>
     .wrapper{position:relative;}
     .right,.left{width:50%; position:absolute;}
-    .right{right:0;}
+    .right{right:50px;}
     .left{left:0;}
     .h2{font-weight: bold; color: #fff; font-size: 24px;}
 </style>
 
 
-<section id="hero" style = "background-image: url(https://saumata.com/wp-content/uploads/2020/04/inspirasi-desain-interior-apartemen-di-tahun-2020-sanwa-apartemen-jakarta-indonesia.jpg);">
-    <div class="hero container">
-      <div class="right">
-        <h1>Welcome! <span></span></h1>
-        <h1>Sign up here <span></span></h1>
-        <br>
-        <form align = left>
-          <input type="text" placeholder="  Username" id="textboxid" name="username" style="border-radius: 25px; height: 40px; width: 300px;"><br>
+<section id="hero" style = "background-image: url(https://saumata.com/wp-content/uploads/2020/04/inspirasi-desain-interior-apartemen-di-tahun-2020-sanwa-apartemen-jakarta-indonesia.jpg); background-repeat: no-repeat; background-size: cover;">
+    <div class="blue container">
+      <div class="right" style="background-color: #BDDCDFA8; padding: 0px 50px 50px 50px; display: block; border-radius: 25px; width: auto; margin-top: 75px;">
+        <h1 style="font-size: 50px;">Welcome! Sign up here<span></span></h1>
+        <form>
+          <i class="fa fa-user icon" style="padding: 10px; font-size: 20px;"></i>
+          <input type="text" placeholder="  Username" id="textboxid" name="username" style="height: 40px; width: 300px;"><br>
           <br>
-          <input type="text" placeholder="  Password" id="textboxid" name="pwd" style="border-radius: 25px; height: 40px; width: 300px;"><br>
+          <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
+          <input type="text" placeholder="  Password" id="textboxid" name="pwd" style="height: 40px; width: 300px;"><br>
           <br>
-          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="border-radius: 25px; height: 40px; width: 300px;"><br>
-      </form>
+          <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
+          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="height: 40px; width: 300px;"><br>
+        </form>
         <a href="#projects" type="button" class="cta">Create Account</a><br><br><br>
         <label style = "color: white; font-size: 20px">Already have an account?</label><br>
         <a href="#projects" type="button" class="cta">Sign in</a>
