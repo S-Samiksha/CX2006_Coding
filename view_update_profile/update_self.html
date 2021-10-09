@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+#textboxid
+{
+    height:30px;
+    font-size:14pt;
+}
+
+.parent
+{
+  border: 1px solid white;
+  margin: 1rem;
+  height: 750px;
+  text-align: center;
+}
+
+.child
+{
+  display: inline-block;
+  border: 1px solid white;
+  vertical-align: middle;
+
+}
+
+.slider {
+    display: inline;
+    -webkit-appearance: none;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    width: auto;
+    margin-left: 5%;
+}
+#red_slider{
+    background: linear-gradient(to right, rgb(0,0,0) , rgb(255,0,0) );
+}
+#green_slider{
+    background: linear-gradient(to right, rgb(0,0,0) , rgb(0,255,0) );
+}
+#blue_slider{
+    background: linear-gradient(to right, rgb(0,0,0) , rgb(0,0,255) );
+}
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_main.css">
+  <title>Update Self Profile</title>
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="index.html" data-after="Home">HOME</a></li>
+            <!-- <li><a href="#services" data-after="Service">Service</a></li> --> 
+            <li><a href="about.html" data-after="ABOUT">ABOUT</a></li>
+            <li><a href="search_roomates.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li> 
+            <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Start NAME ACCORDINGLY Section -->
+<style>
+  #imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+#profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
+  
+</style>
+
+<style type="text/css">
+  #imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+}
+
+#profile-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 150px;
+    height: 150px;
+}
+</style>
+
+
+<!--<script type="text/javascript">
+  $("#profileImage").click(function(e) {
+    $("#imageUpload").click();
+});
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+          $('#profileImage').attr('src', 
+             window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
+$("#imageUpload").change(function(){
+    fasterPreview( this );
+});
+</script> -->
+
+<section>
+    <div style="background-color: #F9CABD; height: 300px;">
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript">
+        $("#profileImage").click(function(e) {
+    $("#imageUpload").click();
+});
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+          $('#profileImage').attr('src', 
+             window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
+$("#imageUpload").change(function(){
+    fasterPreview( this );
+});
+      </script>
+      
+      <div id="profile-container" style="position: relative; left: 90px; top: -37px;">
+         <image id="profileImage" src="http://lorempixel.com/100/100" />
+      </div>
+      <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+      <form action="/action_page.php">
+        <input type="file" id="myFile" name="filename" style="position: relative; bottom: 30px; left: 80px;">
+       <!-- <input type="submit"> -->
+      </form>
+<script type="text/javascript">
+  $(".chosen-select").chosen({
+  no_results_text: "Oops, nothing found!"
+})
+
+</script>
+
+
+      <div contenteditable="true" style="font-size: 30px; width: 200px; padding-left: 70px; padding-top: 30px; position: relative; left: 250px; top:-200px">
+        Thomas | 30
+      </div>
+      <a href="#projects" type="button" class="cta" style="position: relative; left: 270px; top: -200px;">Save Profile</a>
+    </div>
+    <div style="height: 650px; padding-left: 40px;">
+      <br>
+      <div class = "parent" style="vertical-align: middle;">
+        <form action="http://httpbin.org/post" method="post">
+          <div class = "child" style="float: left; width: 600px; text-align: left;">
+            <label style="font-size: 30px;">My Summary</label><br><br>
+            <input type="text" name="summary" placeholder="Enter your summary here." style="height: 200px; width: 400px;"><br><br><br>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+            <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+
+
+            <label style="font-size: 30px;">Area Preference</label><br>
+            <label style="font-size: 15px;">(To select multiple options, hold down ctrl/cmd)</label>
+            <br><br>
+            <select style="width: 300px;" multiple class="chose-select" name="select">
+              <option>Woodlands</option>
+              <option>Admiralty</option>
+              <option>Canberra</option>
+              <option>Ang Mo Kio</option>
+              <option>Bukit Batok</option>
+              <option>Bedok</option>
+            </select><br><br><br>
+            <label style="font-size: 30px;">Profession</label><br><br>
+            <input type="text" name="profession"><br><br><br>
+            <label style="font-size: 30px;">Music Preference</label><br><br>
+            <input type="text" name="music preference"><br>
+          </div>
+
+          <div class = "child" style="float: right; width: 598px; text-align: left;">
+            <label style="font-size: 30px;">Gender</label><br><br>
+            <select style="width: auto;">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select><br><br><br>
+            <label style="font-size: 30px;">Ethnicity</label><br><br>
+            <input type="text" name="ethnicity"><br><br><br>
+            <label style="font-size: 30px;">Language Preference</label><br><br>
+            <input type="text" name="language preference"><br><br><br>
+            <label style="font-size: 30px;">Going Out Meter</label><br><br>
+            <input type="range" name="Going Out Meter" min="0" max="10" class="slider" id="blue_slider"><br><br>
+            <label style="font-size: 30px;">Staying In Meter</label><br><br>
+            <input type="range" name="Staying In Meter" min="0" max="10" class="slider" id="red_slider"><br><br><br>
+            <label style="font-size: 30px;">Sleep Schedule</label><br><br>
+            <input type="time" name="sleep schedule">&nbsp;&nbsp;
+            <label style="font-size: 20px;">to</label>&nbsp;&nbsp;
+            <input type="time" name="sleep schedule"><br>
+          </div>
+
+        </form>
+      </div>
+
+
+    </div>
+</section>
+  <!-- End ___ Section  -->
+
+<!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <!--
+      <div class="brand">
+        <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
+      </div>
+      <h2>Your Complete Web Solution</h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
+        </div>
+      </div>
+      -->
+      <p>Copyright © 2021 SwipeMyRoomie. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
