@@ -153,7 +153,7 @@ decide later
 4. Codes were dapted from for home.html: w3schools (2021) https://www.w3schools.com/howto/ retrieved 3 oct 2021
 5. Codes were taken and adapted from for all pages: https://github.com/WebCifar/one-page-website-html-css-project-for-practice 
 6. https://www.free-css.com/free-css-templates/page270/felicity 
-7. 
+7. Reference taken from: https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit retrieved 9 oct 2021
 
 
 
