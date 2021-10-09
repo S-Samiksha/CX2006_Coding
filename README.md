@@ -101,17 +101,9 @@ I also put inside folder: so many css and html files ><
 
 I need yall to upload the .vpp files to github<br>
 
-----
+---
 
-## Lab 4 Submissions 
-### decide deadline later 
-10 Oct: SQL **Everyon their own pages**  <br>
-10 Oct: test cases and testing results **Samiksha, Junhan**  <br>
-10 Oct: demo script -- video script **Melise, Arushi**  <br>
-10 Oct: make database add in the landlord entries **Anagha, Marcus**  <br>
-
-## Lab 5 Submission 
-### decide later 
+## Discussion stuff (add on here)
 
 *The diagrams*
 Just put here first for reference later:
@@ -127,10 +119,30 @@ Just put here first for reference later:
 10. actually how long is the activation bar supposed to be?
 11. do we really need a communication diagram ><
 12. visual paradigm can convert from sequence to communication diagram. but why have a communication diagram in the first place??? :(
-13. 
+13. UML sequence and class diagram have to match the coding??? ~from both OOP lectures and 2006 lectures technically html is a OOP language we change the file names, the inside variables to match UML class diagram and sequence diagram --> discuss?
+14. **References**, if you copied code, change a bit, and add the references below
+15. and why is oop lecture more clearer? maybe we should follow that properly and make sure it is correct? 
+16. Navigation bar standardize (center or left align?)
+17. standardize the fonts, buttons, design in general, heading swip animation, all animations, heading photos etc. 
+18. if we want we can restrict to a certain screen size aka say 786px to 1020px. so we dont have to even account for smaller sizes. then less work. then put it inside the documentation the intro part the restrictions part thing
+19. How to do SQL...? A lot of us are unfamiliar so either we sit down every week before the deadline do 5 hours / week. or we have one day 12 hours sit down code or we otot by watching online video. (doing tgt just mean if we have error can just ask immediately, and also if restrictions ease we can meet ftf)
+20. Lab 4 delegation: what do we need to do for lab 4, how to do it, who is doing it etc. 
+21. if yall wan we can make this github nice nice for portfolio, I guess we can? like put the lab documents here and the readme make it look nice 
 
 
 ----
+
+
+## Lab 4 Submissions 
+### decide deadline later 
+10 Oct: SQL **Everyon their own pages**  <br>
+10 Oct: test cases and testing results 
+10 Oct: demo script -- video script
+10 Oct: make database add in the landlord entries
+
+## Lab 5 Submission 
+
+decide later
 
 ---
 ## References:
