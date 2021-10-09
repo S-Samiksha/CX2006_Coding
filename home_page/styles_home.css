@@ -293,12 +293,12 @@ p {
     margin-top: 1 rem;
   }
   .page-section h2.section-heading {
-    font-size: 4rem;
+    font-size: 4vw;
     margin-bottom: 20px ;
     margin-top: 0;
   }
   .page-section h3.section-subheading {
-    font-size: 4rem;
+    font-size: 2.5vw;
     font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -311,27 +311,28 @@ p {
 	  max-width: 100%;
 	  max-height: 50%;
 	  padding-top: 40px;
+	  display: block;
+	  align-content: center;
   }
 	#roommate_img{
-		width: 500px;
-		height: 500px;
-		margin-left: 250px;
+		max-width: 70%;
+		max-height: 60%;
+		margin-left: 15%;
 		padding-top: 40px;
 	}
 
 	.button-chat{
 		border-radius: 0;
-		background-color: #033270;
+		background-color: #044dad;
 		border: none;
 		color: white;
-		padding: 10px 30px 10px 30px;
+		padding: 1rem 2rem 1rem 2rem;
 		text-align: center;
 		text-decoration: none;
-		font-size: 3rem;
-		margin: 50px 30px 50px 200px;
+		font-size: 1.5vw;;
+		margin-left: 5%;
 		cursor: pointer;
 		border-radius: 10px;
-		align-self: right;
 	}
 	.button-chat:hover,
 	.button-chat:focus {
@@ -343,22 +344,19 @@ p {
 		border-radius: 0;
 		border: none;
 		color: white;
-		padding: 10px 30px 10px 30px;
+		padding: 1rem 2rem 1rem 2rem;
 		text-align: center;
 		text-decoration: none;
-		font-size: 3rem;
-		margin: 50px 30px 50px 30px;
+		font-size: 1.5vw;
+		margin-left: 3%;
 		cursor: pointer;
 		border-radius: 10px;
-		align-self: right;
 	}
 	.button-skip:hover,
 	.button-skip:focus {
 	box-shadow: 0 1em 1em -1em var(--hover);
 	transform: translateY(-0.25em);
 	}
-
-
   .myRecommendations {display: none}  
 
 /* Next & previous buttons */
