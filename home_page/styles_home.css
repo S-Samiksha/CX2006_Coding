@@ -315,10 +315,11 @@ p {
 	  align-content: center;
   }
 	#roommate_img{
-		max-width: 70%;
-		max-height: 60%;
+		width: 40vw;
+		height: 30vw;
 		margin-left: 15%;
 		padding-top: 40px;
+		object-fit: contain;
 	}
 
 	.button-chat{
