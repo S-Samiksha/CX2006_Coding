@@ -146,10 +146,14 @@ decide later
 
 ---
 ## References:
-1. https://www.w3schools.com/howto/howto_js_slideshow.asp
-2. https://www.w3schools.com/howto/howto_js_slideshow.asp
-3. https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
-4. https://www.w3schools.com/howto/ 
+
+1. Codes were taken and adapted from for home.html: w3schools (2021) https://www.w3schools.com/howto/howto_js_slideshow.asp retrieved 3 oct 2021
+2. Codes were taken and adapted from for home.html: w3schools (2021) https://www.w3schools.com/howto/howto_js_slideshow.asp retrieved 3 oct 2021
+3. Codes were taken and adapted from for home.html: w3schools (2021) https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp retrieved 3 oct 2021
+4. Codes were taken and adapted from for home.html: w3schools (2021) https://www.w3schools.com/howto/ retrieved 3 oct 2021
+5. Codes were taken and adapted from for all pages: https://github.com/WebCifar/one-page-website-html-css-project-for-practice 
+6. https://www.free-css.com/free-css-templates/page270/felicity 
+7. 
 
 
 
