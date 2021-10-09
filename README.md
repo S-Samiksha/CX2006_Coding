@@ -133,6 +133,11 @@ Just put here first for reference later:
 ----
 
 ---
+## References:
+1. https://www.w3schools.com/howto/howto_js_slideshow.asp
+2. https://www.w3schools.com/howto/howto_js_slideshow.asp
+3. https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+4. https://www.w3schools.com/howto/ 
 
 
 
