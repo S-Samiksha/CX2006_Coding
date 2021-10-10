@@ -341,12 +341,12 @@ button {
 select {
      font-family : Raleway;
      padding-left: 10px;
-	width: 180px;
-	height: 40px;
-	font-size: 20px;
-	background-color: #9DCEE2;
-	border: 2px solid #293241;
-	border-left: 0px;
+     width: 180px;
+     height: 40px;
+     font-size: 20px;
+     background-color: #9DCEE2;
+     border: 2px solid #293241;
+     border-left: 0px;
 }
 ::placeholder {
 	color: #293241;
@@ -357,88 +357,88 @@ input[type=text]
 {
      font-family : Raleway;
      padding-left: 30px;
-	width: 400px;
-	height: 40px;
-	border: 2px solid #293241;
-	font-size: 20px;
-	color: #293241;
-	background-color: #9DCEE2;
+     width: 400px;
+     height: 40px;
+     border: 2px solid #293241;
+     font-size: 20px;
+     color: #293241;
+     background-color: #9DCEE2;
 }
 button[type=submit]
 {
      font-family : Raleway;
-	width: 120px;
-	height: 40px;
-	border: 2px solid #CB1B16;
-	font-size: 20px;
-	color: #FEDFD4;
-	background-color: #EF3C2D;
-	border-left: 0px;
+     width: 120px;
+     height: 40px;
+     border: 2px solid #CB1B16;
+     font-size: 20px;
+     color: #FEDFD4;
+     background-color: #EF3C2D;
+     border-left: 0px;
 }
 
 /* Header section */
 #about_nav_bar{
-   justify-content: normal;
-   margin-top: 5px;
-   height: 65px;
-   padding: 0 30px;
+  justify-content: normal;
+  margin-top: 5px;
+  height: 65px;
+  padding: 0 30px;
 }
 
 .container_head{
-   margin-left: 0;
-   margin-right: 0;
-   min-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 100%;
 }
 
 .brand{
-   padding-top: 1.2%;
+  padding-top: 1.2%;
 }
 
 .brand h1 {
 	font-size: 2rem;
 	text-transform: uppercase;
 	color: black;
-   display: inline;
-   padding-left: 20px;
+  display: inline;
+  padding-left: 20px;
 }
 .brand h1 span {
 	color: #65010C;
 }
 
 .brand .navg_list{
-   display: inline;
+  display: inline;
 }
 
 #header .nav-list ul{
-   position: initial;
-   display: block;
-   height: auto;
-   width: fit-content;
-   background-color: transparent;
-   width: fit-content;
+  position: initial;
+  display: block;
+  height: auto;
+  width: fit-content;
+  background-color: transparent;
+  width: fit-content;
 }
 
 .page_selection{
-   display: inline-block;
-   float: right;
+  display: inline-block;
+  float: right;
 }
 
 #banner_logo{
-   max-height: inherit;
-   height: 40px;
-   padding-left: 5%;
+  max-height: inherit;
+  height: 40px;
+  padding-left: 5%;
 }
 
 .page_selection .navg_list li a:hover{
-   color: #65010C;
+  color: #65010C;
 }
 
 
 .navg_list li {
- font-size: 1.1rem;
- letter-spacing: 0.15rem;
- font-weight: 400;
- padding: 20px;
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    font-weight: 400;
+    padding: 20px;
 }
 
 #header {
@@ -569,14 +569,14 @@ button[type=submit]
 }
 
 #logo {
- float: left;
- width: 50px;
- height: 50px;
- margin-top:0.8%;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top:0.8%;
 }
 
 .navg_list li{
-   display: inline;
+  display: inline;
 }
 
 /* End Header section */
@@ -594,6 +594,7 @@ button[type=submit]
 #dre{
      font-family : Raleway;
      font-size: 20px;
+     margin-top: 10px;
 }
 #sresults{
      font-family : Raleway;
@@ -611,7 +612,7 @@ button[type=submit]
 .display_main{
      background-color: white;
      margin-top: 20px;
-     height: 500px;
+     height: 700px;
      display: flex;
      font-family : Raleway;
      font-size: 30px;
@@ -709,15 +710,15 @@ button[type=submit]
 }
 
 .book_n {
- border: inherit;
- border-radius: 20px;
- background-color: #eeeeee;
- width: 100%;
- font-size: 16px;
- height: auto;
- line-height: normal;
- padding: 10px 20px;
- -webkit-appearance: none !important;
+    border: inherit;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    width: 100%;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    padding: 10px 20px;
+    -webkit-appearance: none !important;
 }
 
 
@@ -983,7 +984,46 @@ button[type=submit]
 
 /** end testimonial section **/
 
+/** start of table **/
+table {
+     border-collapse: collapse;
+     font-size: 60%;
+     background-color: #FEDFD4;
+}
+td {
+     border: 1px solid none;
+     text-align: left;    
+}
+#house{
+     color: #F26A4F;
+}
+td text h1{
+     text-align: left;
+     padding-left: 15px;
+     color: #F26A4F;
+     font-size: auto;
+}
+td text h2{
+     text-align: left;
+     padding-left: 15px;
+     font-size: auto;
+     color: #293241;
+}
+td img {
+     padding-top: 0px;
+     margin-left: 20px;
+}
 
+.pagination {
+     text-align: center;
+     display:block;
+}
+.pagination a {
+     color: #293241;
+     text-align: center;
+     padding: 10px;
+     font-size: 14px;
+}
 /** footer **/
 
 .main_form {
@@ -1057,23 +1097,23 @@ button[type=submit]
 
 
 #footer{
-   background-image: linear-gradient(60deg, #F29479 0%, #f8d2c4 100%);
+  background-image: linear-gradient(60deg, #F29479 0%, #f8d2c4 100%);
 }
 
 #footer .footer{
-   min-height: 200px;
-   flex-direction: column;
-   padding-top: 50px;
-   padding-bottom: 10px;
+  min-height: 200px;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 
 #footer p {
- color: black;
- font-size: 0.8rem;
- text-align: center;
- margin-top: 5px;
- line-height: 2rem;
- letter-spacing: 0.05rem;
+    color: black;
+    font-size: 0.8rem;
+    text-align: center;
+    margin-top: 5px;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
 }
 
 p {
