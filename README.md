@@ -34,7 +34,7 @@ I also put inside folder: so many css and html files ><
 
 *home_page folder*
 
-5. Home Page (that contains the roommate recommendation; to do the entire roommate reccomendation algorithm ): home.html **Samiksha**
+5. Home Page (that contains the roommate recommendation; to do the entire roommate reccomendation algorithm ): home.html **Samiksha** (done)
 
 
 *view_update_profile* <br>
@@ -42,13 +42,13 @@ I also put inside folder: so many css and html files ><
 
 6. View Profile: profile.html **Melise** 
 7. Update roommate profile page: update_roommate.html **Arushi**
-8. Update self profile page: update_self.html **Anagha**
+8. Update self profile page: update_self.html **Anagha** 
 
 *search_view_houses* <br>
 (swap around if needed) 
 
-9. Search House page: search_house.html **Melise**
-10. view result of house page: view_houses.html **junhan**
+9. Search House page: search_house.html **Melise** 
+10. view result of house page: view_houses.html **junhan** 
 
 *Messages*
 
@@ -127,7 +127,7 @@ Just put here first for reference later:
 18. if we want we can restrict to a certain screen size aka say 786px to 1020px. so we dont have to even account for smaller sizes. then less work. then put it inside the documentation the intro part the restrictions part thing
 19. How to do SQL...? A lot of us are unfamiliar so either we sit down every week before the deadline do 5 hours / week. or we have one day 12 hours sit down code or we otot by watching online video. (doing tgt just mean if we have error can just ask immediately, and also if restrictions ease we can meet ftf)
 20. Lab 4 delegation: what do we need to do for lab 4, how to do it, who is doing it etc. 
-21. if yall wan we can make this github nice nice for portfolio, I guess we can? like put the lab documents here and the readme make it look nice 
+21. UI mockup to match actual coding to match use case (e.g. jerry tom, the number of things to input in the form for update roommate/self preference, recommendation system coding, etc. ) 
 
 
 ----
