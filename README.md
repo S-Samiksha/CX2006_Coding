@@ -53,7 +53,7 @@ Italics: Check it (dont not check it, please check it. I think we dont have time
 - form validation 
 
 ---
-Test Cases and Testing: **Samiksha** **Marcus**
+Test Cases and Testing (And Everything Related, including documenting into the document): **Samiksha** **Marcus**
 Compile into one executable app.py file: **Samiksha**
 Make the database for the landlord emails: **Junhan** 
 Make the database for the roommate preference (remember they are different databases in the Use Case): **Melise** **Arushi** **Anagha** --> since it under your section 
