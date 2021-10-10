@@ -2,7 +2,7 @@
 Bold: Do it
 Italics: Check it (dont not check it, please check it. I think we dont have time for everyone to check. So once those two are done means can submit)
 
-## Coding 
+## Coding (deadline lab 5 since frontend is done)
 
 *main folder* <br>
 
@@ -61,7 +61,7 @@ Request to API (gov.sg): **Junhan** *Melise* --> since it is related to your sea
 
 ---
 
-## Documentation
+## Documentation (1 to 6 to finish by next lab session aka next monday; 7 onwards the next lab)
 all .vpp files in github
 
 1. Make sure ALL diagrams are coherent when reading, meaning the functions and class diagrams and the use case diagram, use case all match match (ensure it accommodates the stuff the TA said)  
