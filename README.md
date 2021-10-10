@@ -1,18 +1,9 @@
 # READ THIS!!!!
-i have changes the names of the files to follow the initial dialog map. Pls refer to the pdf submitted and the following for reference: 
-main page is before the register or login <br>
-home page is after you login <br>
-follow the drive link for UI: <br>
-https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit
-<br>
-I also split further and further to make it very clear the different pages. I know they can be the same code or can be merged but we can discuss that later. 
-
-I also put inside folder: so many css and html files ><
-
 
 ## Lab 3 Submission (Front-End)
 ### **10 OCT 12 PM**
-#### Sql, backend also the person is responsible 
+
+"Mine might need php and/or python flask. Not so sure but yes that my backend language potentially" - Samiksha 
 
 
 > Pages(just nice 12 pages):
@@ -128,6 +119,7 @@ Just put here first for reference later:
 19. How to do SQL...? A lot of us are unfamiliar so either we sit down every week before the deadline do 5 hours / week. or we have one day 12 hours sit down code or we otot by watching online video. (doing tgt just mean if we have error can just ask immediately, and also if restrictions ease we can meet ftf)
 20. Lab 4 delegation: what do we need to do for lab 4, how to do it, who is doing it etc. 
 21. UI mockup to match actual coding to match use case (e.g. jerry tom, the number of things to input in the form for update roommate/self preference, recommendation system coding, etc. ) 
+22. Decide on one backend language (cuz we have to ideally use one)
 
 
 ----
