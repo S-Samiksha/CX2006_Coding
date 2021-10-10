@@ -1,96 +1,98 @@
 # READ THIS!!!!
+Bold: Do it
+Italics: Check it (dont not check it, please check it. I think we dont have time for everyone to check. So once those two are done means can submit)
 
-## Lab 3 Submission (Front-End)
-### **10 OCT 12 PM**
-
-"Mine might need php and/or python flask. Not so sure but yes that my backend language potentially. I really leaning towards flask tho" - Samiksha 
-
-
-> Pages(just nice 12 pages):
-
+## Coding 
 
 *main folder* <br>
-(swap around if needed)
 
 1. Main Page: main.html **Samiksha** 
 2. About Page: about.html **Marcus** 
 
+- These are static no need to worry
+
 
 *register_login folder* <br>
-(swap around if needed) 
 
 3. Registration Page: register.html **Anagha** 
 4. Login Page: login.html **Arushi** 
 
+- Make sure password cannot be seen when typing in 
+- if needed, do the encryption 
 
 *home_page folder*
 
-5. Home Page (that contains the roommate recommendation; to do the entire roommate reccomendation algorithm ): home.html **Samiksha** (done)
-
+5. Home Page: home.html **Samiksha** (done)
+- Recommendation Lowkey AI thing 
+- Logout Function
 
 *view_update_profile* <br>
-(swap around if needed) 
 
 6. View Profile: profile.html **Melise** 
 7. Update roommate profile page: update_roommate.html **Arushi**
 8. Update self profile page: update_self.html **Anagha** 
 
+- Update the sql database, change it 
+- form validation 
+
+
 *search_view_houses* <br>
-(swap around if needed) 
 
 9. Search House page: search_house.html **Melise** 
 10. view result of house page: view_houses.html **junhan** 
+- Update the sql database, change it **might have to work together** 
 
 *Messages*
 
 11. Chat Box Page **Marcus** : messages.html
+- this difficult one
 
 *tenant_email*
 
 12. Tenant Email Landlord **Junhan**: tenant_email.html
+- form validation 
 
-
-
-#### Things to do:
-1. Make the HTML pages using styles.css made by Junhan --> found in main>style_main
-2. Then we fix the SQL after all 6 pages are done!
-3. Then we finalize the document
-
+---
+Test Cases and Testing: **Samiksha** **Marcus**
+Compile into one executable app.py file: **Samiksha**
+Make the database for the landlord emails: **Junhan** 
+Make the database for the roommate preference (remember they are different databases in the Use Case): **Melise** **Arushi** **Anagha** --> since it under your section 
+Request to API (gov.sg): **Junhan** *Melise* --> since it is related to your search house thing 
 
 ---
 
-## Lab 3 Submission (documentation)
-### **13 OCT 12 PM**
+## Documentation
+all .vpp files in github
 
-1. System Architecture **Junhan, Marcus, Samiksha**  
-2. State machine diagram **Junhan, Marcus, Samiksha**  
+1. Make sure ALL diagrams are coherent when reading, meaning the functions and class diagrams and the use case diagram, use case all match match (ensure it accommodates the stuff the TA said)  
 
-*For all the below stuff, most are from the TA's feedback and the existing pdf we sent in for lab. Check onedrive>lab 3 submission. follow the images in the pdf and make a new .vpp file and send. also help edit the landlord database thingy about the rental flats and sending to all the landlords (discussed in the meeting on 24 sept)*
+> UC001 to UC004 (table and sequence): Melise
+> UC005 to UC007 (table and sequence: Arushi
+> UC007 to UC0010 (table and sequence: Marcus
+> Intial Dialog: Marcus 
+> UML: Samiksha 
 
-*I uploaded the .vpp file containing all the use case, dialog map, class diagram. We just need to **update** it.*
+--
+All the new stuff (everyone help each other out, i tried to mix and match as much possible to reduce workload)
+also finalize within your own "micro" group if everyone (all 6 people) checks we will take forever. 
 
+2. New class diagram **Junhan** **Samiksha** **Marcus**  (One take Control, one take entity, one take boundary respectively once the first person is done, just update to github and pass on) 
 
+3. Make the system architecture **Samiksha** 
 
-2. class diagram .vpp needed follow the pdf **Arushi** 
-3. Edit the use case (change the landlord and follow the pdf)  
+4. Make the state machine **Anagha** (take intial dialog convert to even more boring form)
 
-   >*UC001 to UC004*: **Melise**  <br>
-   >*UC005 to UC009*: **Anagha**  <br>
+5. Make the communication diagram **Melise** **Arushi** (Split 50/50, iirc each sequence diagram got one communication)
 
-4. sequence diagram any changes all the changes  **Arushi**  <br>
-5. Dialog Map **Anagha**  <br>
-6. use case diagram **Samiksha**  <br>
-7. font size, font type, the details basically **Marcus**   <br>
+6. Make the activity diagram **Junhan** **Marcus**  (take state machine to even more boring form its the same and yet just more boring)
 
+7. Do video scripting **Anagha** **Arushi** **Melise** (cuz need to screen record)
 
-#### Checking 15 Oct 12pm
-**Melise - Anagha:** double check each other use case <br>
-**junhan:** check the diagrams (class diagram, sequence diagram) <br>
-**marcus:** check the diagrams (use case diagram, initial dialog map) <br>
-**samiksha:** compile the front end code into github, .vpp files, and document for submission and check the system architecture <br>
+8. Do the video **Anagha** **Melise**
 
+9. Data dictionary finalize  **Anagha** **Arushi** 
 
-I need yall to upload the .vpp files to github<br>
+10. UI mockup compile the final one and explain based on the use case. **Junhan** 
 
 ---
 
@@ -122,21 +124,7 @@ Just put here first for reference later:
 22. Decide on one backend language (cuz we have to ideally use one)
 
 
-----
 
-
-## Lab 4 Submissions 
-### decide deadline later 
-10 Oct: SQL **Everyon their own pages**  <br>
-10 Oct: test cases and testing results 
-10 Oct: demo script -- video script
-10 Oct: make database add in the landlord entries
-
-## Lab 5 Submission 
-
-decide later
-
----
 ## References:
 
 1. Codes were adapted from for home.html: w3schools (2021) https://www.w3schools.com/howto/howto_js_slideshow.asp retrieved 3 oct 2021
