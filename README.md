@@ -61,10 +61,11 @@ Request to API (gov.sg): **Junhan** *Melise* --> since it is related to your sea
 
 ---
 
-## Documentation (1 to 6 to finish by next lab session aka next monday; 7 onwards the next lab)
+## Documentation
 all .vpp files in github
+the word doc in the lab_3 submission 
 
-1. Make sure ALL diagrams are coherent when reading, meaning the functions and class diagrams and the use case diagram, use case all match match (ensure it accommodates the stuff the TA said)  
+1. Make sure ALL diagrams are coherent when reading, meaning the functions and class diagrams and the use case diagram, use case all match match (ensure it accommodates the stuff the TA said)  update according to the pdf
 
 > UC001 to UC004 (table and sequence): Melise
 > UC005 to UC007 (table and sequence: Arushi
@@ -73,16 +74,16 @@ all .vpp files in github
 > UML: Samiksha 
 
 --
-All the new stuff (everyone help each other out, i tried to mix and match as much possible to reduce workload)
+All the new stuff
 also finalize within your own "micro" group if everyone (all 6 people) checks we will take forever. 
 
-2. New class diagram **Junhan** **Samiksha** **Marcus**  (One take Control, one take entity, one take boundary respectively once the first person is done, just update to github and pass on) 
+2. New class diagram **Junhan** **Samiksha** **Arushi**  (One take Control, one take entity, one take boundary respectively once the first person is done, just update to github and pass on) 
 
 3. Make the system architecture **Samiksha** 
 
 4. Make the state machine **Anagha** (take intial dialog convert to even more boring form)
 
-5. Make the communication diagram **Melise** **Arushi** (Split 50/50, iirc each sequence diagram got one communication)
+5. Make the communication diagram **Melise** **Marcus** (Split 50/50, iirc each sequence diagram got one communication)
 
 6. Make the activity diagram **Junhan** **Marcus**  (take state machine to even more boring form its the same and yet just more boring)
 
@@ -95,6 +96,8 @@ also finalize within your own "micro" group if everyone (all 6 people) checks we
 10. UI mockup compile the final one and explain based on the use case. **Junhan** 
 
 ---
+On **Sunday 17 Oct, 9.30pm**, I will download the zip from github and submit with the Word document. (For Lab 3) --> Only 1 to 6,9,10 need to be done
+
 
 ## Discussion stuff (add on here)
 
