@@ -3,7 +3,7 @@
 ## Lab 3 Submission (Front-End)
 ### **10 OCT 12 PM**
 
-"Mine might need php and/or python flask. Not so sure but yes that my backend language potentially" - Samiksha 
+"Mine might need php and/or python flask. Not so sure but yes that my backend language potentially. I really leaning towards flask tho" - Samiksha 
 
 
 > Pages(just nice 12 pages):
