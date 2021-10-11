@@ -379,8 +379,14 @@ button {
 .page_selection .navg_list li a:hover{
    color: #65010C;
 }
-
-
+.navg_list li a{
+     font-family: Raleway;
+     color: #222222;
+     font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    font-weight: 400;
+    padding: 20px;
+}
 .navg_list li {
  font-size: 1.1rem;
  letter-spacing: 0.15rem;
@@ -606,16 +612,13 @@ textarea
      margin-left: 10%;
      margin-bottom: 2%;
 }
-.form-control{
-     
-}
 #cboximg{
      width: 100px;
      height: 100px;
      padding: 10px;
 }
 #next{
-     width: 400px;
+     width: 80%;
      height: 40px;
      border: 2px solid #4091C9;
      font-size: 20px;

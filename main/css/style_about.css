@@ -327,7 +327,7 @@ button {
 /* Header section */
 #about_nav_bar{
   justify-content: normal;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   height: 65px;
   padding: 0 30px;
 }

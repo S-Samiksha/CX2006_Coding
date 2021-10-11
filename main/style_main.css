@@ -96,11 +96,14 @@ p {
 	width: 100vw;
 	height: auto;
 }
+/*Copy from here*/
 #header .header {
 	min-height: 8vh;
 	background-color: white;
 	transition: 0.1s ease background-color;
+	margin-top: 0px;
 }
+
 #header .nav-bar {
 	display: flex;
 	align-items: center;
@@ -161,6 +164,8 @@ p {
 #header .nav-list ul li:hover a {
 	color: #65010C;
 }
+
+/*end here*/
 #header .hamburger {
 	height: 60px;
 	width: 60px;
