@@ -81,6 +81,7 @@ p {
 	float: left;
 	width: 5rem;
 	height: 5rem;
+	margin-left: 1vw;
 	
   }
   
@@ -93,15 +94,9 @@ p {
 	top: 0;
 	width: 100vw;
 	height: auto;
+	
 }
-#header {
-	position: fixed;
-	z-index: 1000;
-	left: 0;
-	top: 0;
-	width: 100vw;
-	height: auto;
-}
+
 /*Copy from here*/
 #header .header {
 	min-height: 8vh;
@@ -114,10 +109,11 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
+	width: 90%;
 	height: 100%;
-	max-width: 1300px;
-	padding: 0 30px;
+	max-width: 100%;
+	padding: 0 0px;
+	align-content: center;
 }
 #header .nav-list ul {
 	list-style: none;
@@ -125,9 +121,7 @@ p {
 	background-color: white;
 	width: 100vw;
 	height: 100vh;
-	left: 100%;
 	top: 0;
-	padding-right: 1 rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -140,15 +134,14 @@ p {
 	left: 0%;
 }
 #header .nav-list ul a {
-	font-size: 2.5rem;
+	font-size: 4rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-decoration: none;
 	color: black;
 	text-transform: uppercase;
-	padding: 20px;
 	display: block;
-	padding-right: 1 rem;
+	padding-right: 3rem;
 }
 #header .nav-list ul a::after {
 	content: attr(data-after);
@@ -172,6 +165,7 @@ p {
 }
 
 /*end here*/
+
 #header .hamburger {
 	height: 60px;
 	width: 60px;
@@ -244,26 +238,27 @@ p {
 	top: 0;
 	height: 100%;
 	width: 100%;
-	background-color: #F29479;
-	opacity: 0.6;
 	z-index: -1;
+	background-color: #BDDCDFA8;
 }
 #welcome .welcome {
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 50px;
 	justify-content: center;
 }
 #welcome h1 {
-	display: block;
 	width: fit-content;
-	font-size: 4rem;
+	text-align: center;
+	font-size: 1.5rem;
 	position: relative;
 	color: transparent;
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
+	margin-left: auto;
+	margin-right: auto;
 
 }
+
 #welcome h1:nth-child(1) {
 	animation-delay: 1s;
 }
@@ -276,6 +271,7 @@ p {
 }
 #welcome h1 span {
 	position: absolute;
+	text-align: center;
 	top: 0;
 	left: 0;
 	height: 100%;
@@ -283,6 +279,7 @@ p {
 	background-color: #FEDFD4;
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.1s;
+	
 }
 #welcome h1:nth-child(1) span {
 	animation-delay: 0.5s;
@@ -291,8 +288,9 @@ p {
 	animation-delay: 1.5s;
 }
 #welcome h1:nth-child(3) span {
-	animation-delay: 1s;
+	animation-delay: 2.5s;
 }
+
 
 /* End welcome Section */
 
@@ -320,7 +318,7 @@ p {
 	display: inline;
   }
   .slideshow-container{
-	  background-color: #f8c1ac;
+	  background-color: #FEDFD4;
 	  max-width: 100%;
 	  max-height: 100%;
 	  padding-top: 40px;
@@ -337,7 +335,7 @@ p {
 
 	.button-chat{
 		border-radius: 0;
-		background-color: #044dad;
+		background-color: #09c2d3;
 		border: none;
 		color: white;
 		padding: 1rem 2rem 1rem 2rem;
@@ -354,7 +352,7 @@ p {
 	transform: translateY(-0.25em);
 	}
 	.button-skip{
-		background-color: #65010C;
+		background-color: #09c2d3;
 		border-radius: 0;
 		border: none;
 		color: white;

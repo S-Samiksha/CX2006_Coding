@@ -75,15 +75,15 @@ Buttons: PINK BACKGROUND BLUE BUTTON BLUE BACKGROUND PINK BUTTON SOLID BACKGROUN
 > roommate_language table 
 
 ---
-**Samiksha** **Marcus** **Junhan** **Anagha**
-Test Cases and Testing (And Everything Related, including documenting into the document, split the pages and test cases):  <br>
+**Samiksha** **Marcus** **Junhan** **Anagha** (two each plus test cases for each page so 3 'test' ish each roughly)
+Test Cases and Testing (And Everything Related, including documenting into the document, split the pages and test cases): **Everyone here** <br>
 Compile into one executable app.py file + readme guidelines + set up env: **Samiksha** <br>
 Make the database for the landlord emails: **Marcus** <br>
-Make the CSV for the roommate preference (remember they are different databases in the Use Case): <br> --> give to melise and arushi to finish it
-Request to API (gov.sg): <br>
-Registration,login,logout:
+Make the CSV for the roommate preference (remember they are different databases in the Use Case):  Done just wait for the docs ppl to get back
+Request to API (gov.sg): **Junhan** <br>
+Registration,login,logout: **Anagha**
 update profile, update roommate profile: **Anagha**
-tenant_email: **Junhan**
+tenant_email: **Samiksha** I can do this ~Samiksha
 Messages: **Marcus**
 Rommmate recommendation: **Samiksha**
 Search House: **Junhan**
