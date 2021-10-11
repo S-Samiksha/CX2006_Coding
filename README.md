@@ -1,6 +1,6 @@
 # READ THIS!!!!
-Bold: Do it
-Italics: Check it (dont not check it, please check it. I think we dont have time for everyone to check. So once those two are done means can submit)
+Bold: Do it<br>
+Italics: Check it (dont not check it, please check it. I think we dont have time for everyone to check. So once those two are done means can submit) <br>
 
 ## Coding (deadline lab 5 since frontend is done)
 
@@ -53,12 +53,12 @@ Italics: Check it (dont not check it, please check it. I think we dont have time
 - form validation 
 
 ---
-Test Cases and Testing (And Everything Related, including documenting into the document): **Samiksha** **Marcus**
-Compile into one executable app.py file: **Samiksha**
-Make the database for the landlord emails: **Junhan** 
-Make the database for the roommate preference (remember they are different databases in the Use Case): **Melise** **Arushi** **Anagha** --> since it under your section 
-Request to API (gov.sg): **Junhan** *Melise* --> since it is related to your search house thing 
-
+Test Cases and Testing (And Everything Related, including documenting into the document, split the pages and test cases): **Samiksha** **Marcus** **Junhan** <br>
+Compile into one executable app.py file + readme guidelines: **Samiksha** <br>
+Make the database for the landlord emails: **Junhan** **Name** <br>
+Make the database for the roommate preference (remember they are different databases in the Use Case): **Samiksha** **Anagha** **Arushi**
+Request to API (gov.sg): **Junhan** **Name**--> since it is related to your search house thing <br>
+Make your own backend: **EVERYONE**
 ---
 
 ## Documentation
@@ -67,64 +67,41 @@ the word doc in the lab_3 submission
 
 1. Make sure ALL diagrams are coherent when reading, meaning the functions and class diagrams and the use case diagram, use case all match match (ensure it accommodates the stuff the TA said)  update according to the pdf
 
-> UC001 to UC004 (table and sequence): Melise
-> UC005 to UC007 (table and sequence: Arushi
-> UC007 to UC0010 (table and sequence: Marcus
-> Intial Dialog: Marcus 
-> UML: Samiksha 
+> UC001 to UC004 (table and sequence): **Name** <br>
+> UC005 to UC0010 (table and sequence: **Name** <br>
+> Intial Dialog: **Name** <br>
+> UML: **Samiksha** <br>
 
 --
 All the new stuff
 also finalize within your own "micro" group if everyone (all 6 people) checks we will take forever. 
 
-2. New class diagram **Junhan** **Samiksha** **Arushi**  (One take Control, one take entity, one take boundary respectively once the first person is done, just update to github and pass on) 
+2. New class diagram **Name** **Samiksha** **Name**  (One take Control, one take entity, one take boundary respectively once the first person is done, just update to github and pass on) --> many to one, one to one etc. 
 
-3. Make the system architecture **Samiksha** 
+3. Make the system architecture **Samiksha** **Name**
 
-4. Make the state machine **Anagha** (take intial dialog convert to even more boring form)
+4. Make the state machine **Name** **Name**  (take intial dialog convert to even more boring form)
 
-5. Make the communication diagram **Melise** **Marcus** (Split 50/50, iirc each sequence diagram got one communication)
+5. Make the communication diagram **Name** **Name** (Split 50/50, iirc each sequence diagram got one communication)
 
-6. Make the activity diagram **Junhan** **Marcus**  (take state machine to even more boring form its the same and yet just more boring)
+6. Make the activity diagram **Name** **Name**(take state machine to even more boring form its the same and yet just more boring)
 
 7. Do video scripting **Anagha** **Arushi** **Melise** (cuz need to screen record)
 
-8. Do the video **Anagha** **Melise**
+8. Do the video **Anagha** **Melise** **Arushi** 
 
-9. Data dictionary finalize  **Anagha** **Arushi** 
+9. Data dictionary finalize  **Name** **Name** 
 
-10. UI mockup compile the final one and explain based on the use case. **Junhan** 
+10. UI mockup compile the final one and explain based on the use case. **Name** **Name**
+
+11. font size, font type, alignment etc. **Marcus** 
+
+12. Whoever wanna nit grit on the design and the website and critique how the website works: **Name** **Name**
 
 ---
-On **Sunday 17 Oct, 9.30pm**, I will download the zip from github and submit with the Word document. (For Lab 3) --> Only 1 to 6,9,10 need to be done
+## LAB3: 
+On **Sunday 17 Oct, 9.30pm**, I will download the zip from github and submit with the Word document. 
 
-
-## Discussion stuff (add on here)
-
-*The diagrams*
-Just put here first for reference later:
-1. make sure the class diagram is coherent with the use case
-2. all diagrams need to be coherent. 
-3. proper class diagram with the proper number of relationships (one to many, many to one, one to one)
-4. think about parent class, subclasses 
-5. noun: classes
-6. verb: operation
-7. idk??? all entity classes must be in data dictionary?? lecture note 7 slide 20?
-8. do not need sequence diagram for all. the minor classes dont need 
-9. sequence diagram no line from boundary back to actor 
-10. actually how long is the activation bar supposed to be?
-11. do we really need a communication diagram ><
-12. visual paradigm can convert from sequence to communication diagram. but why have a communication diagram in the first place??? :(
-13. UML sequence and class diagram have to match the coding??? ~from both OOP lectures and 2006 lectures technically html is a OOP language we change the file names, the inside variables to match UML class diagram and sequence diagram --> discuss?
-14. **References**, if you copied code, change a bit, and add the references below
-15. and why is oop lecture more clearer? maybe we should follow that properly and make sure it is correct? 
-16. Navigation bar standardize (center or left align?)
-17. standardize the fonts, buttons, design in general, heading swip animation, all animations, heading photos etc. 
-18. if we want we can restrict to a certain screen size aka say 786px to 1020px. so we dont have to even account for smaller sizes. then less work. then put it inside the documentation the intro part the restrictions part thing
-19. How to do SQL...? A lot of us are unfamiliar so either we sit down every week before the deadline do 5 hours / week. or we have one day 12 hours sit down code or we otot by watching online video. (doing tgt just mean if we have error can just ask immediately, and also if restrictions ease we can meet ftf)
-20. Lab 4 delegation: what do we need to do for lab 4, how to do it, who is doing it etc. 
-21. UI mockup to match actual coding to match use case (e.g. jerry tom, the number of things to input in the form for update roommate/self preference, recommendation system coding, etc. ) 
-22. Decide on one backend language (cuz we have to ideally use one)
 
 
 
