@@ -79,7 +79,7 @@ Buttons: PINK BACKGROUND BLUE BUTTON BLUE BACKGROUND PINK BUTTON SOLID BACKGROUN
 Test Cases and Testing (And Everything Related, including documenting into the document, split the pages and test cases):  <br>
 Compile into one executable app.py file + readme guidelines + set up env: **Samiksha** <br>
 Make the database for the landlord emails: <br>
-Make the database for the roommate preference (remember they are different databases in the Use Case): <br>
+Make the CSV for the roommate preference (remember they are different databases in the Use Case): <br> --> give to melise and arushi to finish it
 Request to API (gov.sg): <br>
 Registration,login,logout:
 update profile, update roommate profile: **Anagha**
