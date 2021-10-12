@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_update_roommate.css">
+
+  <title>Update Roommate Preference</title>
+</head>
+
+
+
+<body>
+  <!-- Header and Navigation Bar-->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <img src="../images/icon.png" id="logo"/>
+        <div class="brand">
+          <a href="#welcome">
+            <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <ul>
+            <li><a href="../view_update_profile/profile.html" data-after="PROFILE">PROFILE</a></li>
+            <li><a href="../search_view_houses/search_house.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
+            <li><a href="../Messages/messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="../main/main.html" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="../main/about.html" data-after="ABOUT US">ABOUT US</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+  <!-- profile Section  -->
+  <section id="profile">
+    <div class="profile-section">
+        <img src="../images/crop1.png" id="self_img"/>
+        <h1>Thomas | 30 </h1>
+        <h2>My Roommate Preferences </h2>
+    </div>
+    <div class="page-section">
+          <h2> Update Preferences </h2>
+          <div class = "select">
+            <h3> Choose your prefered Gender </h3>
+            <select id="gender" name="gender">
+              <option value = "0"> Choose your preferred gender </option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Any">Any</option>
+            </select>
+            </div>
+            <div class = "select">
+            <h3> Enter your prefered Age </h3>
+            <input type="number" min="18" max="100" placeholder="Age"> </input>
+            </div>
+            <div class = "select">
+                <h3> Enter your prefered Occupation </h3>
+                <input type="text" placeholder= "Occupation"> </input>
+            </div>
+            <div class = "select">
+                <h3> Enter your prefered Ethnicity </h3>
+                <input type="text" placeholder= "Ethnicity"> </input>
+            </div>
+            <div class = "select">
+                <h3> Enter your prefered Languages </h3>
+                <input type="text" placeholder= "English, Chinese, Malay, Tamil"> </input>
+            </div>
+            <a class="button-submit" onclick='alert("Form submitted Successfully")'>Submit</a>
+      </div>
+      
+  </section>
+  <!-- End welcome Section  -->
+
+
+</section>
+<!--end Roommate Recommendation Page-->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <p>Copyright © 2021 SwipeMyRoomie. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
