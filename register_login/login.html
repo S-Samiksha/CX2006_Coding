@@ -1,12 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+#textboxid
+{
+    height:30px;
+    font-size:14pt;
+}
+
+</style>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Login</title>
+  <link rel="stylesheet" href="../main/style_main.css">
+  <title>Register</title>
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -14,6 +25,7 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
+          <img src="../images/icon.png" id="logo"/>
         <div class="brand">
           <a href="#hero">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -27,8 +39,8 @@
             <li><a href="index.html" data-after="Home">HOME</a></li>
             <!-- <li><a href="#services" data-after="Service">Service</a></li> --> 
             <li><a href="about.html" data-after="ABOUT">ABOUT</a></li>
-            <li><a href="search_roomates.htmla-after="SEARCH HOUSE">SEARCH HOUSE</a></li> 
-            <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="search_roomates.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li> 
+            <!-- <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li> -->
           </ul>
         </div>
       </div>
@@ -36,13 +48,33 @@
   </section>
 
 <!-- Start NAME ACCORDINGLY Section -->
-<section id="nameaccordingly">
-    <div class="nameaccordingly">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Arfan <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
+<style>
+    .wrapper{position:relative;}
+    .right,.left{width:50%; position:absolute;}
+    .right{right:50px;}
+    .left{left:0;}
+    .h2{font-weight: bold; color: #fff; font-size: 24px;}
+</style>
+
+
+<section id="hero" style = "background-image: url(https://saumata.com/wp-content/uploads/2020/04/inspirasi-desain-interior-apartemen-di-tahun-2020-sanwa-apartemen-jakarta-indonesia.jpg); background-repeat: no-repeat; background-size: cover;">
+    <div class="blue container">
+      <div class="right" style="background-color: #BDDCDFA8; padding: 0px 50px 50px 50px; display: block; border-radius: 25px; width: auto; margin-top: 75px;">
+        <h1 style="font-size: 50px;">Welcome back! Log in here<span></span></h1>
+        <form>
+          <i class="fa fa-user icon" style="padding: 10px; font-size: 20px;"></i>
+          <input type="text" placeholder="  Username" id="textboxid" name="username" style="height: 40px; width: 300px;"><br>
+          <br>
+          <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
+          <input type="text" placeholder="  Password" id="textboxid" name="pwd" style="height: 40px; width: 300px;"><br>
+          <br>
+          <!-- <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
+          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="height: 40px; width: 300px;"><br>
+        </form> -->
+        <a href="#projects" type="button" class="cta">Login</a><br><br><br>
+        <label style = "color: white; font-size: 20px">Don't have an account yet?</label><br>
+        <a href="#projects" type="button" class="cta">Register here</a>
+        <!-- <a href="#projects" type="button" class="cta">Need help?</a> -->
       </div>
     </div>
   </section>
@@ -77,85 +109,3 @@
   <!-- End Footer -->
   <script src="./app.js"></script>
 </body>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Login</title>
-</head>
-
-<body>
-  <!-- Header -->
-  <section id="header">
-    <div class="header container">
-      <div class="nav-bar">
-        <div class="brand">
-          <a href="#hero">
-            <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
-          </a>
-        </div>
-        <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
-          <ul>
-            <li><a href="index.html" data-after="Home">HOME</a></li>
-            <!-- <li><a href="#services" data-after="Service">Service</a></li> --> 
-            <li><a href="about.html" data-after="ABOUT">ABOUT</a></li>
-            <li><a href="search_roomates.htmla-after="SEARCH HOUSE">SEARCH HOUSE</a></li> 
-            <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<!-- Start NAME ACCORDINGLY Section -->
-<section id="nameaccordingly">
-    <div class="nameaccordingly">
-      <div>
-        <h1>Hello, <span></span></h1>
-        <h1>My Name is <span></span></h1>
-        <h1>Arfan <span></span></h1>
-        <a href="#projects" type="button" class="cta">Portfolio</a>
-      </div>
-    </div>
-  </section>
-  <!-- End ___ Section  -->
-
-<!-- Footer -->
-  <section id="footer">
-    <div class="footer container">
-      <!--
-      <div class="brand">
-        <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
-      </div>
-      <h2>Your Complete Web Solution</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
-        </div>
-      </div>
-      -->
-      <p>Copyright © 2021 SwipeMyRoomie. All rights reserved</p>
-    </div>
-  </section>
-  <!-- End Footer -->
-  <script src="./app.js"></script>
-</body>
-
-</html>
