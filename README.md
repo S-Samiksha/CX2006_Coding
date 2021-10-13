@@ -81,12 +81,12 @@ Compile into one executable app.py file + readme guidelines + set up env: **Sami
 Make the database for the landlord emails: **Marcus** <br>
 Make the CSV for the roommate preference (remember they are different databases in the Use Case):  Done just wait for the docs ppl to get back
 Request to API (gov.sg): **Junhan** <br>
-Registration,login,logout: **Anagha**
-update profile, update roommate profile: **Anagha**
-tenant_email: **Samiksha** I can do this ~Samiksha
-Messages: **Marcus**
-Rommmate recommendation: **Samiksha**
-Search House: **Junhan**
+Registration,login,logout: **Anagha** 
+update profile, update roommate profile: **Anagha** 
+tenant_email: **Samiksha** I can do this ~Samiksha 
+Messages: **Marcus** 
+Rommmate recommendation: **Samiksha** 
+Search House: **Junhan** 
 
 ---
 
