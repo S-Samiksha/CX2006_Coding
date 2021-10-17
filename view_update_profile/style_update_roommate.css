@@ -370,6 +370,28 @@ p {
 	transform: translateY(-0.25em);
 	}
 
+	.button-two{
+		border-radius: 0;
+		background-color: #0978d3;
+		border: none;
+		color: black;
+		padding: 1rem 4rem 1rem 4rem;
+		text-align: center;
+		text-decoration: none;
+		font-size: 1.5vw;
+		margin: 3vw;
+		margin-left: 4vw;
+		margin-right: 30vw;
+		cursor: pointer;
+		border-radius: 10px;
+		display: block;
+	}
+	.button-two:hover,
+	.button-two:focus {
+	box-shadow: 0 1em 1em -1em var(--hover);
+	transform: translateY(-0.25em);
+	}
+
 
   
   /* Fading animation */

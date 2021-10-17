@@ -1,82 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style_profile.css">
-  <title>Profile</title>
+  <link rel="stylesheet" href="style_update_roommate.css">
+
+  <title>View Profile</title>
 </head>
 
+
+
 <body>
-  <!-- Header -->
+  <!-- Header and Navigation Bar-->
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
+        <img src="../images/icon.png" id="logo"/>
         <div class="brand">
-          <a href="#hero">
+          <a href="#welcome">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
           </a>
         </div>
         <div class="nav-list">
-          <div class="hamburger">
-            <div class="bar"></div>
-          </div>
           <ul>
-            <li><a href="index.html" data-after="Home">HOME</a></li>
-            <!-- <li><a href="#services" data-after="Service">Service</a></li> --> 
-            <li><a href="about.html" data-after="ABOUT">ABOUT</a></li>
-            <li><a href="search_roomates.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li> 
-            <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="../view_update_profile/profile.html" data-after="PROFILE">PROFILE</a></li>
+            <li><a href="../search_view_houses/search_house.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
+            <li><a href="../Messages/messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="../main/main.html" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="../main/about.html" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
+  <!-- End Header -->
 
-<!-- Start NAME ACCORDINGLY Section -->
-
-<section id="hero">
-    <div class="hero container">
-      <div style = "position:fixed;left:0%;top:10%;background-color: #F29479;width:100%">
-        <h1><img src="crop2.jpg" style="width:50px;height:50px;border-radius:50%;">Thomas | 20 <span></span></h1>
-        <a href="#projects" type="button" class="cta button1">Update Profile</a>
-        <a href="#projects" type="button" class="cta button2">Roommate Preferences</a>
-      </div>
-      <div style = "position:fixed;left:5%;color:#293241;font-size: 27px;">
-        <h2>Gender: "" </h2>
-        <h2>Ethnicity: "" </h2>
-        <h2>Language spoken: ""</h2>
-      </div>
+  <!-- profile Section  -->
+  <section id="profile">
+    <div class="profile-section">
+        <img src="../images/crop2.png" id="self_img"/>
+        <h1>Jerry | 30 </h1>
+        <h2>My Profile</h2>
+        <a class="button-two" >Update Roommate Preference</a>
+        <a class="button-two" >Update Self Profile</a>
     </div>
+    <div class="page-section">
+
+          
+    </div>
+      
   </section>
+  <!-- End welcome Section  -->
 
-  <!-- End ___ Section  -->
 
-<!-- Footer -->
+</section>
+<!--end Roommate Recommendation Page-->
+
+  <!-- Footer -->
   <section id="footer">
     <div class="footer container">
-      <!--
-      <div class="brand">
-        <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
-      </div>
-      <h2>Your Complete Web Solution</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
-        </div>
-      </div>
-      -->
       <p>Copyright © 2021 SwipeMyRoomie. All rights reserved</p>
     </div>
   </section>
