@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>Home Search Results</title>
+
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="main/css/bootstrap.min.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="styles_view_houses.css">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="main/css/responsive.css">
+  <!-- fevicon -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"> -->
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      </head>
+
+      <body>
+        <!-- navigation -->
+        <section id="header">
+         <div class="header container_head">
+           <div id="about_nav_bar">
+             <img src="../images/icon.png" id="logo"/>
+             <div class="brand">
+                 <!-- <a href="#welcome">
+                   <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
+                 </a> -->
+                 <img src="../main/images/banner_logo.png" id="banner_logo"/>
+
+                 <div class="page_selection">
+                  <ul class="navg_list">
+                    <li><a href="../home_page/home.html" data-after="HOME">HOME</a></li>
+                    <li><a href="../profile.html" data-after="PROFILE">PROFILE</a></li>
+                    <li><a href="../search_view_houses/search_house.html" data-after="SEARCH HOUSE">SEARCH HOME</a></li>
+                    <li><a href="../Messages/messages.html" data-after="MESSAGES">MESSAGES</a></li>
+                    <li><a href="../main/main.html" data-after="LOGOUT">LOGOUT</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end navigation -->
+
+        <!-- search bar  -->
+        <section class="searchR_main">
+          <p id="sresults">Search Results</p>
+        </section>
+        <section class="banner_main">
+          
+          <div id="searchcontainer">
+            <form action="/action_page.php">
+              <div id="searchbox">
+                <img src="images/searchicon.png" id="searchicon">
+                <input type="text" placeholder="Search Rooms" name="search">
+              </div>
+              <div id="searchbox">
+                <select name="filter" id="search">
+                  <option value="" selected disabled hidden>More Filters</option>
+                  <option value="filter1">filter1</option>
+                  <option value="filter2">filter2</option>
+                </select>
+              </div>
+              <div id="searchbox">
+                <button type="submit">Search</button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <!-- End search Section  -->
+        <!-- Display search Section  -->
+        
+        <p id="dre">100 Results in Woodlands</p>  
+        <section class="display_main">
+          
+          <table style="width:100%">
+            <colgroup>
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 15%;">
+              <col span="1" style="width: 15%;">
+            </colgroup>
+            <tr>
+              <td rowspan="1" style="height:10%"><img src="images/sample_house1.png"></td>
+              <td>
+                <text>
+                  <h1><a href="" id="house">Sample House</a></h1>
+                  <h2>1 Sample Street 123456</h2>
+                  <h2>$500</h2>
+                </text>
+              </td>
+              <td><img src="images/sample_house2.png"></td>
+              <td>
+                <text>
+                  <h1><a href="" id="house">Sample House</a></h1>
+                  <h2>1 Sample Street 123456</h2>
+                  <h2>$500</h2>
+                </text>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" style="height:10%"><img src="images/sample_house1.png"></td>
+              <td>
+                <text>
+                  <h1><a href="" id="house">Sample House</a></h1>
+                  <h2>1 Sample Street 123456</h2>
+                  <h2>$500</h2>
+                </text>
+              </td>
+              <td><img src="images/sample_house2.png"></td>
+              <td>
+                <text>
+                  <h1><a href="" id="house">Sample House</a></h1>
+                  <h2>1 Sample Street 123456</h2>
+                  <h2>$500</h2>
+                </text>
+              </td>
+            </tr>
+            <tr>
+              <td rowspan="1" style="height:10%"><img src="images/sample_house1.png"></td>
+              <td>
+                <text>
+                  <h1><a href="" id="house">Sample House</a></h1>
+                  <h2>1 Sample Street 123456</h2>
+                  <h2>$500</h2>
+                </text>
+              </td>
+              <td><img src="images/sample_house2.png"></td>
+              <td>
+                <text>
+                  <h1><a href="" id="house">Sample House</a></h1>
+                  <h2>1 Sample Street 123456</h2>
+                  <h2>$500</h2>
+                </text>
+              </td>
+            </tr>
+          </table>
+        </section>
+
+        <!--end Roommate Recommendation Page-->
+
+        <!-- Footer -->
+        <section id="numberbar">
+          <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">&raquo;</a>
+          </div>
+        </section>
+        <!-- End Footer -->
+        <script src="./app.js"></script>
+      </body>
+      </html>
