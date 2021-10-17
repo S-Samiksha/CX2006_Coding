@@ -83,7 +83,6 @@ Make the CSV for the roommate preference (remember they are different databases 
 Request to API (gov.sg): **Junhan** <br>
 Registration,login,logout: **Anagha**
 update profile, update roommate profile: **Anagha**
-tenant_email: **Samiksha** I can do this ~Samiksha
 Messages: **Marcus**
 Rommmate recommendation: **Samiksha**
 Search House: **Junhan**
@@ -93,6 +92,7 @@ Search House: **Junhan**
 ## Documentation
 **Arushi** **Melise**
 1. Make sure ALL diagrams are coherent when reading, meaning the functions and class diagrams and the use case diagram, use case all match match (ensure it accommodates the stuff the TA said)  update according to the pdf
+remember to remove tenant email 
 
 > UC001 to UC004 (table and sequence): 
 > UC005 to UC0010 (table and sequence): 
