@@ -2,74 +2,30 @@
 Bold: Do it<br>
 Italics: Check it (dont not check it, please check it. I think we dont have time for everyone to check. So once those two are done means can submit) <br>
 
+## Important Lectures 
+Design pattern: week of 11 oct 
+Testing 18 oct week lectures 
+
 ## Locations of all documents (update there directly)
 Code: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Coding <br>
-
 Test and Testcases: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Coding/Testing <br>
-
-Documentation: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Documentation/lab_3_submission
-
+Documentation: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Documentation/lab_3_submission <br>
 SRS document: https://entuedu-my.sharepoint.com/:w:/r/personal/samiksha002_e_ntu_edu_sg/Documents/CX2006/Group%20Project/Final%20SRS.docx?d=w8c13886884a6467c99bdcfac463748c1&csf=1&web=1&e=eEE4rM <br>
-
 UI MOCK UP LINK:  https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit?usp=sharing <br>
 
+## Deadlines
+On **Sunday 31 Oct, 9.30pm**, I will download the zip from github and submit with the pdf document. <br>
+11 Nov: CX2006 Part 2 Quiz during lecture time <br>
+29 Nov: CX2006 finals only part 1 tested <br>
+
+## Weightage
+Group Project: 50% <br>
+quiz: 25% <br>
+finals: 25% <br>
 
 
+### All the best guys!!! 
 
-## Coding Standardize:
-
-Navigation Bar: Other than main.html Page, registration and login, everything else follow about.html page, cover the full top part 
-Buttons: PINK BACKGROUND BLUE BUTTON BLUE BACKGROUND PINK BUTTON SOLID BACKGROUND
-
-
-## Coding (deadline lab 5 since frontend is done)
-
-*main folder* <br>
-
-1. Main Page: main.html **Samiksha** 
-2. About Page: about.html **Marcus** 
-
-- These are static no need to worry
-
-
-*register_login folder* <br>
-
-3. Registration Page: register.html **Anagha** 
-4. Login Page: login.html **Arushi** 
-
-- Make sure password cannot be seen when typing in 
-- if needed, do the encryption 
-
-*home_page folder*
-
-5. Home Page: home.html **Samiksha** (done)
-- Recommendation Lowkey AI thing 
-- Logout Function
-
-*view_update_profile* <br>
-
-6. View Profile: profile.html **Melise** 
-7. Update roommate profile page: update_roommate.html **Arushi**
-8. Update self profile page: update_self.html **Anagha** 
-
-- form validation 
-
-
-*search_view_houses* <br>
-
-9. Search House page: search_house.html **Melise** 
-10. view result of house page: view_houses.html **junhan** 
-- Update the sql database, change it **might have to work together** 
-
-*Messages*
-
-11. Chat Box Page **Marcus** : messages.html
-- this difficult one
-
-*tenant_email*
-
-12. Tenant Email Landlord **Junhan**: tenant_email.html
-- form validation 
 
 ## Database (Ask TA)
 > profile table 
@@ -79,6 +35,8 @@ Buttons: PINK BACKGROUND BLUE BUTTON BLUE BACKGROUND PINK BUTTON SOLID BACKGROUN
 > roommate_language table 
 
 ---
+## Backend 
+
 **Samiksha** **Marcus** **Junhan** **Anagha** (two each plus test cases for each page so 3 'test' ish each roughly)
 Test Cases and Testing (And Everything Related, including documenting into the document, split the pages and test cases): **Everyone here** <br>
 Compile into one executable app.py file + readme guidelines + set up env: **Samiksha** <br>
@@ -131,15 +89,6 @@ also finalize within your own "micro" group if everyone (all 6 people) checks we
 12. Whoever wanna nit grit on the design and the website and critique how the website works: 
 
 ---
-## LAB 3: 
-
-On **Sunday 17 Oct, 9.30pm**, I will download the zip from github and submit with the Word document. 
-On **Monday 12 oct, 12pm**, finish front-end to BE DONE 
-
-
-## LAB 4:
-On **Sunday 31 Oct, 9.30pm**, I will download the zip from github and submit with the Word document. 
-
 
 
 
@@ -156,6 +105,54 @@ On **Sunday 31 Oct, 9.30pm**, I will download the zip from github and submit wit
 
 
 
+## Front-end (DONE)
+
+*main folder* <br>
+
+1. Main Page: main.html **Samiksha** 
+2. About Page: about.html **Marcus** 
+
+- These are static no need to worry
+
+
+*register_login folder* <br>
+
+3. Registration Page: register.html **Anagha** 
+4. Login Page: login.html **Arushi** 
+
+- Make sure password cannot be seen when typing in 
+- if needed, do the encryption 
+
+*home_page folder*
+
+5. Home Page: home.html **Samiksha** (done)
+- Recommendation Lowkey AI thing 
+- Logout Function
+
+*view_update_profile* <br>
+
+6. View Profile: profile.html **Melise** 
+7. Update roommate profile page: update_roommate.html **Arushi**
+8. Update self profile page: update_self.html **Anagha** 
+
+- form validation 
+
+
+*search_view_houses* <br>
+
+9. Search House page: search_house.html **Melise** 
+10. view result of house page: view_houses.html **junhan** 
+- Update the sql database, change it **might have to work together** 
+
+*Messages*
+
+11. Chat Box Page **Marcus** : messages.html
+- this difficult one
+
+*tenant_email*
+
+12. Tenant Email Landlord **Junhan**: tenant_email.html
+- form validation 
 
 
 
