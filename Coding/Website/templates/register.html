@@ -25,7 +25,7 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
-          <img src="../images/icon.png" id="logo"/>
+          <img src="../static/images/icon.png" id="logo"/>
         <div class="brand">
           <a href="#hero">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -43,6 +43,7 @@
           </ul>
         </div>
       </div>
+      
     </div>
   </section>
 
@@ -60,25 +61,36 @@
     <div class="blue container">
       <div class="right" style="background-color: #BDDCDFA8; padding: 0px 50px 50px 50px; display: block; border-radius: 25px; width: auto; margin-top: 75px;">
         <h1 style="font-size: 50px;">Welcome! Sign up here<span></span></h1>
-        <form>
+        <form method='POST'>
           <i class="fa fa-user icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="  Email" id="textboxid" name="Email" style="height: 40px; width: 300px;"><br>
+          <input type="email" placeholder="Email" id="email" name="email" style="height: 40px; width: 300px;"><br>
           <br>
           <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="  Password" id="textboxid" name="pwd" style="height: 40px; width: 300px;"><br>
+          <input type="password" placeholder="Password" id="password" name="password" style="height: 40px; width: 300px;"><br>
           <br>
           <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="height: 40px; width: 300px;"><br>
-        </form>
-        <br><br><br>
-        <a href="#projects" type="button" class="button-login">Create Account</a><br><br><br>
-        <br><br>
-        <label style = "color: black; font-size: 20px">Already have an account?</label><br><br><br>
-        <br><br>
-        <a href="#projects" type="button" class="button-login">Sign in</a>
+          <input type="password" placeholder="Confirm Password" id="password2" name="password2" style="height: 40px; width: 300px;"><br>
+        <br>
+        <button type="submit" class="button-login">Create Account</button><br>
         <!-- <a href="#projects" type="button" class="cta">Need help?</a> -->
+      </form>
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for messages in messages%}
+        <!--its not fading away but its showing the correct message-->
+        <div class='alert' role='alert' style="color:rgb(155, 9, 9)">{{messages}}</div>
+        <button type="button" class="close" data-dismiss = "alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        {% endfor %}
+      {% endif %}
+      {% endwith %}
+      <br>
+      <label style = "color: black; font-size: 20px">Already have an account?</label><br>
+        <button href="/login" type="button" class="button-login">Sign in</button>
       </div>
     </div>
+    
   </section>
   <!-- End ___ Section  -->
 
@@ -109,5 +121,4 @@
     </div>
   </section>
   <!-- End Footer -->
-  <script src="./app.js"></script>
 </body>
