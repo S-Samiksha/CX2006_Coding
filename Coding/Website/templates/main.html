@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style_main.css">
+  <link rel="stylesheet" href="../static/styles/style_main.css">
   <title>Main Page</title>
 </head>
 
@@ -14,7 +14,7 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
-        <img src="../images/icon.png" id="logo"/>
+        <img src="../static/images/icon.png" id="logo"/>
         <div class="brand">
           <a href="#welcome">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -22,9 +22,9 @@
         </div>
         <div class="nav-list">
           <ul>
-            <li><a href="../register_login/register.html" data-after="REGISTER">REGISTER</a></li>
-            <li><a href="../register_login/login.html" data-after="LOGIN">LOGIN</a></li>
-            <li><a href="./about.html" data-after="ABOUT US">ABOUT US</a></li>
+            <li><a href="/register" data-after="REGISTER">REGISTER</a></li>
+            <li><a href="/login" data-after="LOGIN">LOGIN</a></li>
+            <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
         </div>
       </div>
@@ -41,8 +41,8 @@
         <h1>Welcome to</h1>
         <h1>SwipeMyRoomie! <span></span></h1>
       </div>  
-      <a class="button-register" href ="../register_login/register.html">REGISTER</a>
-      <a class="button-login" href = "../register_login/login.html">LOGIN</a>
+      <a class="button-register" href ="/register">REGISTER</a>
+      <a class="button-login" href = "/login">LOGIN</a>
       <p>Join our community and find the perfect roommate!</p>  
     </div>
     <div class = "section">
@@ -61,5 +61,4 @@
     </div>
   </section>
   <!-- End Footer -->
-  <script src="./app.js"></script>
 </body>

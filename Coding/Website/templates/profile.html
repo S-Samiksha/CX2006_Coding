@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style_update_roommate.css">
+  <link rel="stylesheet" href="./static/styles/style_update_roommate.css">
 
   <title>View Profile</title>
 </head>
@@ -16,7 +16,7 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
-        <img src="../images/icon.png" id="logo"/>
+        <img src="../static/images/icon.png" id="logo"/>
         <div class="brand">
           <a href="#welcome">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -24,11 +24,11 @@
         </div>
         <div class="nav-list">
           <ul>
-            <li><a href="../view_update_profile/profile.html" data-after="PROFILE">PROFILE</a></li>
-            <li><a href="../search_view_houses/search_house.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
-            <li><a href="../Messages/messages.html" data-after="MESSAGES">MESSAGES</a></li>
-            <li><a href="../main/main.html" data-after="LOGOUT">LOGOUT</a></li>
-            <li><a href="../main/about.html" data-after="ABOUT US">ABOUT US</a></li>
+            <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
+            <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
+            <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="/" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
         </div>
       </div>
@@ -39,11 +39,11 @@
   <!-- profile Section  -->
   <section id="profile">
     <div class="profile-section">
-        <img src="../images/crop4.png" id="self_img"/>
+        <img src="../static/images/crop4.png" id="self_img"/>
         <h1>Thomas | 30 </h1>
         <h2>My Profile</h2>
-        <a class="button-two" >Update Roommate Preference</a>
-        <a class="button-two" >Update Self Profile</a>
+        <a class="button-two" href = '/update_roommate'>Update Roommate Preference</a>
+        <a class="button-two" href = '/update_self'>Update Self Profile</a>
     </div>
     <div class="page-section">
       <h2>Personal Details</h2>

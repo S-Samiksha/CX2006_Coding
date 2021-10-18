@@ -52,7 +52,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../main/style_main.css">
+  <link rel="stylesheet" href="./static/styles/style_main.css">
   <title>Update Self Profile</title>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -62,7 +62,7 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
-          <img src="../images/icon.png" id="logo"/>
+          <img src="../static/images/icon.png" id="logo"/>
         <div class="brand">
           <a href="#hero">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -73,11 +73,11 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="index.html" data-after="Home">HOME</a></li>
-            <!-- <li><a href="#services" data-after="Service">Service</a></li> --> 
-            <li><a href="about.html" data-after="ABOUT">ABOUT</a></li>
-            <li><a href="search_roomates.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li> 
-            <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
+            <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
+            <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="/" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
         </div>
       </div>
@@ -184,7 +184,7 @@ $("#imageUpload").change(function(){
       </script>
       
       <div id="profile-container" style="position: relative; left: 90px; top: -37px;">
-         <image id="profileImage" src="../images/crop4.png" />
+         <image id="profileImage" src="../static/images/crop4.png" />
       </div>
       <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
       <form action="/action_page.php">
