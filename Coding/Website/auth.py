@@ -1,5 +1,5 @@
 #do not delete 
-from flask import Blueprint, render_template, request, url_for, flash
+from flask import Blueprint, render_template, request, url_for, flash, redirect
 import mysql.connector
 auth = Blueprint('auth', __name__)
 current_account_id = 0
@@ -41,7 +41,7 @@ def login():
         cursor.execute(statement, val)
         current_account_id = cursor.fetchone()
         print(current_account_id)
-        home()
+        return redirect(url_for('auth.home'))
     return render_template("login.html")
 #must use the POST method!
 
@@ -88,12 +88,15 @@ def home():
     statement = "SELECT * from profile where accounts_AccountID = %s"
     val = current_account_id
     cursor.execute(statement, val)
-    profiletuple = cursor.fetchall()
-    print(profiletuple)
+    profilelist = cursor.fetchall()
+    #Name = [item[5] for item in profilelist]
+    #Name = profiletuple[5]
+    Name = [item[5] for item in profilelist]
+    Name = Name[0]
+    print(profilelist)
     #cur.close()
 
-    return render_template("home.html")
-
+    return render_template("home.html", Name = Name)
 #-------------------------------------------------End Home----------------------------------------------------------------------------------------
 
 
