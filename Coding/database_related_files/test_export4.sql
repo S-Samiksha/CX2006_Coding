@@ -25,7 +25,6 @@ USE `cz2006` ;
 -- Table `cz2006`.`accounts`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `cz2006`.`accounts` ;
-
 CREATE TABLE IF NOT EXISTS `cz2006`.`accounts` (
   `AccountID` INT NOT NULL AUTO_INCREMENT,
   `Email` VARCHAR(255) NOT NULL,

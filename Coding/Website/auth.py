@@ -3,6 +3,10 @@ from flask import Blueprint, render_template, request, url_for, flash
 import mysql.connector
 auth = Blueprint('auth', __name__) #much easier to call the same as the file
 
+#replace each item with your own respective password, localhost etc. 
+cur = mysql.connector.connect(user='root', password='password',
+                    host='localhost',
+                    database='cz2006')
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
@@ -23,12 +27,12 @@ def register():
             flash("Password and Confirm Password are not equal", category='error')
         else:
             #add user to database
-            cur = mysql.connector.connect(user='root', password='password',
-                              host='localhost',
-                              database='cz2006')
+            
             cursor = cur.cursor()
-            cursor.execute("INSERT INTO accounts" "(email, password)" "VALUES (%(email)s, %(password)s),")
-            cur.commit()
+            statement = "INSERT INTO accounts (Email, Password) VALUES (%s, %s)"
+            val = (email, password)
+            cursor.execute(statement, val)
+            cur.commit() 
             cursor.close()
             cur.close()
             flash("Account Created", category='success')
