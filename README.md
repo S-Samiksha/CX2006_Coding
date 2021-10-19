@@ -35,19 +35,49 @@ finals: 25% <br>
 > roommate_language table 
 
 ---
+## Testing (after finishing backend)
+Manual table thing for documentation **Arushi** , **Melise** , **Samiksha** (take 3 pages each to make) <br>
+flask automated testing for login and logout(for doing autmation purposes just one or two shld be okay): **Samiksha** <br> 
+
+**Manual test (give feedback if anything is not working, test all the buttons, anything that can click must work**
+
+Test Manually: login, logout, recommendation **Marcus** <br>
+Test Manually: update roommate, update self **Junhan** <br>
+Test Manually: Messages **Anagha** <br>
+Test Manually: Search Houses **Samiksha** <br>
+
+**Flow of demo/video**
+
+Register a dummy account --> then just use account 1 from there 
+
+Test accounts to be used: Account 1 and Account 3
+
+Login using Account 1
+
+Update self/roommate: Account 1
+
+Account 1 messages Account 3 (maybe have account 1 saying 'yes lets room tgt!' in the demo, with a prev chat history of them discussing **marcus** decide)
+
+Test accounts to use 'skip' button in recommendation: Account 2
+
+Search House (One locations, **Junhan** choose):
+
+Logout successfully back to main page 
+
+
+
 ## Backend 
 
-**Samiksha** **Marcus** **Junhan** **Anagha** (two each plus test cases for each page so 3 'test' ish each roughly)
-Test Cases and Testing (And Everything Related, including documenting into the document, split the pages and test cases): **Everyone here** <br>
 Compile into one executable app.py file + readme guidelines + set up env: **Samiksha** <br>
 Make the database for the landlord emails: **Marcus** <br>
-Make the CSV for the roommate preference (remember they are different databases in the Use Case):  Done just wait for the docs ppl to get back
+Make the CSV for the roommate preference (remember they are different databases in the Use Case):  Done 
 Request to API (gov.sg): **Junhan** <br>
-Registration,login,logout: **Anagha**  
-update profile, update roommate profile: **Anagha**  
-Messages: **Marcus**  
-Rommmate recommendation: **Samiksha**  
-Search House: **Junhan**  
+Registration,login,logout: **Anagha**  <br>
+update profile, update roommate profile: **Anagha**  <br>
+Messages: **Marcus**  <br>
+Rommmate recommendation + home page: **Samiksha**  <br>
+Search House: **Junhan**  <br>
+video screen recording: **Samiksha** <br>
 
 ---
 
