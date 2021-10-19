@@ -11,19 +11,24 @@ current_account_id = 0
 """
 PLEASE READ!!
 Instructions:
-Here are all the variables we can use to pass into each html file. 
-From the logout page, we get a current_account_id which is the PK for the sql then everyone can use from there!
-current_user will be the NAME of the user this is to be standardized by everyone using this file 
+From the login page, we get a current_account_id which is the PK for the sql then everyone can use from there!
+to use, global current_account_id is called in the login page --> do not remove 
+Each page is separated with the line
 
-email, password, password2, current_user, age, gender, occupation, ethnicity, imgpath, r_gender, r_age, r_occupation, r_ethnicity 
-will be used as variables names. KEEP TO THESE VARIABLE NAMES FOR EASE OF USE
+1. connect with sql, localhost and your own password
+2. the functions needed (from youtube and placed in comments) are below (can ctr find)
+#how to get from SQL
+#to pass in update to sql
+#button-sql-js-flask-connection
+
+
 """
 
 
 #------------------------------------------------------------MySql Connector-----------------------------------------------------------------------
 #replace each item with your own respective password, localhost etc. 
 cur = mysql.connector.connect(user='root', password='password',
-                    host='127.0.0.1',
+                    host='localhost',
                     database='cz2006')
 
 
@@ -86,8 +91,9 @@ def register():
 
 
 #---------------------------------------------------Start Home and Roommate Reccommendation------------------------------------------------------
-@auth.route('/home')
+@auth.route('/home', methods=['GET', 'POST'])
 def home():
+    #how to get from SQL
     cursor = cur.cursor()
     statement = "SELECT * from profile where accounts_AccountID = %s"
     val = current_account_id
@@ -100,16 +106,15 @@ def home():
     r_gender = r_gender[0]
     r_age = [item[7] for item in profilelist]
     r_age = r_age[0]
-    r_occupation = [item[8] for item in profilelist]
-    r_occupation = r_occupation[0]
-    r_ethnicity = [item[9] for item in profilelist]
-    r_ethnicity = r_ethnicity[0]
-    skip = [item[10] for item in profilelist]
+    skip = [item[8] for item in profilelist]
     skip = skip[0]
-    statement = 'SELECT * from profile where accounts_AccountID != %s'
-    val = skip
+    r_occupation = [item[9] for item in profilelist]
+    r_occupation = r_occupation[0]
+    r_ethnicity = [item[10] for item in profilelist]
+    r_ethnicity = r_ethnicity[0]
+    statement = 'SELECT * from profile'
     #need to account for language 
-    cursor.execute(statement, val)
+    cursor.execute(statement)
     table = cursor.fetchall()
     statement = 'SELECT * from user_language where accounts_AccountID = %s'
     val = current_account_id
@@ -123,10 +128,12 @@ def home():
     #need to account for language 
     cursor.execute(statement)
     r_lan = cursor.fetchall()
-    table = pd.DataFrame(table, columns = ['Age', 'Gender', 'Occupation', 'Ethnicity', 'ImgPathFile', 'Name', 'R_Gender', 'R_Age', 'R_Occupation', 'R_Ethnicity', 'accountsID'])
+    #converting to pandas dataframe
+    table = pd.DataFrame(table, columns = ['Age', 'Gender', 'Occupation', 'Ethnicity', 'ImgPathFile', 'Name', 'R_Gender', 'R_Age', 'R_Skip', 'R_Occupation', 'R_Ethnicity', 'accountsID'])
     r_lan = pd.DataFrame(r_lan, columns = ['r_lang', 'accountsID'])
     table = pd.merge(table, r_lan, left_on='accountsID', right_on='accountsID', how='left')
     table = table[table.accountsID != current_account_id] #remove the current person 
+    table = table[table.accountsID != skip]
     table = table[table.R_Age > (r_age-2)]
     table = table[table.R_Age < (r_age+2)]
     #print(table.size)
@@ -143,14 +150,26 @@ def home():
     size = int(size/12)
     i=0
     table = table.values.tolist()
-
     return render_template("home.html", Name = Name, table=table, size = size, i=i)
 
-@auth.route('/deleteRec', methods=['POST'])
-def deleteRec():
-    accountId = json.loads(request.data)
-    aID = accountId['aID']
-    
+
+#for button manipulation from js, link in home.js and home.html commented as 'button-sql-js-flask-connection'
+@auth.route('/delete-rec', methods=['POST'])
+def delete_rec():
+    AiD = json.loads(request.data)
+    AiD = AiD['AiD']
+    #print(AiD)
+    cursor = cur.cursor()
+    #to pass in update to sql
+    #concatenate
+    statement = 'UPDATE profile SET r_Skip = '+str(AiD)+' WHERE accounts_AccountID = %s'
+    val = (current_account_id)
+    cursor.execute(statement, val)
+    #cursor.execute(statement, val)
+
+    cur.commit()
+
+
     return jsonify({})
 #-------------------------------------------------End Home----------------------------------------------------------------------------------------
 
@@ -166,23 +185,36 @@ def profile():
 #-----------------------------------------------End Profile---------------------------------------------------------------------------------------
 
 
-
+#-----------------------------------------------Start Messages------------------------------------------------------------------------------------
 @auth.route('/messages')
 def messages():
     return render_template("messages.html")
 
+
+#----------------------------------------------End Messages---------------------------------------------------------------------------------------
+
+#---------------------------------------------Start Search/view Houses---------------------------------------------------------------------------------
 @auth.route('/search_house')
 def search_house():
     return render_template("search_house.html")
 
+@auth.route('/view_houses')
+def view_houses():
+    return render_template("view_houses.html")
+
+#--------------------------------------------End Search/view Houses------------------------------------------------------------------------------------
+
+#-------------------------------------------Start Update Roommate---------------------------------------------------------------------------------
 @auth.route('/update_roommate')
 def update_roommate():
     return render_template("update_roommate.html")
 
+#--------------------------------------------End Update Roommate-----------------------------------------------------------------------------------
+
+#-------------------------------------------Start Update Self--------------------------------------------------------------------------------------
 @auth.route('/update_self')
 def update_self():
     return render_template("update_self.html")
 
-@auth.route('/view_houses')
-def view_houses():
-    return render_template("view_houses.html")
+#--------------------------------------------End Update Self---------------------------------------------------------------------------------------
+

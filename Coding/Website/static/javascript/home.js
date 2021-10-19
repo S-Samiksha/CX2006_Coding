@@ -21,10 +21,12 @@ function showSlides(n) {
 }
 
 //reference from w3 schools (above)
-function deleteRec(aID) {
-  fetch("/deleteRec", {
+
+//button-sql-js-flask-connection
+function deleteRec(AiD) {
+  fetch("/delete-rec", {
     method: "POST",
-    body: JSON.stringify({ aID: aID }),
+    body: JSON.stringify({ AiD: AiD }),
   }).then((_res) => {
     window.location.href = "/home";
   });
