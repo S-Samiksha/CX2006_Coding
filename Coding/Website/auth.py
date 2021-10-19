@@ -107,23 +107,41 @@ def home():
     #need to account for language 
     cursor.execute(statement)
     table = cursor.fetchall()
+    statement = 'SELECT * from user_language where accounts_AccountID = %s'
+    val = current_account_id
+    #need to account for language 
+    cursor.execute(statement, val)
+    u_lan = cursor.fetchall()
+    u_lan = [item[0] for item in u_lan]
+    u_lan = u_lan[0]
+    #print(u_lan)
+    statement = 'SELECT * from roommate_language'
+    #need to account for language 
+    cursor.execute(statement)
+    r_lan = cursor.fetchall()
     table = pd.DataFrame(table, columns = ['Age', 'Gender', 'Occupation', 'Ethnicity', 'ImgPathFile', 'Name', 'R_Gender', 'R_Age', 'R_Occupation', 'R_Ethnicity', 'accountsID'])
+    r_lan = pd.DataFrame(r_lan, columns = ['r_lang', 'accountsID'])
+    table = pd.merge(table, r_lan, left_on='accountsID', right_on='accountsID', how='left')
     table = table[table.accountsID != current_account_id] #remove the current person 
-    table = table[table.R_Age > (r_age-4)]
-    table = table[table.R_Age < (r_age+4)]
-    if (r_gender != 'Any'):
+    table = table[table.R_Age > (r_age-2)]
+    table = table[table.R_Age < (r_age+2)]
+    #print(table.size)
+    if (r_gender != 'Any' and table.size>5):
         table = table[table.R_Gender == r_gender]
-    if (r_occupation != 'Any'):
+    elif (r_occupation != 'Any' and table.size>5):
         table = table[table.R_Occupation == r_occupation]
-    if (r_ethnicity != 'Any'):
+    elif (r_ethnicity != 'Any' and table.size>5):
         table = table[table.R_Ethnicity == r_ethnicity]
+    elif (u_lan != 'Any' and table.size>5):
+        table = table[table.r_lang == u_lan]
 
+    size = int(table.size)
+    size = int(size/12)
+    i=0
+    
     table = table.values.tolist()
 
-    print(table)
-    
-
-    return render_template("home.html", Name = Name, table=table)
+    return render_template("home.html", Name = Name, table=table, size = size, i=i)
 #-------------------------------------------------End Home----------------------------------------------------------------------------------------
 
 

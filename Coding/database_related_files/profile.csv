@@ -25,7 +25,7 @@ Age,Gender,Occupation,Ethnicity,profileImgPath,Name,r_Gender,r_Occupation,r_age,
 22,Female,Student,Chinese,../static/images/A24.png,Chia Kai Ling,Female,Student,21,Any,24
 21,Female,Student,Chinese,../static/images/A25.png,Zhong Kai Wen,Female,Student,20,Chinese,25
 20,Female,Student,Chinese,../static/images/A26.png,Shen Jia Min,Female,Student,19,Chinese,26
-20,Male,Student,Chinese,../static/images/A27.png,Liu Jia Qi Rachel,Male,Any,20,Any,27
+20,Female,Student,Chinese,../static/images/A27.png,Liu Jia Qi Rachel,Female,Any,20,Any,27
 24,Female,Pharmacist,Chinese,../static/images/A28.png,Tan Jia Wen Daisy,Female,Any,24,Chinese,28
 23,Female,Student,Chinese,../static/images/A29.png,Tang Xin En Jasmine,Female,Student,23,Chinese,29
 22,Female,Student,Chinese,../static/images/A30.png,Carol Keng Hui Wen,Female,Student,22,Chinese,30
