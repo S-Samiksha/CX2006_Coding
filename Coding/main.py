@@ -14,3 +14,8 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 
+
+#go to auth.py or views.py for your respective pages
+#auth is for every page after logging in 
+
+

@@ -60,19 +60,19 @@
     <div class="blue container">
       <div class="right" style="background-color: #BDDCDFA8; padding: 0px 50px 50px 50px; display: block; border-radius: 25px; width: auto; margin-top: 75px;">
         <h1 style="font-size: 50px;">Welcome back! Log in here<span></span></h1>
-        <form>
+        <form method="POST">
           <i class="fa fa-user icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="  Email" id="textboxid" name="username" style="height: 40px; width: 300px;"><br>
+          <input type="email" placeholder="Email" id="email" name="email" style="height: 40px; width: 300px;"><br>
           <br>
           <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="Password" id="textboxid" name="pwd" style="height: 40px; width: 300px;"><br>
+          <input type="password" placeholder="Password" id="password" name="password" style="height: 40px; width: 300px;"><br>
           <br>
           <!-- <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="height: 40px; width: 300px;"><br>
-        </form> -->
+          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="height: 40px; width: 300px;"><br> -->
         <br>
         <br>
-        <a href="#projects" type="button" class="button-login">Login</a><br><br><br>
+        <button href="/home" type="submit" class="button-login">Login</button><br><br><br>
+      </form>
         <label style = "color: black; font-size: 20px">Don't have an account yet?</label><br><br><br><br>
         <a href="#projects" type="button" class="button-login">Register here</a>
         <!-- <a href="#projects" type="button" class="cta">Need help?</a> -->
