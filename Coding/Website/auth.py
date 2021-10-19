@@ -1,5 +1,8 @@
 #do not delete 
+
 from flask import Blueprint, render_template, request, url_for, flash, redirect
+import pandas as pd
+
 import mysql.connector
 auth = Blueprint('auth', __name__)
 current_account_id = 0
@@ -89,14 +92,38 @@ def home():
     val = current_account_id
     cursor.execute(statement, val)
     profilelist = cursor.fetchall()
-    #Name = [item[5] for item in profilelist]
-    #Name = profiletuple[5]
     Name = [item[5] for item in profilelist]
     Name = Name[0]
-    print(profilelist)
     #cur.close()
+    r_gender = [item[6] for item in profilelist]
+    r_gender = r_gender[0]
+    r_age = [item[7] for item in profilelist]
+    r_age = r_age[0]
+    r_occupation = [item[8] for item in profilelist]
+    r_occupation = r_occupation[0]
+    r_ethnicity = [item[9] for item in profilelist]
+    r_ethnicity = r_ethnicity[0]
+    statement = 'SELECT * from profile'
+    #need to account for language 
+    cursor.execute(statement)
+    table = cursor.fetchall()
+    table = pd.DataFrame(table, columns = ['Age', 'Gender', 'Occupation', 'Ethnicity', 'ImgPathFile', 'Name', 'R_Gender', 'R_Age', 'R_Occupation', 'R_Ethnicity', 'accountsID'])
+    table = table[table.accountsID != current_account_id] #remove the current person 
+    table = table[table.R_Age > (r_age-4)]
+    table = table[table.R_Age < (r_age+4)]
+    if (r_gender != 'Any'):
+        table = table[table.R_Gender == r_gender]
+    if (r_occupation != 'Any'):
+        table = table[table.R_Occupation == r_occupation]
+    if (r_ethnicity != 'Any'):
+        table = table[table.R_Ethnicity == r_ethnicity]
 
-    return render_template("home.html", Name = Name)
+    table = table.values.tolist()
+
+    print(table)
+    
+
+    return render_template("home.html", Name = Name, table=table)
 #-------------------------------------------------End Home----------------------------------------------------------------------------------------
 
 

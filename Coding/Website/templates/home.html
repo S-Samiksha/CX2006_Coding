@@ -53,24 +53,26 @@
       <div class = "slideshow-container">
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
           <div class = "myRecommendations fade">
-              <h3 class= "section-subheading"> Harry | Age</h3>
+              <h3 class= "section-subheading">{{table[0][5]}} | {{table[0][0]}}</h3>
               <a class="button-chat" href ="/messages">Chat</a>
               <a class="button-skip">Skip</a>
-              <img src="../static/images/male1.jpg" id="roommate_img"/>
+              <img src="{{table[0][4]}}" id="roommate_img"/>
           </div>
           <div class = "myRecommendations fade">
-              <h3 class= "section-subheading">Jerry | Age</h3>
-              <a class="button-chat" href ="/messages">Chat</a>
-              <a class="button-skip">Skip</a>
-              <img src="../static/images/male3.jpg" id="roommate_img"/>
-          </div>
-          <div class = "myRecommendations fade">
-              <h3 class= "section-subheading"> Ron | Age</h3>
+              <h3 class= "section-subheading"> {{table[1][5]}} | {{table[1][0]}}</h3>
               <a class="button-chat" href ="messages">Chat</a>
               <a class="button-skip">Skip</a>
-              <img src="../static/images/male5.jpg" id="roommate_img"/>
+              <img src="{{table[1][4]}}" id="roommate_img"/>
           </div>
+          <div class = "myRecommendations fade">
+            <h3 class= "section-subheading"> {{table[2][5]}} | {{table[2][0]}}</h3>
+            <a class="button-chat" href ="messages">Chat</a>
+            <a class="button-skip">Skip</a>
+            <img src="{{table[2][4]}}" id="roommate_img"/>
+        </div>
           
       </div>
       <script src="../static/javascript/home.js"></script>
