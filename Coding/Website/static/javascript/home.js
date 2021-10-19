@@ -20,4 +20,12 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
 }
 
-//reference from w3 schools 
+//reference from w3 schools (above)
+function deleteRec(aID) {
+  fetch("/deleteRec", {
+    method: "POST",
+    body: JSON.stringify({ aID: aID }),
+  }).then((_res) => {
+    window.location.href = "/home";
+  });
+}

@@ -48,6 +48,7 @@
 
   
   <!--Roommate Recommendation-->
+  
   <section class= "page-section" id="recommendation">
       <h2 class="section-heading">Roommates Recommended Just For You!</h2>
       <div class = "slideshow-container">
@@ -58,14 +59,14 @@
             <div class = "myRecommendations fade">
               <h3 class= "section-subheading">{{table[i][5]}} | {{table[i][0]}}</h3>
               <a class="button-chat" href ="/messages">Chat</a>
-              <a class="button-skip" method = "POST">Skip</a>
+              <a class="button-skip" onclick="deleteRec({{ table[i][10] }})">Skip</a>
               <img src="{{table[i][4]}}" id="roommate_img"/>
           </div>
           {% endfor %}
-
+          <script src="../static/javascript/home.js"></script>
           
       </div>
-      <script src="../static/javascript/home.js"></script>
+      
 
         
 

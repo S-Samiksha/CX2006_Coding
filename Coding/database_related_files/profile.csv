@@ -1,31 +1,31 @@
-Age,Gender,Occupation,Ethnicity,profileImgPath,Name,r_Gender,r_Occupation,r_age,r_Ethnicity,accounts_AccountID
-23,Male,Student,Chinese,../static/images/A1.png,David Lee Hao Wen,Male,Student,23,Chinese,1
-22,Male,Student,Chinese,../static/images/A2.png,Jervis Tan Jun Hong,Male,Any,22,Any,2
-25,Female,Accountant,Indian,../static/images/A3.png,Meera,Female,Any,25,Any,3
-26,Male,Nurse,Chinese,../static/images/A4.png,Zu Ding Yong,Male,Any,26,Any,4
-24,Male,Student,Chinese,../static/images/A5.png,Fong Yi Ming Jason,Male,Student,24,Chinese,5
-27,Male,Teacher,Chinese,../static/images/A6.png,Ang De Kang ,Male,Any,27,Chinese,6
-23,Male,Student,Chinese,../static/images/A7.png,Cheong Seng Hee,Male,Student,23,Any,7
-21,Male,Student,Chinese,../static/images/A8.png,Woo Cheng Ha,Male,Any,21,Chinese,8
-22,Male,Student,Chinese,../static/images/A9.png,Guo Yong Hui,Male,Student,22,Any,9
-28,Male,Sales Associate,European,../static/images/A10.png,Harry John,Male,Any,28,Any,10
-25,Male,Marketing Manager,Chinese,../static/images/A11.png,Chong Kai Ming,Male,Any,25,Chinese,11
-24,Male,Student,Chinese,../static/images/A12.png,Leong Jun Rui ,Male,Student,24,Any,12
-22,Female,Student,British,../static/images/A13.png,Kyla Howell,Female,Student,22,Any,13
-21,Male,Student,Chinese,../static/images/A14.png,Jonathan Jun Yi,Male,Any,21,Any,14
-24,Female,Content Creator,British,../static/images/A15.png,Kling Ming Rylan,Female,Any,24,Any,15
-23,Male,Student,indian,../static/images/A16.png,ramu gopal,Male,Student,22,any,16
-25,Male,Software Developer,Chinese,../static/images/A17.png,Chang Jia De,Male,Any,26,Chinese,17
-24,Male,Student,Chinese,../static/images/A18.png,Li Jun De Anthony,Male,Student,25,Chinese,18
-27,Male,Product Officer,Chinese,../static/images/A19.png,Chang Jia Deng Xavier,Male,Any,26,Any,19
-22,Male,Student,Chinese,../static/images/A20.png,Fang Jia Jian,Male,Any,22,Any,20
-23,Male,Student,Chinese,../static/images/A21.png,Teoh Zhi En,Male,Student,23,Any,21
-25,Female,Biologist,Chinese,../static/images/A22.png,Koh Rui Ling Jessica,Female,Any,25,Chinese,22
-26,Male,Chemical Engineer,Chinese,../static/images/A23.png,Zeng Zhi En Timothy,Male,Any,26,Chinese,23
-22,Female,Student,Chinese,../static/images/A24.png,Chia Kai Ling,Female,Student,21,Any,24
-21,Female,Student,Chinese,../static/images/A25.png,Zhong Kai Wen,Female,Student,20,Chinese,25
-20,Female,Student,Chinese,../static/images/A26.png,Shen Jia Min,Female,Student,19,Chinese,26
-20,Female,Student,Chinese,../static/images/A27.png,Liu Jia Qi Rachel,Female,Any,20,Any,27
-24,Female,Pharmacist,Chinese,../static/images/A28.png,Tan Jia Wen Daisy,Female,Any,24,Chinese,28
-23,Female,Student,Chinese,../static/images/A29.png,Tang Xin En Jasmine,Female,Student,23,Chinese,29
-22,Female,Student,Chinese,../static/images/A30.png,Carol Keng Hui Wen,Female,Student,22,Chinese,30
+Age,Gender,Occupation,Ethnicity,profileImgPath,Name,r_Gender,r_Occupation,r_Age,r_Ethnicity,r_Skip,accounts_AccountID
+23,Male,Student,Chinese,../static/images/A1.png,David Lee Hao Wen,Male,Student,23,Chinese,10,1
+22,Male,Student,Chinese,../static/images/A2.png,Jervis Tan Jun Hong,Male,Any,22,Any,,2
+25,Female,Accountant,Indian,../static/images/A3.png,Meera,Female,Any,25,Any,,3
+26,Male,Nurse,Chinese,../static/images/A4.png,Zu Ding Yong,Male,Any,26,Any,,4
+24,Male,Student,Chinese,../static/images/A5.png,Fong Yi Ming Jason,Male,Student,24,Chinese,,5
+27,Male,Teacher,Chinese,../static/images/A6.png,Ang De Kang ,Male,Any,27,Chinese,,6
+23,Male,Student,Chinese,../static/images/A7.png,Cheong Seng Hee,Male,Student,23,Any,,7
+21,Male,Student,Chinese,../static/images/A8.png,Woo Cheng Ha,Male,Any,21,Chinese,4,8
+22,Male,Student,Chinese,../static/images/A9.png,Guo Yong Hui,Male,Student,22,Any,,9
+28,Male,Sales Associate,European,../static/images/A10.png,Harry John,Male,Any,28,Any,,10
+25,Male,Marketing Manager,Chinese,../static/images/A11.png,Chong Kai Ming,Male,Any,25,Chinese,,11
+24,Male,Student,Chinese,../static/images/A12.png,Leong Jun Rui ,Male,Student,24,Any,,12
+22,Female,Student,British,../static/images/A13.png,Kyla Howell,Female,Student,22,Any,,13
+21,Male,Student,Chinese,../static/images/A14.png,Jonathan Jun Yi,Male,Any,21,Any,,14
+24,Female,Content Creator,British,../static/images/A15.png,Kling Ming Rylan,Female,Any,24,Any,,15
+23,Male,Student,indian,../static/images/A16.png,ramu gopal,Male,Student,22,any,,16
+25,Male,Software Developer,Chinese,../static/images/A17.png,Chang Jia De,Male,Any,26,Chinese,,17
+24,Male,Student,Chinese,../static/images/A18.png,Li Jun De Anthony,Male,Student,25,Chinese,,18
+27,Male,Product Officer,Chinese,../static/images/A19.png,Chang Jia Deng Xavier,Male,Any,26,Any,,19
+22,Male,Student,Chinese,../static/images/A20.png,Fang Jia Jian,Male,Any,22,Any,,20
+23,Male,Student,Chinese,../static/images/A21.png,Teoh Zhi En,Male,Student,23,Any,,21
+25,Female,Biologist,Chinese,../static/images/A22.png,Koh Rui Ling Jessica,Female,Any,25,Chinese,,22
+26,Male,Chemical Engineer,Chinese,../static/images/A23.png,Zeng Zhi En Timothy,Male,Any,26,Chinese,,23
+22,Female,Student,Chinese,../static/images/A24.png,Chia Kai Ling,Female,Student,21,Any,,24
+21,Female,Student,Chinese,../static/images/A25.png,Zhong Kai Wen,Female,Student,20,Chinese,,25
+20,Female,Student,Chinese,../static/images/A26.png,Shen Jia Min,Female,Student,19,Chinese,,26
+20,Female,Student,Chinese,../static/images/A27.png,Liu Jia Qi Rachel,Female,Any,20,Any,,27
+24,Female,Pharmacist,Chinese,../static/images/A28.png,Tan Jia Wen Daisy,Female,Any,24,Chinese,,28
+23,Female,Student,Chinese,../static/images/A29.png,Tang Xin En Jasmine,Female,Student,23,Chinese,,29
+22,Female,Student,Chinese,../static/images/A30.png,Carol Keng Hui Wen,Female,Student,22,Chinese,,30

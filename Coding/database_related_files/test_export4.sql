@@ -69,6 +69,7 @@ CREATE TABLE IF NOT EXISTS `cz2006`.`profile` (
   `r_Age` INT NULL DEFAULT NULL,
   `r_Occupation` VARCHAR(45) NULL DEFAULT NULL,
   `r_Enthnicity` VARCHAR(45) NULL DEFAULT NULL,
+  `r_Skip` INT NULL DEFAULT NULL,
   `accounts_AccountID` INT NOT NULL,
   PRIMARY KEY (`accounts_AccountID`),
   INDEX `fk_profile_accounts_idx` (`accounts_AccountID` ASC) VISIBLE,

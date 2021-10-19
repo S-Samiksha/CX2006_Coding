@@ -1,7 +1,8 @@
 #do not delete 
 
-from flask import Blueprint, render_template, request, url_for, flash, redirect
+from flask import Blueprint, render_template, request, url_for, flash, redirect, jsonify
 import pandas as pd
+import json
 
 import mysql.connector
 auth = Blueprint('auth', __name__)
@@ -43,7 +44,7 @@ def login():
         val = (email, )
         cursor.execute(statement, val)
         current_account_id = cursor.fetchone()
-        print(current_account_id)
+        #print(current_account_id)
         return redirect(url_for('auth.home'))
     return render_template("login.html")
 #must use the POST method!
@@ -103,9 +104,12 @@ def home():
     r_occupation = r_occupation[0]
     r_ethnicity = [item[9] for item in profilelist]
     r_ethnicity = r_ethnicity[0]
-    statement = 'SELECT * from profile'
+    skip = [item[10] for item in profilelist]
+    skip = skip[0]
+    statement = 'SELECT * from profile where accounts_AccountID != %s'
+    val = skip
     #need to account for language 
-    cursor.execute(statement)
+    cursor.execute(statement, val)
     table = cursor.fetchall()
     statement = 'SELECT * from user_language where accounts_AccountID = %s'
     val = current_account_id
@@ -138,10 +142,16 @@ def home():
     size = int(table.size)
     size = int(size/12)
     i=0
-    
     table = table.values.tolist()
 
     return render_template("home.html", Name = Name, table=table, size = size, i=i)
+
+@auth.route('/deleteRec', methods=['POST'])
+def deleteRec():
+    accountId = json.loads(request.data)
+    aID = accountId['aID']
+    
+    return jsonify({})
 #-------------------------------------------------End Home----------------------------------------------------------------------------------------
 
 
