@@ -9,12 +9,13 @@ Testing 18 oct week lectures
 ## Locations of all documents (update there directly)
 Code: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Coding <br>
 Test and Testcases: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Coding/Testing <br>
-Documentation: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Documentation/lab_3_submission <br>
+
 SRS document: https://entuedu-my.sharepoint.com/:w:/r/personal/samiksha002_e_ntu_edu_sg/Documents/CX2006/Group%20Project/Final%20SRS.docx?d=w8c13886884a6467c99bdcfac463748c1&csf=1&web=1&e=eEE4rM <br>
 
-<!--UI MOCK UP LINK:  https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit?usp=sharing-->
+<!--UI MOCK UP LINK:  https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit?usp=sharing
+Documentation: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Documentation/lab_3_submission <br> -->
 
-## Deadlines
+## Deadlines (TO BE CONFIRMED, WE NEED TO ADJUST THIS)
 On **Sunday 31 Oct, 9.30pm**, I will download the zip from github and submit with the pdf document. <br>
 11 Nov: CX2006 Part 2 Quiz during lecture time <br>
 29 Nov: CX2006 finals only part 1 tested <br>
@@ -27,13 +28,6 @@ finals: 25% <br>
 
 ### All the best guys!!! 
 
-
-## Database (Ask TA)
-> profile table 
-> Accounts table
-> chat_date table
-> user_language table
-> roommate_language table 
 
 ---
 ## Testing (after finishing backend)
@@ -68,6 +62,14 @@ Logout successfully back to main page
 
 
 ## Backend 
+
+#### Stuff that needs to be standardized
+1. If you install some libraries frameworks etc. put it into the requirements.txt(e.g. pandas, without pandas the home page wont show which means nth will work)
+2. To download all the requirements, go into the folder with the requirements.txt in cmd line / terminal. Run (`pip install -r requirement.txt`)
+3. All the python stuff is to be added into auth.py --> all routes are made and comments are made for sql commands taken from online (tech with tim, w3 schools) when you go in read the thing at the top
+4. about page and main page is in views.py 
+5. do not touch __init__.py and main.py 
+6. run main.py to run flask application 
 
 Compile into one executable app.py file + readme guidelines + set up env: **Samiksha** <br>
 Make the database for the landlord emails: **Marcus** <br>
