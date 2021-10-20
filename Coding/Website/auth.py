@@ -10,17 +10,63 @@ current_account_id = 0
 
 """
 PLEASE READ!!
-Instructions:
-From the login page, we get a current_account_id which is the PK for the sql then everyone can use from there!
+From the login page, we get a current_account_id then everyone can use from there!
 to use, global current_account_id is called in the login page --> do not remove 
-Each page is separated with the line
+Each page is separated with the line #------ like that
 
-1. connect with sql, localhost and your own password
-2. the functions needed (from youtube and placed in comments) are below (can ctr find)
-#how to get from SQL
-#to pass in update to sql
-#button-sql-js-flask-connection
+connect with sql, localhost and your own password
 
+Below for code reference:
+"""
+
+"""
+import request done at the top, import API as pandas DF
+r = requests.get('url') #paste url here
+j = r.json()
+table = pd.DataFrame.from_dict(j)
+"""
+"""
+pandas code format for filtering:
+table = table[table.<variable_name> != <value>]
+table = table[table.<variable_name> == <value>]
+table = table[table.<variable_name> > <value>]
+table = table[table.<variable_name> < <value>]
+
+size = table.size / (no. of columns in table) = no. of rows in table
+
+table = table.values.tolist() #convert to list before 
+pass in table into render_template as table=table 
+then in html file {{table[x][y]}} to call the values 
+
+"""
+
+"""
+My SQl -- python reference 
+cursor = cur.cursor()
+#separate the statment and the values 
+statement = "SELECT AccountID from accounts where Email = %s" #place SQL query here 
+val = (email, )
+cursor.execute(statement, val)
+current_account_id = cursor.fetchone() #fetch one means fetch only one column 
+#fetchall means fetch all columns 
+
+#insert data into sql database
+cursor = cur.cursor()
+statement = "INSERT INTO accounts (Email, Password) VALUES (%s, %s)" # we can do it this way too?
+val = (email, password)
+cursor.execute(statement, val)
+cur.commit() #commit to sql
+
+#update for one account at a particular place must concatenate string if separated and cannot use VALUES (%s, %s) 
+#why is this so?
+statement = 'UPDATE profile SET r_Skip = '+str(AiD)+' WHERE accounts_AccountID = %s'
+
+"""
+
+"""
+references:
+https://www.youtube.com/watch?v=dam0GPOAvVI
+https://www.w3schools.com/python/python_mysql_getstarted.asp 
 
 """
 
@@ -28,7 +74,7 @@ Each page is separated with the line
 #------------------------------------------------------------MySql Connector-----------------------------------------------------------------------
 #replace each item with your own respective password, localhost etc. 
 cur = mysql.connector.connect(user='root', password='password',
-                    host='127.0.0.1',
+                    host='localhost',
                     database='cz2006')
 
 
@@ -194,9 +240,12 @@ def messages():
 #----------------------------------------------End Messages---------------------------------------------------------------------------------------
 
 #---------------------------------------------Start Search/view Houses---------------------------------------------------------------------------------
+
+
 @auth.route('/search_house')
 def search_house():
     return render_template("search_house.html")
+
 
 @auth.route('/view_houses')
 def view_houses():
