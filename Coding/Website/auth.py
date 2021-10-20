@@ -28,7 +28,7 @@ Each page is separated with the line
 #------------------------------------------------------------MySql Connector-----------------------------------------------------------------------
 #replace each item with your own respective password, localhost etc. 
 cur = mysql.connector.connect(user='root', password='password',
-                    host='localhost',
+                    host='127.0.0.1',
                     database='cz2006')
 
 
