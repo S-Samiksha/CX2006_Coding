@@ -64,12 +64,14 @@ Logout successfully back to main page
 ## Backend 
 
 #### Stuff that needs to be standardized
-1. If you install some libraries frameworks etc. put it into the requirements.txt(e.g. pandas, without pandas the home page wont show which means nth will work)
-2. To download all the requirements, go into the folder with the requirements.txt in cmd line / terminal. Run (`pip install -r requirement.txt`)
+1. If you install some libraries frameworks etc. put it into the requirements.txt(e.g. pandas, sql, flask, without pandas the home page wont show which means nth will work)
+2. To download all the requirements, go into the folder with the requirements.txt in cmd line / terminal. Run (`pip install -r requirement.txt`) --> do this everytime so if anyone made edits flask can run on your laptop
 3. All the python stuff is to be added into auth.py --> all routes are made and comments are made for sql commands taken from online (tech with tim, w3 schools) when you go in read the thing at the top
 4. about page and main page is in views.py 
 5. do not touch __init__.py and main.py 
-6. run main.py to run flask application 
+6. run main.py to run flask application (in VS code ctr + shift + N) fire up local host 
+
+**Do we want a virtual environment?** 
 
 Compile into one executable app.py file + readme guidelines + set up env: **Samiksha** <br>
 Make the database for the landlord emails: **Marcus** <br>
