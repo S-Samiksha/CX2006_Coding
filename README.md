@@ -11,7 +11,8 @@ Code: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Coding <br>
 Test and Testcases: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Coding/Testing <br>
 Documentation: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Documentation/lab_3_submission <br>
 SRS document: https://entuedu-my.sharepoint.com/:w:/r/personal/samiksha002_e_ntu_edu_sg/Documents/CX2006/Group%20Project/Final%20SRS.docx?d=w8c13886884a6467c99bdcfac463748c1&csf=1&web=1&e=eEE4rM <br>
-UI MOCK UP LINK:  https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit?usp=sharing <br>
+
+<!--UI MOCK UP LINK:  https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit?usp=sharing-->
 
 ## Deadlines
 On **Sunday 31 Oct, 9.30pm**, I will download the zip from github and submit with the pdf document. <br>
