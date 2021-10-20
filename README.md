@@ -45,13 +45,13 @@ Test Manually: Search Houses **Samiksha** <br>
 
 Register a dummy account --> then just use account 1 from there 
 
-Test accounts to be used: Account 1 and Account 3
+Test accounts to be used: Account 1 and Account 5
 
 Login using Account 1
 
 Update self/roommate: Account 1
 
-Account 1 messages Account 3 (maybe have account 1 saying 'yes lets room tgt!' in the demo, with a prev chat history of them discussing **marcus** decide)
+Account 1 messages Account 5 (maybe have account 1 saying 'yes lets room tgt!' in the demo, with a prev chat history of them discussing **marcus** decide)
 
 Test accounts to use 'skip' button in recommendation: Account 2
 
