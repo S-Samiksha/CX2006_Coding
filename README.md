@@ -15,8 +15,17 @@ SRS document: https://entuedu-my.sharepoint.com/:w:/r/personal/samiksha002_e_ntu
 <!--UI MOCK UP LINK:  https://docs.google.com/presentation/d/1dIuQCkmmF8AWjBT9cTfn94fV4n_XEfiyTaNp6yWQWBk/edit?usp=sharing
 Documentation: https://github.com/S-Samiksha/CX2006_Coding/tree/main/Documentation/lab_3_submission <br> -->
 
-## Deadlines (TO BE CONFIRMED, WE NEED TO ADJUST THIS)
-On **Sunday 31 Oct, 9.30pm**, I will download the zip from github and submit with the pdf document. <br>
+## Deadlines (READ HERE and the WHOLE README)
+BY **Friday 29 Oct 2359**, if the backend cannot be properly coded we will divert all resources to search houses, login and logout. The codes that are undone shall be left as it is.
+BY **Saturday 30 Oct 5pm**, all backend coding should be done that are main priority. 
+ON **Sunday** WHILE USING DISCORD/ZOOM:
+ALL TESTING AND CODING: Junhan, Marcus, Sam, Anagha (DISCORD, we meet up and fix the testing/coding whichever needs to be fixed)
+EVERYTHING OTHER THAN TESTING AND CODING INCLUDING LIFE CYCLE DESIGN PATTERN ETC ETC: Arushi, Melise 
+video screen recording: Sam
+presentation of product: Sam (12min --> change if need @Melisepoon @arushiibansal19)
+the rest: arushi and melise (10min )
+
+On **Sunday 31 Oct, 11.00pm**, I will download the zip from github and submit with the pdf document. <br>
 11 Nov: CX2006 Part 2 Quiz during lecture time <br>
 29 Nov: CX2006 finals only part 1 tested <br>
 
