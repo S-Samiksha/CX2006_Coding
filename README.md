@@ -149,7 +149,7 @@ press ctr + c to stop the server.
 
 > exit 
 
-~~
+~~~
 
 
 
