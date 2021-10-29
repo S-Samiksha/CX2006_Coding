@@ -1,5 +1,5 @@
 # Creators of SwipeMyRoommie
-[Sankar Samiksha](https://github.com/S-Samiksha)
+[Sankar Samiksha](https://github.com/S-Samiksha) <br/>
 [Poon Yan Xin Melise](https://github.com/Melisepoon)
 
 add in your names here 
