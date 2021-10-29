@@ -24,7 +24,7 @@
           <ul>
             <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
             <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
-            <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
+            <li><a href="/messages.html" data-after="MESSAGES">MESSAGES</a></li>
             <li><a href="/" data-after="LOGOUT">LOGOUT</a></li>
             <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
@@ -46,16 +46,16 @@
   </section>
   <!-- End welcome Section  -->
 
-  
+
   <!--Roommate Recommendation-->
-  
+
   <section class= "page-section" id="recommendation">
       <h2 class="section-heading">Roommates Recommended Just For You!</h2>
       <div class = "slideshow-container">
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         <!--button-sql-js-flask-connection-->
-         {%for i in range(size)%} 
+         {%for i in range(size)%}
             <div class = "myRecommendations fade">
               <h3 class= "section-subheading">{{table[i][5]}} | {{table[i][0]}}</h3>
               <button class="button-chat" href ="/messages">Chat</button>
@@ -64,11 +64,11 @@
           </div>
           {% endfor %}
           <script src="../static/javascript/home.js"></script>
-          
-      </div>
-      
 
-        
+      </div>
+
+
+
 
 </section>
 <!--end Roommate Recommendation Page-->
