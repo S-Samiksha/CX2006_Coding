@@ -199,6 +199,9 @@ main header h3{
   height: 65px;
 }
 
+
+
+
 .button-chat{
   border-radius: 0;
   background-color: #f26a4f;
@@ -251,12 +254,22 @@ main footer a{
 }
 
 .send_icons{
-  height: 30px;
 }
 
 #send_btn{
   float:right;
   border: 2px solid black;
+  height: 7vh;
+  border-radius: 8px;
+  padding-top: 10px;
+  color: white;
+  background-color: #033270;
+  width: 10vh;
+  text-align: center;
+}
+
+a.send_icons:hover{
+ background-color: lightgrey;
 }
 
 
