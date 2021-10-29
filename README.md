@@ -43,7 +43,7 @@ Open command prompt/terminal
 ~~~
 
 ## Clone Git Repository
-Open command prompt / terminal 
+Open command prompt / terminal (this instruction set follows Windows cmd prompt, this could vary if you are using another OS terminal)
 
 ~~~
 
@@ -51,7 +51,7 @@ Open command prompt / terminal
 
 > git clone https://github.com/S-Samiksha/CX2006_Coding.git
 
->cd cx2006_coding
+> cd cx2006_coding
 
 > pip install -r requirement.txt
 
