@@ -62,14 +62,13 @@ Open command prompt / terminal (this instruction set follows Windows cmd prompt,
 
 From the following website download [mySql](https://dev.mysql.com/downloads/mysql/) 
 
-~~~
 
 After downloading MySql, creating a password, you will need to use it later. 
 
 Set it as the following:
-Username = \`root` and password = `password` 
+Username = `root` and password = `password` 
 
----
+
 
 if you are using another username or password, open auth.py to change. <br>
 cur = mysql.connector.connect(user='root', password='password',
@@ -78,7 +77,7 @@ cur = mysql.connector.connect(user='root', password='password',
 
 Change the password, user 
 if needed change localhost (most likely do not need to)
-~~~
+
 
 
 ## Setting up the database using mySQL command line client 
@@ -120,12 +119,10 @@ mysql> exit
 ## Setting up the database using mySQL workbench 
 Prerequisite: You are already connected to server <br>
 
-~~~
 Firstly, create a new schema called cz2006 (case sensitive). <br>
 
 In the menu bar go to server --> data import --> select the `cx2006_coding/db` folder --> import 
 
-~~~
 
 ## Running the python app
 
@@ -150,7 +147,7 @@ Cope and paste into your web browser.
 ~~~
 press ctr + c to stop the server. 
 
->exit 
+> exit 
 
 ~~
 
