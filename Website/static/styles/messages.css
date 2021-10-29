@@ -6,7 +6,7 @@
 }
 #container{
   height: 100%;
-  background:#fedfd4;
+  background:#bddcdf;
   margin:0 auto;
   font-size:0;
   border-radius:5px;
@@ -133,12 +133,16 @@ main header h3{
   color:#7e818a;
 }
 
+.textarea_padding{
+  padding-top: 10px;
+}
+
 #chat{
   padding-left:0;
   margin:0;
   list-style-type:none;
   overflow-y:scroll;
-  height:45vh;
+  height:63vh;
   border-top:2px solid #fff;
   border-bottom:2px solid #fff;
 }
@@ -169,7 +173,8 @@ main header h3{
   text-align:right;
 }
 #chat .you .message{
-  background-color: #f26a4f;
+  background-color: #FEDFD4;
+  color: black;
 }
 #chat .me .message{
   background-color: #033270;
@@ -215,22 +220,19 @@ main header h3{
 }
 
 main footer{
-  height:155px;
-  padding:20px 30px 10px 20px;
+  padding:0px 30px 10px 20px;
   bottom: 0;
-  position: absolute;
-width: 80%;
 }
 main footer textarea{
   resize:none;
   border:none;
-  display:block;
-  width:100%;
-  height:80px;
+  width:93%;
   border-radius:3px;
-  padding:20px;
+  height: 7vh;
+  padding:10px 20px 10px 10px;
   font-size:13px;
   margin-bottom:13px;
+  overflow: hidden;
 }
 main footer textarea::placeholder{
   color:#ddd;
@@ -249,7 +251,6 @@ main footer a{
 }
 
 .send_icons{
-  display: inline-block;
   height: 30px;
 }
 
