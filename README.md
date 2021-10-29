@@ -25,19 +25,21 @@ $sudo apt-get install git-all
 
 If you are using windows<br>
 
---
+---
+
 Download git from [here](https://gitforwindows.org/)
 
 Follow the instructions from [here](https://github.com/git-guides/install-git#:~:text=To%20do%20so%2C%20Navigate%20to,installation%20by%20typing%3A%20git%20version%20)
 
---
+---
 
 If you are using MacOS <br>
---
+---
+
 Download git from [here](https://sourceforge.net/projects/git-osx-installer/files/git-2.23.0-intel-universal-mavericks.dmg/download?use_mirror=autoselect)
 
 Follow the instructions from [here](https://github.com/git-guides/install-git#:~:text=To%20do%20so%2C%20Navigate%20to,installation%20by%20typing%3A%20git%20version%20)
---
+---
 
 Check if you have downloaded git:
 
