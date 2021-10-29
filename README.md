@@ -55,6 +55,8 @@ Open command prompt / terminal
 
 > git clone https://github.com/S-Samiksha/CX2006_Coding.git
 
+>cd cx2006_coding
+
 > pip install -r requirement.txt
 
 ~~~
@@ -89,7 +91,8 @@ Now, do the following:
 2. Enter password 
 3. Run the following commands:
 
-mysql> `DROP DATABASE [IF EXISTS] cz2006;`
+
+mysql> `DROP DATABASE cz2006;` 
 
 mysql> `CREATE DATABASE cz2006;` 
 
@@ -97,24 +100,25 @@ mysql> `CREATE DATABASE cz2006;`
 
 mysql> `use cz2006;`
 
-mysql> `source C:\desktop\cx2006_coding\db\cz2006_accounts.sql`
+mysql> `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_accounts.sql`
 
-mysql> `source C:\desktop\cx2006_coding\db\cz2006_chat_data.sql` 
+mysql> `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_chat_data.sql` 
 
-mysql> `source C:\desktop\cx2006_coding\db\cz2006_profile.sql` 
+mysql> `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_profile.sql` 
 
-mysql>  `source C:\desktop\cx2006_coding\db\cz2006_roommate_language.sql`
+mysql>  `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_roommate_language.sql`
 
-mysql>  `source C:\desktop\cx2006_coding\db\cz2006_user_language.sql` 
+mysql>  `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_user_language.sql` 
 
 ~~~
 
 Note: if you have stored the file cx2006_coding in a different folder, remember to change the pathfile accordingly<br>
-for example, if you have it stored cx2006 in documents the following wld be the path file:<br>
-`C:\Users\user_name\documents\cx2006_coding\db\cz2006_accounts.sql`
+<user_name> has to be changed to your own 
 
 ~~~
 4. Close the SQL command client 
+
+> exit 
 ~~~
 
 
@@ -143,7 +147,20 @@ OR
 
 ~~~
 
-Click on the generate ip address, this should lead you to our website
+This should generate the following ip address: `http://127.0.0.1:5000/`
+
+Cope and paste into your web browser.
+
+## Exiting 
+~~~
+press ctr + c to stop the server. 
+
+>exit 
+
+~~
+
+
+
 
 
 
