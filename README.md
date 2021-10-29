@@ -67,7 +67,7 @@ From the following website download [mySql](https://dev.mysql.com/downloads/mysq
 After downloading MySql, creating a password, you will need to use it later. 
 
 Set it as the following:
-Username = `root` and password = `password` 
+Username = \`root` and password = `password` 
 
 ---
 
