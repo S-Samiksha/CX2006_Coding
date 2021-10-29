@@ -89,23 +89,21 @@ Now, do the following:
 3. Run the following commands:
 
 
-mysql> `DROP DATABASE cz2006;` 
+mysql> DROP DATABASE cz2006;
 
-mysql> `CREATE DATABASE cz2006;` 
+mysql> CREATE DATABASE cz2006;
 
-** do remember to include the ; **
+mysql> use cz2006;
 
-mysql> `use cz2006;`
+mysql> source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_accounts.sql
 
-mysql> `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_accounts.sql`
+mysql> source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_chat_data.sql
 
-mysql> `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_chat_data.sql` 
+mysql> source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_profile.sql
 
-mysql> `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_profile.sql` 
+mysql>  source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_roommate_language.sql
 
-mysql>  `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_roommate_language.sql`
-
-mysql>  `source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_user_language.sql` 
+mysql>  source C:\Users\<user_name>\Desktop\cx2006_coding\db\cz2006_user_language.sql
 
 ~~~
 
@@ -115,7 +113,7 @@ Note: if you have stored the file cx2006_coding in a different folder, remember 
 ~~~
 4. Close the SQL command client 
 
-> exit 
+mysql> exit 
 ~~~
 
 
