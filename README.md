@@ -18,12 +18,12 @@ You have the following installed:
 
 ## Installing Git
 
-If you are using ubuntu <br>
+**If you are using ubuntu** <br>
 ~~~
 $sudo apt-get install git-all
 ~~~
 
-If you are using windows<br>
+**If you are using windows** <br>
 
 ---
 
@@ -33,7 +33,7 @@ Follow the instructions from [here](https://github.com/git-guides/install-git#:~
 
 ---
 
-If you are using MacOS <br>
+**If you are using MacOS** <br>
 ---
 
 Download git from [here](https://sourceforge.net/projects/git-osx-installer/files/git-2.23.0-intel-universal-mavericks.dmg/download?use_mirror=autoselect)
