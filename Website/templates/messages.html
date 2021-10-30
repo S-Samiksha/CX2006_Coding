@@ -11,7 +11,7 @@
   <!-- <script src="jquery-3.5.1.min.js"></script> -->
 </head>
 
-<body>
+<body onload="scrollbtm()">
 
   <!-- Header -->
   <section id="header">
@@ -210,6 +210,10 @@
   <!-- End Footer -->
   <script src="./app.js"></script>
   <script src="../static/javascript/messages.js"></script>
+  <script>
+    var chat_messages = document.getElementById("chat");
+    chat_messages.scrollTop = chat_messages.scrollHeight;
+  </script>
 </body>
 
 </html>
