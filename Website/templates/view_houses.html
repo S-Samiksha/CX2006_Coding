@@ -14,13 +14,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <!-- bootstrap css -->
-  <link rel="stylesheet" href="main/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../main/css/bootstrap.min.css">
   <!-- style css -->
-  <link rel="stylesheet" href="./static/styles/styles_view_houses.css">
+  <link rel="stylesheet" href="../static/styles/styles_view_houses.css">
   <!-- Responsive-->
-  <link rel="stylesheet" href="main/css/responsive.css">
+  <link rel="stylesheet" href="../main/css/responsive.css">
   <!-- fevicon -->
-  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link rel="icon" href="../static/images/fevicon.png" type="image/gif" />
   <!-- Scrollbar Custom CSS -->
   <!-- <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css"> -->
   <!-- Tweaks for older IEs-->
@@ -36,7 +36,7 @@
         <section id="header">
          <div class="header container_head">
            <div id="about_nav_bar">
-             <img src="../images/icon.png" id="logo"/>
+             <img src="../static/images/icon.png" id="logo"/>
              <div class="brand">
                  <!-- <a href="#welcome">
                    <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -63,99 +63,69 @@
           <p id="sresults">Search Results</p>
         </section>
         <section class="banner_main">
-          
           <div id="searchcontainer">
-            <form action="/action_page.php">
               <div id="searchbox">
-                <img src="images/searchicon.png" id="searchicon">
-                <input type="text" placeholder="Search Rooms" name="search">
+                <img src="../static/images/searchicon.png" id="searchicon">
+                <!-- change ip address -->
+                <form action = "/view_houses" method = "POST">
+                  <input type="text" placeholder="Search Rooms" name="search" required>
+                  <button type="submit">Search</button>
+                </form>
               </div>
-              <div id="searchbox">
+              <!-- <div id="searchbox">
                 <select name="filter" id="search">
                   <option value="" selected disabled hidden>More Filters</option>
                   <option value="filter1">filter1</option>
                   <option value="filter2">filter2</option>
                 </select>
-              </div>
-              <div id="searchbox">
-                <button type="submit">Search</button>
-              </div>
-            </form>
+              </div> -->
           </div>
         </section>
         <!-- End search Section  -->
         <!-- Display search Section  -->
-        
-        <p id="dre">100 Results in Woodlands</p>  
+        {% if townName and numOfResult %}
+          <p id="dre">{{numOfResult}} Results in {{townName}}</p>  
+        {% endif %}
+        {% if numOfResult == 0 %}
+          <p id="dre">{{numOfResult}} Results in query: {{status}}</p>
+          <img src="../static/images/search_icon_man.png" align="center" id="fail" />
+        {% endif %}
+        {% if slist %}
         <section class="display_main">
-          
           <table style="width:100%">
             <colgroup>
               <col span="1" style="width: 15%;">
               <col span="1" style="width: 15%;">
-              <col span="1" style="width: 15%;">
-              <col span="1" style="width: 15%;">
             </colgroup>
+            {% for i in slist %}  
             <tr>
-              <td rowspan="1" style="height:10%"><img src="images/sample_house1.png"></td>
+              <td rowspan="1" style="height:10%"><img src="../static/images/sample_house1.png"></td>
               <td>
-                <text>
-                  <h1><a href="" id="house">Sample House</a></h1>
-                  <h2>1 Sample Street 123456</h2>
-                  <h2>$500</h2>
-                </text>
-              </td>
-              <td><img src="images/sample_house2.png"></td>
-              <td>
-                <text>
-                  <h1><a href="" id="house">Sample House</a></h1>
-                  <h2>1 Sample Street 123456</h2>
-                  <h2>$500</h2>
-                </text>
+                  <text>
+                  <h1>Id:{{i['_id']}}</h1>
+                  <h1>{{i['blk_no']}} {{i['street']}}</h1>
+                  <h2>Area: {{townName}}</h2>
+                  <h2>Max Floors: {{i['max_floor_lvl']}}</h2>
+                  {% if i['market_hawker'] == 'N' %}
+                  <h2>Market/Hawker nearby: No</h2>
+                  {% else %}
+                  <h2>Market/Hawker nearby: Yes</h2>
+                  {% endif %}
+                  {% if i['multistorey_carpark'] == 'N' %}
+                  <h2>Multistorey Carpark nearby: No</h2>
+                  {% else %}
+                  <h2>Multistorey Carpark nearby: Yes</h2>
+                  {% endif %}
+                  <h2>Completed in {{i['year_completed']}}</h2>
+                  </text>
               </td>
             </tr>
-            <tr>
-              <td rowspan="1" style="height:10%"><img src="images/sample_house1.png"></td>
-              <td>
-                <text>
-                  <h1><a href="" id="house">Sample House</a></h1>
-                  <h2>1 Sample Street 123456</h2>
-                  <h2>$500</h2>
-                </text>
-              </td>
-              <td><img src="images/sample_house2.png"></td>
-              <td>
-                <text>
-                  <h1><a href="" id="house">Sample House</a></h1>
-                  <h2>1 Sample Street 123456</h2>
-                  <h2>$500</h2>
-                </text>
-              </td>
-            </tr>
-            <tr>
-              <td rowspan="1" style="height:10%"><img src="images/sample_house1.png"></td>
-              <td>
-                <text>
-                  <h1><a href="" id="house">Sample House</a></h1>
-                  <h2>1 Sample Street 123456</h2>
-                  <h2>$500</h2>
-                </text>
-              </td>
-              <td><img src="images/sample_house2.png"></td>
-              <td>
-                <text>
-                  <h1><a href="" id="house">Sample House</a></h1>
-                  <h2>1 Sample Street 123456</h2>
-                  <h2>$500</h2>
-                </text>
-              </td>
-            </tr>
+            {% endfor %}
           </table>
         </section>
-
-        <!--end Roommate Recommendation Page-->
-
+        {% endif %}
         <!-- Footer -->
+        <!-- 
         <section id="numberbar">
           <div class="pagination">
             <a href="#">&laquo;</a>
@@ -168,6 +138,7 @@
             <a href="#">&raquo;</a>
           </div>
         </section>
+        -->
         <!-- End Footer -->
         <script src="./app.js"></script>
       </body>
