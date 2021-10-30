@@ -3,7 +3,7 @@
 from flask import Blueprint, render_template, request, url_for, flash, redirect, jsonify
 import pandas as pd
 import json
-
+import requests
 import mysql.connector
 auth = Blueprint('auth', __name__)
 current_account_id = 0
@@ -13,9 +13,7 @@ PLEASE READ!!
 From the login page, we get a current_account_id then everyone can use from there!
 to use, global current_account_id is called in the login page --> do not remove 
 Each page is separated with the line #------ like that
-
 connect with sql, localhost and your own password
-
 Below for code reference:
 """
 
@@ -31,13 +29,10 @@ table = table[table.<variable_name> != <value>]
 table = table[table.<variable_name> == <value>]
 table = table[table.<variable_name> > <value>]
 table = table[table.<variable_name> < <value>]
-
 size = table.size / (no. of columns in table) = no. of rows in table
-
 table = table.values.tolist() #convert to list before 
 pass in table into render_template as table=table 
 then in html file {{table[x][y]}} to call the values 
-
 """
 
 """
@@ -49,25 +44,21 @@ val = (email, )
 cursor.execute(statement, val)
 current_account_id = cursor.fetchone() #fetch one means fetch only one column 
 #fetchall means fetch all columns 
-
 #insert data into sql database
 cursor = cur.cursor()
 statement = "INSERT INTO accounts (Email, Password) VALUES (%s, %s)" # we can do it this way too?
 val = (email, password)
 cursor.execute(statement, val)
 cur.commit() #commit to sql
-
 #update for one account at a particular place must concatenate string if separated and cannot use VALUES (%s, %s) 
 #why is this so?
 statement = 'UPDATE profile SET r_Skip = '+str(AiD)+' WHERE accounts_AccountID = %s'
-
 """
 
 """
 references:
 https://www.youtube.com/watch?v=dam0GPOAvVI
 https://www.w3schools.com/python/python_mysql_getstarted.asp 
-
 """
 
 
@@ -241,15 +232,171 @@ def messages():
 
 #---------------------------------------------Start Search/view Houses---------------------------------------------------------------------------------
 
+# def abc(listOfStuff):
+#     id = listOfStuff["_id"]
+#     town = listOfStuff["bldg_contract_town"]
+#     blk = listOfStuff["blk_no"]
+#     maxFlr = listOfStuff["max_floor_lvl"]
+#     yearCom = listOfStuff["year_completed"]
+#     street = listOfStuff["street"]
+#     market = listOfStuff["market_hawker"]
+#     carpark = listOfStuff["multistorey_carpark"]
 
 @auth.route('/search_house')
 def search_house():
+    
     return render_template("search_house.html")
+# display short form town into full name
+def convertToFullTown(town):
+    if(town == 'AMK'):
+        town = 'ANG MO KIO'
+    elif (town == 'BB'):
+        town = 'BUKIT BATOK'
+    elif (town == 'BD'):
+        town = 'BEDOK'
+    elif (town == 'BH'):
+        town = 'BISHAN'
+    elif (town == 'BM'):
+        town = 'BUKIT MERAH'
+    elif (town == 'BP'):
+        town = 'BUKIT PANJANG'
+    elif (town == 'BT'):
+        town = 'BUKIT TIMAH'
+    elif (town == 'CCK'):
+        town = 'CHOA CHU KANG'
+    elif (town == 'CL'):
+        town = 'CLEMENTI'
+    elif (town == 'CT'):
+        town = 'CENTRAL AREA'
+    elif (town == 'GL'):
+        town = 'GEYLANG'
+    elif (town == 'HG'):
+        town = 'HOUGANG'
+    elif (town == 'JE'):
+        town = 'JURONG EAST'
+    elif (town == 'JW'):
+        town = 'JURONG WEST'
+    elif (town == 'KWN'):
+        town = 'KALLANG/WHAMPOA'
+    elif (town == 'MP'):
+        town = 'MARINE PARADE'
+    elif (town == 'PG'):
+        town = 'PUNGGOL'
+    elif (town == 'PRC'):
+        town = 'PASIR RIS'
+    elif (town == 'QT'):
+        town = 'QUEENSTOWN'
+    elif (town == 'SB'):
+        town = 'SEMBAWANG'
+    elif (town == 'SGN'):
+        town = 'SERANGOON'
+    elif (town == 'SK'):
+        town = 'SENGKANG'
+    elif (town == 'TAP'):
+        town = 'TAMPINES'
+    elif (town == 'TG'):
+        town = 'TENGAH'
+    elif (town == 'TP'):
+        town = 'TOA PAYOH'
+    elif (town == 'WL'):
+        town = 'WOODLANDS'
+    elif (town == 'YS'):
+        town = 'YISHUN'
+    return town
+# get user search input, convert to short form
+def convertToShortTown(input):
+    if(input.upper() in 'ANG MO KIO'):
+        input = 'AMK'
+    elif (input.upper() in 'BUKIT BATOK'):
+        input = 'BB'
+    elif (input.upper() in 'BEDOK'):
+        input = 'BD'
+    elif (input.upper() in 'BISHAN'):
+        input = 'BH'
+    elif (input.upper() in 'BUKIT MERAH'):
+        input = 'BM'
+    elif (input.upper() in 'BUKIT PANJANG'):
+        input = 'BP'
+    elif (input.upper() in 'BUKIT TIMAH'):
+        input = 'BT'
+    elif (input.upper() in 'CHOA CHU KANG'):
+        input = 'CCK'
+    elif (input.upper() in 'CLEMENTI'):
+        input = 'CL'
+    elif (input.upper() in 'CENTRAL AREA'):
+        input = 'CT'
+    elif (input.upper() in 'GEYLANG'):
+        input = 'GL'
+    elif (input.upper() in 'HOUGANG'):
+        input = 'HG'
+    elif (input.upper() in 'JURONG EAST'):
+        input = 'JE'
+    elif (input.upper() in 'JURONG WEST'):
+        input = 'JW'
+    elif (input.upper() in 'KALLANG/WHAMPOA'):
+        input = 'KWN'
+    elif (input.upper() in 'MARINE PARADE'):
+        input = 'MP'
+    elif (input.upper() in 'PUNGGOL'):
+        input = 'PG'
+    elif (input.upper() in 'PASIR RIS'):
+        input = 'PRC'
+    elif (input.upper() in 'QUEENSTOWN'):
+        input = 'QT'
+    elif (input.upper() in 'SEMBAWANG'):
+        input = 'SB'
+    elif (input.upper() in 'SERANGOON'):
+        input = 'SGN'
+    elif (input.upper() in 'SENGKANG'):
+        input = 'SK'
+    elif (input.upper() in 'TAMPINES'):
+        input = 'TAP'
+    elif (input.upper() in 'TENGAH'):
+        input = 'TG'
+    elif (input.upper() in 'TOA PAYOH'):
+        input = 'TP'
+    elif (input.upper() in 'WOODLANDS'):
+        input = 'WL'
+    elif (input.upper() in 'YISHUN'):
+        input = 'YS'
+    return input
+loopCount = 0
+#get user inputs
+def findHouse(query):
+    # parameter= {'limit': 6, 'q' : query}
+    parameter= {'q' : query}
+    response = requests.get("https://data.gov.sg/api/action/datastore_search?resource_id=482bfa14-2977-4035-9c61-c85f871daf4e", params=parameter)
+    #check if api can be accessed
+    if(response.status_code != 200): 
+        print("Error")
+    searchList = response.json()
+    # in list = help success result
+    # in result = resource_id fields records _links limit total
+    # formatted string Python JSON object 
+    # print(json.dumps(response.json(), sort_keys=True, indent=4))
+    listOfStuff = {}
+    stuffList = searchList['result']['records']
+    if(len(stuffList)==0):
+        return 0
+    # limit counter TBC?
+    global loopCount
+    loopCount = searchList['result']['total']
+    listOfStuff = json.loads(json.dumps(stuffList, sort_keys=True))
+    # print(json.dumps(stuffList, sort_keys=True, indent=4))
+    return listOfStuff # = list of dictionary
 
-
-@auth.route('/view_houses')
+@auth.route('/view_houses', methods = ['POST', 'GET']) # ‘/view_houses URL that triggered the result () function.
 def view_houses():
-    return render_template("view_houses.html")
+    if request.method == 'POST':
+        # result = request.form
+        # getting input with name = fname in HTML form
+        search = request.form.get("search")
+        listOfStuff = findHouse(search)
+        if(listOfStuff == 0):
+            return render_template("view_houses.html", status = search, numOfResult = 0)
+
+        townName = convertToFullTown(listOfStuff[0]['bldg_contract_town'])
+        return render_template("view_houses.html", townName = townName, numOfResult = loopCount, slist = listOfStuff)
 
 #--------------------------------------------End Search/view Houses------------------------------------------------------------------------------------
 
@@ -266,4 +413,3 @@ def update_self():
     return render_template("update_self.html")
 
 #--------------------------------------------End Update Self---------------------------------------------------------------------------------------
-
