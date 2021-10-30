@@ -1,7 +1,8 @@
 # Creators of SwipeMyRoommie
 [Sankar Samiksha](https://github.com/S-Samiksha) <br/>
 [Poon Yan Xin Melise](https://github.com/Melisepoon) <br/>
-[Marcus NG Li Wang](https://github.com/ngliwang)
+[Marcus NG Li Wang](https://github.com/ngliwang) <br/>
+[Anagha Ani](https://github.com/ana-17) <br/>
 
 add in your names here 
 
