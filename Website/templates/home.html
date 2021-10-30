@@ -57,8 +57,8 @@
          {%for i in range(size)%}
             <div class = "myRecommendations fade">
               <h3 class= "section-subheading">{{table[i][5]}} | {{table[i][0]}}</h3>
-              <button class="button-chat" href ="/messages">Chat</button>
-                <button class="button-skip" onclick="deleteRec({{table[i][11]}})"">Skip</button>
+              <button class="button-chat" onclick="window.location.href='{{ url_for( 'auth.messages')}}';">Chat</button>
+              <button class="button-skip" onclick="deleteRec({{table[i][11]}})"">Skip</button>
               <img src="{{table[i][4]}}" id="roommate_img"/>
           </div>
           {% endfor %}
