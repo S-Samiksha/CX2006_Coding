@@ -81,7 +81,7 @@ if needed change localhost (most likely do not need to)
 
 
 
-### Setting up the database using mySQL command line client 
+### Method 1: Setting up the database using mySQL command line client 
 Now, do the following:
 ~~~
 1. Open MySql Command Line Client 
@@ -117,7 +117,7 @@ mysql> exit
 ~~~
 
 
-### Setting up the database using mySQL workbench 
+### Method 2: Setting up the database using mySQL workbench 
 Prerequisite: You are already connected to server <br>
 
 Firstly, create a new schema called cz2006 (case sensitive). <br>
