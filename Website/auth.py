@@ -187,7 +187,7 @@ def home():
     size = int(size/12)
     i=0
     table = table.values.tolist()
-
+    
     return render_template("home.html", Name = Name, table=table, size = size, i=i)
 
 
