@@ -54,7 +54,7 @@ Open command prompt / terminal (this instruction set follows Windows cmd prompt,
 
 > cd cx2006_coding
 
-> pip install -r requirement.txt
+> pip install -r requirements.txt
 
 ~~~
 
