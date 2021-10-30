@@ -118,7 +118,7 @@ def register():
             cursor.execute(statement, val)
             cur.commit() 
             cursor.close()
-            cur.close()
+            #cur.close()
             flash("Account Created", category='success')
 
 
