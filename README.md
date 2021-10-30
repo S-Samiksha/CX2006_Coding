@@ -1,6 +1,7 @@
 # Creators of SwipeMyRoommie
 [Sankar Samiksha](https://github.com/S-Samiksha) <br/>
-[Poon Yan Xin Melise](https://github.com/Melisepoon)
+[Poon Yan Xin Melise](https://github.com/Melisepoon) <br/>
+[Marcus NG Li Wang](https://github.com/ngliwang)
 
 add in your names here 
 
@@ -81,7 +82,7 @@ if needed change localhost (most likely do not need to)
 
 
 
-### Method 1: Setting up the database using mySQL command line client 
+### Setting up the database using mySQL command line client 
 Now, do the following:
 ~~~
 1. Open MySql Command Line Client 
@@ -117,7 +118,7 @@ mysql> exit
 ~~~
 
 
-### Method 2: Setting up the database using mySQL workbench 
+### Setting up the database using mySQL workbench 
 Prerequisite: You are already connected to server <br>
 
 Firstly, create a new schema called cz2006 (case sensitive). <br>

@@ -118,7 +118,7 @@ def register():
             cursor.execute(statement, val)
             cur.commit() 
             cursor.close()
-            cur.close()
+            #cur.close()
             flash("Account Created", category='success')
 
 
@@ -187,7 +187,10 @@ def home():
     size = int(size/12)
     i=0
     table = table.values.tolist()
+    
     return render_template("home.html", Name = Name, table=table, size = size, i=i)
+
+
 
 
 #for button manipulation from js, link in home.js and home.html commented as 'button-sql-js-flask-connection'
