@@ -5,10 +5,6 @@
 [Anagha Ani](https://github.com/ana-17) <br/>
 [Arushi Bansal](https://github.com/arushiibansal19) <br/>
 
-add in your names here 
-
-
-
 
 Submitted to Nanyang Technological University (Singapore) on 1 Nov 2021
 
@@ -84,7 +80,7 @@ if needed change localhost (most likely do not need to)
 
 
 
-### Setting up the database using mySQL command line client 
+### Option 1: Setting up the database using mySQL command line client 
 Now, do the following:
 ~~~
 1. Open MySql Command Line Client 
@@ -120,7 +116,7 @@ mysql> exit
 ~~~
 
 
-### Setting up the database using mySQL workbench 
+### Option 2: Setting up the database using mySQL workbench 
 Prerequisite: You are already connected to server <br>
 
 Firstly, create a new schema called cz2006 (case sensitive). <br>
