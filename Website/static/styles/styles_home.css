@@ -55,8 +55,8 @@ p {
 	display: inline-block;
 	padding: 10px 30px;
 	color: black;
-	background-color: transparent;
-	border: 2px solid #FEDFD4;
+	background-color: #FEDFD4;
+	border: 2px solid #000000;
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -66,7 +66,7 @@ p {
 }
 .cta:hover {
 	color: black;
-	background-color: #FEDFD4;
+	background-color: #ffffff;
 }
 .brand h1 {
 	font-size: 3rem;
