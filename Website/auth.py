@@ -131,7 +131,7 @@ def register():
 
         if password != confirmpassword:
             msg = "The passwords don't match!"
-        if len(email) < 4:
+        if len(username) < 4:
             flash("Your Email is too short. Email must be greater than 4 characters", category='error')
         elif len(password)<8:
             flash("Password and Confirm Password are not equal", category='error')
