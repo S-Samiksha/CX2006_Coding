@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/styles/style_update_roommate.css">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'styles/style_update_roommate.css')}}">
 
   <title>Update Roommate Preference</title>
 </head>
@@ -24,11 +24,11 @@
         </div>
         <div class="nav-list">
           <ul>
-            <li><a href = "/home" data-after="HOME">HOME</a></li>
-            <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
+            <li><a href="{{url_for('auth.profile')}}" data-after="PROFILE">PROFILE</a></li>
             <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
             <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
-            <li><a href="/" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="{{url_for('auth.logout')}}" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
         </div>
       </div>
@@ -38,12 +38,14 @@
 
   <!-- profile Section  -->
   <section id="profile">
-    <div class="profile-section">
-        <img src="{{profile_image}}" id="self_img"/>
+    <div class="profile-section" style="padding-top: 40px;">
+        <!--<img src="../static/images/crop4.png" id="self_img"/>-->
         <h1>{{Name}} | {{Age}} </h1>
         <h2>My Roommate Preferences </h2>
     </div>
     <div class="page-section">
+        <div>{{msg}}</div>
+        <form method = "POST", action = "{{url_for('auth.update_roommate')}}">
           <h2> Update Preferences </h2>
           <div class = "select">
             <h3> Choose your prefered Gender </h3>
@@ -56,21 +58,22 @@
             </div>
             <div class = "select">
             <h3> Enter your prefered Age </h3>
-            <input type="number" min="18" max="100" placeholder="Age"> </input>
+            <input type="number" min="18" max="100" placeholder="Age" name ="roommate_age"> </input>
             </div>
             <div class = "select">
                 <h3> Enter your prefered Occupation </h3>
-                <input type="text" placeholder= "Occupation"> </input>
+                <input type="text" placeholder= "Occupation" name ="roommate_occupation"> </input>
             </div>
             <div class = "select">
                 <h3> Enter your prefered Ethnicity </h3>
-                <input type="text" placeholder= "Ethnicity"> </input>
+                <input type="text" placeholder= "Ethnicity" name = "roommate_ethnicity"> </input>
             </div>
             <div class = "select">
                 <h3> Enter your prefered Languages </h3>
-                <input type="text" placeholder= "English, Chinese, Malay, Tamil"> </input>
+                <input type="text" placeholder= "English, Chinese, Malay, Tamil" name = "roommate_lang"> </input>
             </div>
-            <a class="button-submit" onclick='alert("Form submitted Successfully")'>Submit</a>
+            <input type = submit class="cta" value = "Submit">
+        </form>
       </div>
       
   </section>
