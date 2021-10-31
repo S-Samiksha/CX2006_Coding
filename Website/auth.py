@@ -416,3 +416,7 @@ def update_self():
     return render_template("update_self.html")
 
 #--------------------------------------------End Update Self---------------------------------------------------------------------------------------
+
+@auth.route('/404')
+def other_page():
+    return render_template("404.html")
