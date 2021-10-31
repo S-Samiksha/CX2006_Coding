@@ -90,7 +90,6 @@ def login():
         #cursor.execute(query1)
         #frame = pd.DataFrame(cursor.fetchall())
         #print(frame)
-        
         if account:
             session['loggedin'] = True
             session['id'] = account[0]
@@ -145,7 +144,7 @@ def register():
             session['id'] = newid
             current_account_id = session['id'] 
             session['username'] = username
-            return redirect(url_for('update_self'))
+            return redirect(url_for('auth.update_self'))
     elif request.method == 'POST':
         msg = 'Please fill out the form!'
     
@@ -158,9 +157,9 @@ def register():
 def home():
     #how to get from SQL
     cursor = cur.cursor()   
-    val = current_account_id 
-    statement = "SELECT * FROM profile WHERE accounts_AccountID = " + str(val)
-    cursor.execute(statement)
+    #val = session['id'] 
+    statement = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+    cursor.execute(statement, (current_account_id, ))
     profilelist = cursor.fetchall()
     Name = [item[5] for item in profilelist]
     Name = Name[0]
@@ -182,7 +181,7 @@ def home():
     statement = 'SELECT * from user_language where accounts_AccountID = %s'
     val = current_account_id
     #need to account for language 
-    cursor.execute(statement, val)
+    cursor.execute(statement, (val,))
     u_lan = cursor.fetchall()
     u_lan = [item[0] for item in u_lan]
     u_lan = u_lan[0]
@@ -229,7 +228,7 @@ def delete_rec():
     #to pass in update to sql
     #concatenate
     statement = 'UPDATE profile SET r_Skip = '+str(AiD)+' WHERE accounts_AccountID = %s'
-    val = (current_account_id)
+    val = (current_account_id, )
     cursor.execute(statement, val)
     #cursor.execute(statement, val)
 
@@ -488,7 +487,7 @@ def update_roommate():
         roommate_ethnicity = details['roommate_ethnicity']
         roommate_language = details['roommate_lang']
 
-        cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+        #cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
         cursor = cur.cursor(buffered = True)
 
         query4 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
@@ -547,7 +546,6 @@ def update_self():
         language_pref = details['language_preference']
         profile_pic = details['filename']
 
-        cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
         cursor = cur.cursor(buffered = True)
 
         query4 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
