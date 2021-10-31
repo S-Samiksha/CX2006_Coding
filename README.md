@@ -4,6 +4,7 @@
 [Marcus NG Li Wang](https://github.com/ngliwang) <br/>
 [Anagha Ani](https://github.com/ana-17) <br/>
 [Arushi Bansal](https://github.com/arushiibansal19) <br/>
+[Ng Jun Han](https://github.com/pokercrash) <br/>
 
 
 # Data API link
