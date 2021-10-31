@@ -530,7 +530,7 @@ def update_roommate():
             cursor.execute("UPDATE profile SET r_Gender = %s, r_Age = %s, r_Occupation = %s, r_Enthnicity = %s WHERE accounts_AccountID = %s", (roommate_gender, roommate_age, roommate_occupation, roommate_ethnicity, id, ))
             cur.commit()
         else:
-            cursor.execute("INSERT INTO profile (r_Gender, r_Age, r_Occupation, r_Ethnicity, accounts_AccountID) VALUES (%s, %s, %s, %s, %s, %s)", (age, occupation, ethnicity, name, gender, id, ))
+            cursor.execute("INSERT INTO profile (r_Gender, r_Age, r_Occupation, r_Ethnicity, accounts_AccountID) VALUES (%s, %s, %s, %s, %s)", (roommate_gender, roommate_age, roommate_occupation, roommate_ethnicity, id, ))
             cur.commit()
         if(isthereinroommatelang):
             cursor.execute("UPDATE roommate_language SET Language = %s WHERE accounts_AccountID = %s", (roommate_language, id, ))
