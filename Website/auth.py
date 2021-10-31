@@ -186,7 +186,7 @@ def home():
     statement = 'SELECT * from user_language where accounts_AccountID = %s'
     val = current_account_id
     #need to account for language 
-    cursor.execute(statement, val)
+    cursor.execute("SELECT * from user_language where accounts_AccountID = %s", (id, ))
     u_lan = cursor.fetchall()
     u_lan = [item[0] for item in u_lan]
     u_lan = u_lan[0]
