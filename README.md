@@ -6,6 +6,10 @@
 [Arushi Bansal](https://github.com/arushiibansal19) <br/>
 
 
+# Data API link
+[HDB API](https://data.gov.sg/dataset/hdb-property-information)
+
+
 Submitted to Nanyang Technological University (Singapore) on 1 Nov 2021
 
 # How to use our code and get the website running 
