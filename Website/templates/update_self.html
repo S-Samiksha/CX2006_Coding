@@ -184,7 +184,7 @@ $("#imageUpload").change(function(){
       </script>
       
       <div id="profile-container" style="position: relative; left: 90px; top: -37px;">
-         <image id="profileImage" src="../static/images/crop4.png" />
+         <image id="profileImage" src="{{profile_image}}" />
       </div>
       <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
       <form action="/action_page.php">
@@ -200,7 +200,7 @@ $("#imageUpload").change(function(){
 
 
       <div contenteditable="true" style="font-size: 30px; width: 200px; padding-left: 70px; padding-top: 30px; position: relative; left: 250px; top:-200px">
-        Thomas | 30
+        {{Name}} | {{Age}}
       </div>
     </div>
     <div style="height: 650px; padding-left: 40px;">

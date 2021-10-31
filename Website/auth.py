@@ -7,6 +7,14 @@ import requests
 import mysql.connector
 auth = Blueprint('auth', __name__)
 current_account_id = 0
+user_name = ""
+user_age = ""
+user_gender = ""
+user_occupation  = ""
+user_ethnicity  = ""
+user_language = ""
+user_profile_pic = ""
+
 
 """
 PLEASE READ!!
@@ -124,7 +132,7 @@ def register():
             msg = "The passwords don't match!"
         if len(email) < 4:
             flash("Your Email is too short. Email must be greater than 4 characters", category='error')
-        elif len(password)<5:
+        elif len(password)<8:
             flash("Password and Confirm Password are not equal", category='error')
         else:
             cursor = cur.cursor(buffered = True)
@@ -156,13 +164,30 @@ def register():
 @auth.route('/home', methods=['GET', 'POST'])
 def home():
     #how to get from SQL
+    global user_age 
+    global user_gender
+    global user_occupation 
+    global user_ethnicity 
+    global user_language
+    global user_name
+    global user_profile_pic
     cursor = cur.cursor()   
     #val = session['id'] 
     statement = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
     cursor.execute(statement, (current_account_id, ))
     profilelist = cursor.fetchall()
     Name = [item[5] for item in profilelist]
-    Name = Name[0]
+    user_name = Name[0]
+    Gender = [item[1] for item in profilelist]
+    user_gender = Gender[0]
+    Age = [item[0] for item in profilelist]
+    user_age = Age[0]
+    Occupation = [item[2] for item in profilelist]
+    user_occupation = Occupation[0]
+    Ethnicity = [item[3] for item in profilelist]
+    user_ethnicity = Ethnicity[0]
+    profile_pic = [item[4] for item in profilelist]
+    user_profile_pic = profile_pic[0]
     #cur.close()
     r_gender = [item[6] for item in profilelist]
     r_gender = r_gender[0]
@@ -213,7 +238,7 @@ def home():
     i=0
     table = table.values.tolist()
     
-    return render_template("home.html", Name = Name, table=table, size = size, i=i)
+    return render_template("home.html", Name = user_name, table=table, size = size, i=i)
 
 
 
@@ -469,6 +494,7 @@ def view_houses():
 #---------------------------['GET', 'POST']----------------Start Update Roommate---------------------------------------------------------------------------------
 @auth.route('/update_roommate')
 def update_roommate():
+    global user_profile_pic
     id = session['id']
     msg = ''
     query1 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
@@ -515,25 +541,22 @@ def update_roommate():
         return redirect(url_for('auth.profile'))
 
 
-    return render_template('update_roommate.html', msg = msg, Name = name, Age = age)
+    return render_template('update_roommate.html', msg = msg, Name = user_name, Age = user_age, profile_image = user_profile_pic)
 
 #-------------------------, methods = []GET-, 'POST'-----------------End Update Roommate-----------------------------------------------------------------------------------
 
 #-------------------------------------------Start Update Self--------------------------------------------------------------------------------------
 @auth.route('/update_self')
 def update_self():
-    msg = ''
-    name = ''
-    age = ''
+    global user_age 
+    global user_gender
+    global user_occupation 
+    global user_ethnicity 
+    global user_language
+    global user_name
     id = session['id']
-    query1 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
-    #cur = mysql.connector.connect(user='root', password='2006project    cursor.execute(query1, (id, ))
+    msg = ''
 
-    account = cursor.fetchone() 
-    if(account):
-        name = account[5]
-        age = account[0]
-    
 
     if request.method == 'POST':
         details = request.form
@@ -565,7 +588,7 @@ def update_self():
         msg = 'SUCCESSFULLY UPDATED!!'
         return redirect(url_for('auth.profile'))
     
-    return render_template('update_self.html', msg = msg, Name = name, Age = age)
+    return render_template('update_self.html', msg = msg, Name = user_name, Age = user_age, profile_image = user_profile_pic)
 
 #--------------------------------------------End Update Self---------------------------------------------------------------------------------------
 
@@ -583,6 +606,13 @@ def logout():
     session.pop('loggedin', None)
     session.pop('id', None)
     session.pop('username', None)
+    current_account_id = 0
+    user_name = NULL
+    user_age = NULL
+    user_gender = NULL
+    user_occupation  = NULL
+    user_ethnicity  = NULL
+    user_language = NULL
     return redirect(url_for('login'))
   
 #--------------------------------------------End Logout---------------------------------------------------------------------------------------
