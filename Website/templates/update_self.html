@@ -52,7 +52,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./static/styles/style_main.css">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'styles/style_main.css')}}">
   <title>Update Self Profile</title>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -73,11 +73,11 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href = "/home" data-after="HOME">HOME</a></li>
             <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
             <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
             <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
-            <li><a href="/" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="{{url_for('auth.logout')}}" data-after="LOGOUT">LOGOUT</a></li>
+            <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
           </ul>
         </div>
       </div>
@@ -146,14 +146,12 @@
   $("#profileImage").click(function(e) {
     $("#imageUpload").click();
 });
-
 function fasterPreview( uploader ) {
     if ( uploader.files && uploader.files[0] ){
           $('#profileImage').attr('src', 
              window.URL.createObjectURL(uploader.files[0]) );
     }
 }
-
 $("#imageUpload").change(function(){
     fasterPreview( this );
 });
@@ -161,12 +159,14 @@ $("#imageUpload").change(function(){
 
 <section>
     <div style="background-color: #F9CABD; height: 300px;">
-      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br>
+      <h1 style="padding-left: 100px; font-weight: bold; font-size: 40px;">Update Profile</h1><br><br>
+      <h1 style="padding-left: 100px; font-weight: bold; font-size: 30px;">{{Name}} | {{Age}} </h1>
 
 
 
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript">
+      <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript">
         $("#profileImage").click(function(e) {
     $("#imageUpload").click();
 });
@@ -181,14 +181,16 @@ function fasterPreview( uploader ) {
 $("#imageUpload").change(function(){
     fasterPreview( this );
 });
-      </script>
+      </script>-->
       
       <div id="profile-container" style="position: relative; left: 90px; top: -37px;">
-         <image id="profileImage" src="{{profile_image}}" />
+         <image id="profileImage" src="{{source_profilepic}}" />
+         <h1>{{Name}} | {{Age}} </h1>
       </div>
-      <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+      
+      <!--<input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>-->
       <form action="/action_page.php">
-        <input type="file" id="myFile" name="filename" style="position: relative; bottom: 30px; left: 80px;">
+        <!--<input type="file" id="myFile" name="filename" style="position: relative; bottom: 30px; left: 80px;">-->
        <!-- <input type="submit"> -->
       </form>
 <script type="text/javascript">
@@ -198,29 +200,34 @@ $("#imageUpload").change(function(){
 
 </script>
 
-
-      <div contenteditable="true" style="font-size: 30px; width: 200px; padding-left: 70px; padding-top: 30px; position: relative; left: 250px; top:-200px">
-        {{Name}} | {{Age}}
+    <!--<form>
+      <input type = Text style="font-size: 30px; width: 200px; padding-left: 70px; padding-top: 30px; position: relative; left: 250px; top:-200px">
+        Thomas | 30
       </div>
+    </form>-->
     </div>
     <div style="height: 650px; padding-left: 40px;">
       <br>
+      <div>{{msg}}</div>
       <div class = "parent" style="vertical-align: middle;">
-        <form action="http://httpbin.org/post" method="post">
+        <form method = "POST" action = "{{url_for('auth.update_self')}}">
           <div class = "child" style="float: left; width: 600px; text-align: left;">
 
-            <label style="font-size: 30px;">My Summary</label><br><br>
-            <input type="text" name="summary" placeholder="Enter your summary here." style="height: 200px; width: 400px;"><br><br><br>
+            <!--<label style="font-size: 30px;">My Summary</label><br><br>
+            <input type="text" name="summary" placeholder="Enter your summary here." style="height: 200px; width: 400px;"><br><br><br>--->
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
             <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
             <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
 
-
-            <label style="font-size: 30px;">Area Preference</label><br>
+            <label style = "font-size: 30px;">Name</label><br><br>
+            <input type = text placeholder = "Enter your name" name = "name"><br><br><br>
+            <label style = "font-size: 30px;">Age</label><br><br>
+            <input type = text placeholder = "Enter your age" name = "age"><br><br><br>
+            <!--<label style="font-size: 30px;">Area Preference</label><br>
             <label style="font-size: 15px;">(To select multiple options, hold down ctrl/cmd)</label>
             <br><br>
-            <select style="width: 300px;" multiple class="chose-select" name="select">
+            <select style="width: 300px;" multiple class="chose-select" name="selectarea">
               <option>Woodlands</option>
               <option>Admiralty</option>
               <option>Canberra</option>
@@ -228,23 +235,27 @@ $("#imageUpload").change(function(){
               <option>Bukit Batok</option>
               <option>Bedok</option>
             </select><br><br><br>
-            <label style="font-size: 30px;">Occuptation</label><br><br>
+            <input type = "text" placeholder="Area(s)" name = "selectarea"><br><br><br>-->
+            <label style="font-size: 30px;">Occupation</label><br><br>
             <input type="text" name="Occupation"><br><br><br>
           </div>
 
           <div class = "child" style="float: right; width: 598px; text-align: left;">
             <label style="font-size: 30px;">Gender</label><br><br>
-            <select style="width: auto;">
+            <!--<select style="width: auto;" name = "selectgender">
               <option>Male</option>
               <option>Female</option>
               <option>Other</option>
-            </select><br><br><br>
+            </select><br><br><br>-->
+            <input type = text placeholder="Gender" name = "selectgender"><br><br><br>
             <label style="font-size: 30px;">Ethnicity</label><br><br>
             <input type="text" name="ethnicity"><br><br><br>
             <label style="font-size: 30px;">Language Preference</label><br><br>
-            <input type="text" name="language preference"><br><br><br>
+            <input type="text" name="language_preference"><br><br><br>
+            <label style="font-size: 30px;">Profile Picture</label><br><br>
+            <input type="file" id="myFile" name="filename"><br><br><br>
             <br><br><br>
-            <a class="button-login">Update Profile</a>
+            <input type = submit class="cta" value = "Update Profile">
             <br><br><br><br>
           </div>
           

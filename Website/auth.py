@@ -493,7 +493,7 @@ def view_houses():
 #--------------------------------------------End Search/view Houses------------------------------------------------------------------------------------
 
 #---------------------------['GET', 'POST']----------------Start Update Roommate---------------------------------------------------------------------------------
-@auth.route('/update_roommate')
+@auth.route('/update_roommate', methods = ['GET', 'POST'])
 def update_roommate():
     global user_profile_pic
     id = session['id']
@@ -506,6 +506,7 @@ def update_roommate():
     account = cursor.fetchone()
     name = account[5]
     age = account[0]
+    img_path = account[4]
     if request.method == 'POST':
         details = request.form
         roommate_gender = details['gender']
@@ -542,12 +543,12 @@ def update_roommate():
         return redirect(url_for('auth.profile'))
 
 
-    return render_template('update_roommate.html', msg = msg, Name = user_name, Age = user_age, profile_image = user_profile_pic)
+    return render_template('update_roommate.html', msg = msg, Name = name, Age = age, profile_image = img_path)
 
 #-------------------------, methods = []GET-, 'POST'-----------------End Update Roommate-----------------------------------------------------------------------------------
 
 #-------------------------------------------Start Update Self--------------------------------------------------------------------------------------
-@auth.route('/update_self')
+@auth.route('/update_self', methods = ['GET', 'POST'])
 def update_self():
     global user_age 
     global user_gender
@@ -563,7 +564,6 @@ def update_self():
         details = request.form
         name = details['name']
         age = details['age']
-        area_pref = details['selectarea']
         occupation = details['Occupation']
         gender = details['selectgender']
         ethnicity = details['ethnicity']
