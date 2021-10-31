@@ -614,6 +614,6 @@ def logout():
     user_occupation  = ""
     user_ethnicity  = ""
     user_language = ""
-    return redirect(url_for('/'))
+    return redirect(url_for('auth.login'))
   
 #--------------------------------------------End Logout---------------------------------------------------------------------------------------
