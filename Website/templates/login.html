@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +14,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../static/styles/style_main.css">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'styles/styles_home.css')}}">
   <title>Login</title>
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -25,7 +24,7 @@
   <section id="header">
     <div class="header container">
       <div class="nav-bar">
-          <img src="../images/icon.png" id="logo"/>
+          <img src="../static/images/icon.png" id="logo"/>
         <div class="brand">
           <a href="#hero">
             <h1><span>S</span>wipe<span>M</span>y<span>R</span>oomie</h1>
@@ -36,9 +35,12 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <li><a href="/" data-after="HOME">HOME</a></li>
+            <!--<li><a href="index.html" data-after="Home">HOME</a></li>--> 
             <!-- <li><a href="#services" data-after="Service">Service</a></li> --> 
-            <li><a href="/about" data-after="ABOUT">ABOUT</a></li>
+            <li><a href="/register" data-after="REGISTER">REGISTER</a></li>
+            <li><a href="/login" data-after="LOGIN">LOGIN</a></li>
+            <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
+            <!--<li><a href="search_roomates.html" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li> --> 
             <!-- <li><a href="messages.html" data-after="MESSAGES">MESSAGES</a></li> -->
           </ul>
         </div>
@@ -58,24 +60,23 @@
 
 <section id="hero" style = "background-image: url(https://saumata.com/wp-content/uploads/2020/04/inspirasi-desain-interior-apartemen-di-tahun-2020-sanwa-apartemen-jakarta-indonesia.jpg); background-repeat: no-repeat; background-size: cover;">
     <div class="blue container">
-      <div class="right" style="background-color: #BDDCDFA8; padding: 0px 50px 50px 50px; display: block; border-radius: 25px; width: auto; margin-top: 75px;">
-        <h1 style="font-size: 50px;">Welcome back! Log in here<span></span></h1>
-        <form method="POST">
+      <div class="right" style="background-color: #BDDCDFA8; padding: 50px 50px 50px 50px; display: block; border-radius: 25px; width: auto; margin-top: 75px;">
+        <h1 style="font-size: 50px;">Welcome back! Log in here<span></span></h1><br>
+        <div style="text-align: center;">
+        <form method = 'POST' action = "{{url_for('auth.login')}}">
+          <div class="msg">{{ msg }}</div>
           <i class="fa fa-user icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="email" placeholder="Email" id="email" name="email" style="height: 40px; width: 300px;"><br>
+          <input type="text" placeholder="  Username" id="textboxid" name="username" style="height: 40px; width: 300px;"><br>
           <br>
           <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="password" placeholder="Password" id="password" name="password" style="height: 40px; width: 300px;"><br>
+          <input type="password" placeholder="  Password" id="textboxid" name="pwd" style="height: 40px; width: 300px;"><br>
           <br>
-          <!-- <i class="fa fa-lock icon" style="padding: 10px; font-size: 20px;"></i>
-          <input type="text" placeholder="  Confirm Password" id="textboxid" name="confirmpwd" style="height: 40px; width: 300px;"><br> -->
-        <br>
-        <br>
-        <button href="/home" type="submit" class="button-login">Login</button><br><br><br>
-      </form>
-        <label style = "color: black; font-size: 20px">Don't have an account yet?</label><br><br><br><br>
-        <a href="#projects" type="button" class="button-login">Register here</a>
+          <input type="submit" class = "cta" value ="Login"><br><br>>
+        </form>
+        <label style = "color: white; font-size: 20px">Don't have an account yet?</label><br>
+        <a href="register" type="button" class="cta">Register here</a>
         <!-- <a href="#projects" type="button" class="cta">Need help?</a> -->
+    </div>
       </div>
     </div>
   </section>
@@ -108,4 +109,5 @@
     </div>
   </section>
   <!-- End Footer -->
+  <script src="./app.js"></script>
 </body>

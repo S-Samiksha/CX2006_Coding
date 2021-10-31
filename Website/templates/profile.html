@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./static/styles/style_update_roommate.css">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/style_update_roommate.css')}}">
 
   <title>View Profile</title>
 </head>
@@ -24,6 +24,7 @@
         </div>
         <div class="nav-list">
           <ul>
+            <li><a href = "/home" data-after="HOME">HOME</a></li>
             <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
             <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
             <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
@@ -38,40 +39,40 @@
   <!-- profile Section  -->
   <section id="profile">
     <div class="profile-section">
-        <img src="../static/images/crop4.png" id="self_img"/>
-        <h1>Thomas | 30 </h1>
+        <img src="{{profilepic}}" id="self_img"/>
+        <h1>{{Name2}} | {{Age2}} </h1>
         <h2>My Profile</h2>
-        <a class="button-two" href = '/update_roommate'>Update Roommate Preference</a>
-        <a class="button-two" href = '/update_self'>Update Self Profile</a>
+        <a class="button-two" href = "{{url_for('update_roommate')}}">Update Roommate Preference</a>
+        <a class="button-two" href = "{{url_for('update_self')}}">Update Self Profile</a>
     </div>
     <div class="page-section">
       <h2>Personal Details</h2>
       <!--How to call variables from python-->
-      <h3> Name: {{current_user}} </h3> 
+      <h3> Name: {{name}} </h3> 
       <br><br>
-      <h3>Gender: Male</h3>
+      <h3>Gender: {{gender}}</h3>
       <br><br><br>
-      <h3>Age: 30</h3>
+      <h3>Age: {{age}}</h3>
       <br><br>
-      <h3>Occupation: Engineer</h3>
+      <h3>Occupation: {{occupation}}</h3>
       <br><br>
-      <h3>Ethnicity: Chinese</h3>
+      <h3>Ethnicity: {{ethnicity}}</h3>
       <br><br>
-      <h3>Language: English </h3>
+      <h3>Language: {{language}} </h3>
       <br>
       <br>
       <br>
       <h2>Roommate Preference</h2>
       <br><br>
-      <h3>Gender Preference: Male</h3>
+      <h3>Gender Preference: {{gender_roommate}}</h3>
       <br><br>
-      <h3>Age Preference: 30</h3>
+      <h3>Age Preference: {{age_roommate}}</h3>
       <br><br>
-      <h3>Occupation Preference: Engineer</h3>
+      <h3>Occupation Preference: {{occupation_roommate}}</h3>
       <br><br>
-      <h3>Ethnicity Preference: Any</h3>
+      <h3>Ethnicity Preference: {{ethnicity_roommate}}</h3>
       <br><br>
-      <h3>Language Preference: English</h3>
+      <h3>Language Preference: {{language_roommate}}</h3>
       <br>
           
     </div>

@@ -45,11 +45,11 @@
 
                  <div class="page_selection">
                   <ul class="navg_list">
+                    <li><a href = "/home" data-after="HOME">HOME</a></li>
                     <li><a href="/profile" data-after="PROFILE">PROFILE</a></li>
                     <li><a href="/search_house" data-after="SEARCH HOUSE">SEARCH HOUSE</a></li>
                     <li><a href="/messages" data-after="MESSAGES">MESSAGES</a></li>
                     <li><a href="/" data-after="LOGOUT">LOGOUT</a></li>
-                    <li><a href="/about" data-after="ABOUT US">ABOUT US</a></li>
                   </ul>
                 </div>
               </div>
@@ -102,7 +102,7 @@
               <td rowspan="1" style="height:10%"><img src="../static/images/sample_house1.png"></td>
               <td>
                   <text>
-                  <h1>Id:{{i['_id']}}</h1>
+                  <h1>Id: {{i['_id']}}</h1>
                   <h1>{{i['blk_no']}} {{i['street']}}</h1>
                   <h2>Area: {{townName}}</h2>
                   <h2>Max Floors: {{i['max_floor_lvl']}}</h2>
@@ -119,6 +119,10 @@
                   <h2>Completed in {{i['year_completed']}}</h2>
                   </text>
               </td>
+            </tr>
+            <!-- blank row for spacing -->
+            <tr>
+              <td></td>
             </tr>
             {% endfor %}
           </table>
