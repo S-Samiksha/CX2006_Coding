@@ -5,6 +5,7 @@ import pandas as pd
 import json
 import requests
 import mysql.connector
+from flask_login import login_user, login_required, logout_user, current_user
 auth = Blueprint('auth', __name__)
 current_account_id = 0
 user_name = ""
@@ -556,8 +557,8 @@ def update_self():
     global user_name
     id = session['id']
     msg = ''
-
-
+ 
+    cursor = cur.cursor(buffered = True)
     if request.method == 'POST':
         details = request.form
         name = details['name']
@@ -568,7 +569,7 @@ def update_self():
         ethnicity = details['ethnicity']
         language_pref = details['language_preference']
         profile_pic = details['filename']
-
+        
         cursor = cur.cursor(buffered = True)
 
         query4 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
@@ -607,12 +608,12 @@ def logout():
     session.pop('id', None)
     session.pop('username', None)
     current_account_id = 0
-    user_name = NULL
-    user_age = NULL
-    user_gender = NULL
-    user_occupation  = NULL
-    user_ethnicity  = NULL
-    user_language = NULL
-    return redirect(url_for('login'))
+    user_name = ""
+    user_age = ""
+    user_gender = ""
+    user_occupation  = ""
+    user_ethnicity  = ""
+    user_language = ""
+    return redirect(url_for('/'))
   
 #--------------------------------------------End Logout---------------------------------------------------------------------------------------
