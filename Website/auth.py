@@ -157,10 +157,14 @@ def register():
 @auth.route('/home', methods=['GET', 'POST'])
 def home():
     #how to get from SQL
-    cursor = cur.cursor()   
-    val = current_account_id 
-    statement = "SELECT * FROM profile WHERE accounts_AccountID = " + str(val)
-    cursor.execute(statement)
+    id = session['id']
+    query1 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+    cursor = cur.cursor()
+    cursor.execute(query1, (id, ))
+    #cursor = cur.cursor()   
+    #val = current_account_id 
+   # statement = "SELECT * FROM profile WHERE accounts_AccountID = " + str(val)
+    #cursor.execute(statement)
     profilelist = cursor.fetchall()
     Name = [item[5] for item in profilelist]
     Name = Name[0]
