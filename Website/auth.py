@@ -78,17 +78,30 @@ cur = mysql.connector.connect(user='root', password='password',
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     global current_account_id
-    if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('password')
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'pwd' in request.form:
+        details = request.form
+        username = details['username']
+        password = details['pwd']
+        cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
         cursor = cur.cursor()
-        statement = "SELECT AccountID from accounts where Email = %s"
-        val = (email, )
-        cursor.execute(statement, val)
-        current_account_id = cursor.fetchone()
-        #print(current_account_id)
-        return redirect(url_for('auth.home'))
-    return render_template("login.html")
+        #query1 = ("SELECT * FROM accounts WHERE Email = %s AND Password = %s", username, password)
+        cursor.execute('SELECT * FROM accounts WHERE Email = %s AND Password = %s', (username, password, ))
+        account = cursor.fetchone()
+        #query1 = ("SELECT * FROM accounts WHERE Email = username")
+        #cursor.execute(query1)
+        #frame = pd.DataFrame(cursor.fetchall())
+        #print(frame)
+        if account:
+            session['loggedin'] = True
+            session['id'] = account[0]
+            global current_account_id = session['id']
+            session['username'] = account[1]
+            msg = 'Logged in successfully!'
+            return redirect(url_for('home'))
+        else:
+            msg = 'Incorrect username/password'
+    return render_template('login.html', msg = msg)
 #must use the POST method!
 
 #-----------------------------------------------------End Login---------------------------------------------------------------------------------
@@ -99,10 +112,15 @@ def login():
 #the button also does not close when clicking the cross button --> can just remove it was just to test the sql and the python statements
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
-    if request.method == 'POST':
-        email = request.form.get('email')
-        password = request.form.get('password')
-        password2 = request.form.get('password2')
+    msg = ''
+    if request.method=='POST'  and 'username' in request.form and 'pwd' in request.form and 'confirmpwd' in request.form :
+        details = request.form
+        username = details['username']
+        password = details['pwd']
+        confirmpassword = details['confirmpwd']
+
+        if password != confirmpassword:
+            msg = "The passwords don't match!"
         if len(email) < 4:
             flash("Your Email is too short. Email must be greater than 4 characters", category='error')
         elif len(password)<5:
@@ -110,20 +128,28 @@ def register():
         elif (password != password2):
             flash("Password and Confirm Password are not equal", category='error')
         else:
-            #add user to database
+            cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+            cursor = cur.cursor(buffered = True)
             
-            cursor = cur.cursor()
-            statement = "INSERT INTO accounts (Email, Password) VALUES (%s, %s)"
-            val = (email, password)
-            cursor.execute(statement, val)
-            cur.commit() 
-            cursor.close()
-            #cur.close()
-            flash("Account Created", category='success')
-
-
+            query4 = ("SELECT MAX(AccountID) FROM accounts")
+            cursor.execute(query4)
+            newid = cursor.fetchone()[0]
+            newid+=1
+            
+            #query1 = ("INSERT INTO accounts VALUES (%d, %s, %s)", (newid, username, password, ))
+            cursor.execute("INSERT INTO accounts VALUES (%s, %s, %s)", (newid, username, password, ))
+            cur.commit()
+            msg = 'You have successfully registered!'
+            #frame = pd.DataFrame(cursor.fetchall())
+            #print(frame)
+            session['loggedin'] = True
+            session['id'] = newid
+            session['username'] = username
+            return redirect(url_for('update_self'))
+    elif request.method == 'POST':
+        msg = 'Please fill out the form!'
     
-    return render_template("register.html")
+    return render_template('register.html', msg = msg)
 #---------------------------------------------------End Register----------------------------------------------------------------------------------
 
 
@@ -217,11 +243,44 @@ def delete_rec():
 #------------------------------------------------Start profile------------------------------------------------------------------------------------
 @auth.route('/profile')
 def profile():
-    #how to pass in variables from python into html
-    #use {% %} to use if statement and for loops in python in html files
-    #its called using jinja 
-    #pass in variable called current_user into the profile.html page
-    return render_template("profile.html", current_user)
+    id = session['id']
+    query1 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+    cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+    cursor = cur.cursor()
+    cursor.execute(query1, (id, ))
+
+    account = cursor.fetchone()
+    name = account[5]
+    gender = account[1]
+    age = account[0]
+    occupation = account[2]
+    ethnicity = account[3]
+    profilepic = account[4]
+    #language = account[]
+
+
+    gender_roommate = account[6]
+    age_roommate = account[7]
+    occupation_roommate = account[9]
+    ethnicity_roommate = account[10]
+    #language_roommate = account[]
+
+    query2 = ("SELECT * FROM user_language WHERE accounts_AccountID = %s")
+    cursor.execute(query2, (id, ))
+    languageaccount = cursor.fetchone()
+    language = languageaccount[0]
+
+    query3 = ("SELECT * FROM roommate_language WHERE accounts_AccountID = %s")
+    cursor.execute(query3, (id, ))
+    language_roommateaccount = cursor.fetchone()
+    if(language_roommateaccount):
+        language_roommate = language_roommateaccount[0]
+    else:
+        language_roommate = 'None'
+
+
+    return render_template('profile.html', Name2 = name, Age2 = age, name = name, gender = gender, age = age, occupation = occupation, ethnicity = ethnicity, language = language, gender_roommate = gender_roommate, age_roommate = age_roommate, occupation_roommate = occupation_roommate, ethnicity_roommate = ethnicity_roommate, language_roommate = language_roommate, profilepic = profilepic)
+
 #-----------------------------------------------End Profile---------------------------------------------------------------------------------------
 
 
@@ -406,13 +465,116 @@ def view_houses():
 #-------------------------------------------Start Update Roommate---------------------------------------------------------------------------------
 @auth.route('/update_roommate')
 def update_roommate():
-    return render_template("update_roommate.html")
+    id = session['id']
+    msg = ''
+    query1 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+    cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+    cursor = cur.cursor()
+    cursor.execute(query1, (id, ))
+
+    account = cursor.fetchone()
+    name = account[5]
+    age = account[0]
+    if request.method == 'POST':
+        details = request.form
+        roommate_gender = details['gender']
+        roommate_age = details['roommate_age']
+        roommate_occupation = details['roommate_occupation']
+        roommate_ethnicity = details['roommate_ethnicity']
+        roommate_language = details['roommate_lang']
+
+        cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+        cursor = cur.cursor(buffered = True)
+
+        query4 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+        cursor.execute(query4, (id, ))
+        isthereinprofile = cursor.fetchone()
+
+        query5 = ("SELECT * FROM roommate_language WHERE accounts_AccountID = %s")
+        cursor.execute(query5, (id, ))
+        isthereinroommatelang = cursor.fetchone()
+
+        if(isthereinprofile):
+            cursor.execute("UPDATE profile SET r_Gender = %s, r_Age = %s, r_Occupation = %s, r_Enthnicity = %s WHERE accounts_AccountID = %s", (roommate_gender, roommate_age, roommate_occupation, roommate_ethnicity, id, ))
+            cur.commit()
+        else:
+            cursor.execute("INSERT INTO profile (r_Gender, r_Age, r_Occupation, r_Ethnicity, accounts_AccountID) VALUES (%s, %s, %s, %s, %s, %s)", (age, occupation, ethnicity, name, gender, id, ))
+            cur.commit()
+        if(isthereinroommatelang):
+            cursor.execute("UPDATE roommate_language SET Language = %s WHERE accounts_AccountID = %s", (roommate_language, id, ))
+            cur.commit()
+        else:
+            cursor.execute("INSERT INTO roommate_language (Language, accounts_AccountID) VALUES (%s, %s)", (roommate_language, id, ))
+            cur.commit()
+        
+        msg = 'SUCCESSFULLY UPDATED!!'
+        return redirect(url_for('profile'))
+
+
+    return render_template('update_roommate.html', msg = msg, Name = name, Age = age)
 
 #--------------------------------------------End Update Roommate-----------------------------------------------------------------------------------
 
 #-------------------------------------------Start Update Self--------------------------------------------------------------------------------------
 @auth.route('/update_self')
 def update_self():
-    return render_template("update_self.html")
+  msg = ''
+    name = ''
+    age = ''
+    id = session['id']
+    query1 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+    cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+    cursor = cur.cursor()
+    cursor.execute(query1, (id, ))
+
+    account = cursor.fetchone()
+    if(account):
+        name = account[5]
+        age = account[0]
+    
+
+    if request.method == 'POST':
+        details = request.form
+        name = details['name']
+        age = details['age']
+        area_pref = details['selectarea']
+        occupation = details['Occupation']
+        gender = details['selectgender']
+        ethnicity = details['ethnicity']
+        language_pref = details['language_preference']
+        profile_pic = details['filename']
+
+        cur = mysql.connector.connect(user='root', password='2006project!', host='35.197.148.237', database='cz2006')
+        cursor = cur.cursor(buffered = True)
+
+        query4 = ("SELECT * FROM profile WHERE accounts_AccountID = %s")
+        cursor.execute(query4, (id, ))
+        isthere = cursor.fetchone()
+
+        if(isthere):
+            cursor.execute("UPDATE profile SET Age = %s, Occupation = %s, Ethnicity = %s, Name = %s, Gender = %s, profileImgPath=%s WHERE accounts_AccountID = %s", (age, occupation, ethnicity, name, gender, profile_pic, id, ))
+            cur.commit()
+            cursor.execute("UPDATE user_language SET Language = %s WHERE accounts_AccountID = %s", (language_pref, id, ))
+            cur.commit()
+        else:
+            cursor.execute("INSERT INTO profile (Age, Occupation, Ethnicity, Name, Gender, accounts_AccountID, profileImgPath) VALUES (%s, %s, %s, %s, %s, %s, %s)", (age, occupation, ethnicity, name, gender, id, profile_pic, ))
+            cur.commit()
+            cursor.execute("INSERT INTO user_language (Language, accounts_AccountID) VALUES (%s, %s)", (language_pref, id, ))
+            cur.commit()
+        msg = 'SUCCESSFULLY UPDATED!!'
+        return redirect(url_for('profile'))
+    
+    return render_template('update_self.html', msg = msg, Name = name, Age = age)
 
 #--------------------------------------------End Update Self---------------------------------------------------------------------------------------
+
+#--------------------------------------------Start Logout---------------------------------------------------------------------------------------
+
+@auth.route('/logout')
+def logout():
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('username', None)
+    return redirect(url_for('login'))
+  
+#--------------------------------------------End Logout---------------------------------------------------------------------------------------
