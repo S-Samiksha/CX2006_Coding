@@ -3,7 +3,7 @@
 [Poon Yan Xin Melise](https://github.com/Melisepoon) <br/>
 [Marcus NG Li Wang](https://github.com/ngliwang) <br/>
 [Anagha Ani](https://github.com/ana-17) <br/>
-[Arushi Basal](https://github.com/arushiibansal19) <br/>
+[Arushi Bansal](https://github.com/arushiibansal19) <br/>
 
 add in your names here 
 
