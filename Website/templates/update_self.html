@@ -223,7 +223,8 @@ $("#imageUpload").change(function(){
             <label style = "font-size: 30px;">Name</label><br><br>
             <input type = text placeholder = "Enter your name" name = "name"><br><br><br>
             <label style = "font-size: 30px;">Age</label><br><br>
-            <input type = text placeholder = "Enter your age" name = "age"><br><br><br>
+            <input type="number" min="18" max="100" placeholder="Age" name ="age"> </input><br><br><br>
+           <!-- <input type = text placeholder = "Enter your age" name = "age"><br><br><br>-->
             <!--<label style="font-size: 30px;">Area Preference</label><br>
             <label style="font-size: 15px;">(To select multiple options, hold down ctrl/cmd)</label>
             <br><br>
@@ -247,11 +248,33 @@ $("#imageUpload").change(function(){
               <option>Female</option>
               <option>Other</option>
             </select><br><br><br>-->
-            <input type = text placeholder="Gender" name = "selectgender"><br><br><br>
+            <select id="gender" name="selectgender">
+                <option value = "0"> Choose your gender </option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Any">Any</option>
+            </select><br><br><br>
+           <!-- <input type = text placeholder="Gender" name = "selectgender"><br><br><br>-->
             <label style="font-size: 30px;">Ethnicity</label><br><br>
-            <input type="text" name="ethnicity"><br><br><br>
+            <select id="language" name="ethnicity">
+                <option value = "0"> Choose your ethnicity </option>
+                <option value="Chinese">Chinese</option>
+                <option value="Malay">Malay</option>
+                <option value="Indian">Indian</option>
+                <option value="Caucasian">Caucasian</option>
+                <option value="Other">Other</option>
+              </select>
+           <!-- <input type="text" name="ethnicity">--><br><br><br>
             <label style="font-size: 30px;">Language Preference</label><br><br>
-            <input type="text" name="language_preference"><br><br><br>
+              <select id="language" name="language_preference">
+                <option value = "0"> Choose your preferred language </option>
+                <option value="English">English</option>
+                <option value="Mandarin">Mandarin</option>
+                <option value="Malay">Malay</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Other">Other</option>
+              </select>
+            <!--<input type="text" name="language_preference">--><br><br><br>
             <label style="font-size: 30px;">Profile Picture</label><br><br>
             <input type="file" id="myFile" name="filename"><br><br><br>
             <br><br><br>
