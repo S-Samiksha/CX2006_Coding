@@ -48,7 +48,7 @@
         <form method = "POST", action = "{{url_for('auth.update_roommate')}}">
           <h2> Update Preferences </h2>
           <div class = "select">
-            <h3> Choose your prefered Gender </h3>
+            <h3 style="padding-right: 3.2vw;"> Choose your prefered Gender </h3>
             <select id="gender" name="gender">
               <option value = "0"> Choose your preferred gender </option>
               <option value="Male">Male</option>
@@ -57,15 +57,15 @@
             </select>
             </div>
             <div class = "select">
-            <h3> Enter your prefered Age </h3>
-            <input type="number" min="18" max="100" placeholder="Age" name ="roommate_age"> </input>
+            <h3 style="padding-right: 7vw;" > Enter your prefered Age </h3>
+            <input type="number" min="18" max="100" placeholder="Age" name ="roommate_age" > </input>
             </div>
             <div class = "select">
-                <h3> Enter your prefered Occupation </h3>
+                <h3 style="padding-right: 2vw;"> Enter your prefered Occupation </h3>
                 <input type="text" placeholder= "Occupation" name ="roommate_occupation"> </input>
             </div>
             <div class = "select">
-                <h3> Enter your prefered Ethnicity </h3>
+                <h3 style="padding-right: 3.6vw;"> Enter your prefered Ethnicity </h3>
                   <select id="language" name="roommate_ethnicity">
                         <option value = "0"> Choose your preferred ethnicity </option>
                         <option value="Chinese">Chinese</option>
@@ -78,7 +78,7 @@
                <!-- <input type="text" placeholder= "Ethnicity" name = "roommate_ethnicity"> </input>-->
             </div>
             <div class = "select">
-                <h3> Enter your prefered Languages </h3>
+                <h3 style="padding-right: 2vw;"> Enter your prefered Languages </h3>
                   <select id="language" name="roommate_lang">
                         <option value = "0"> Choose your preferred language </option>
                         <option value="English">English</option>
